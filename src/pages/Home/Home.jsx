@@ -1,14 +1,13 @@
 import React from "react";
 import Header from "../../components/Header/header";
 import Realisations from "../../Sections/Realisations/realisations";
-import Hero from "../../components/Hero/hero";
+import Carousel from "../../components/Carousel/carousel";
+import sliderImages from "../../data/data";
 const Home = () => {
-  const imagePath = "/nous-joindre-header-mobile.jpg";
-  const text = "Nous joindre";
   return (
     <div>
       <Header />
-      <Hero imagePath={imagePath} text={text} />
+      <Carousel images={sliderImages} />
       <Realisations></Realisations>
     </div>
   );
