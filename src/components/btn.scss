@@ -1,0 +1,12 @@
+.btn {
+  display: flex;
+  background-color: #242318;
+  color: #f7f4f0;
+  padding: 15px;
+  border-radius: 15px;
+
+  &__text {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+}

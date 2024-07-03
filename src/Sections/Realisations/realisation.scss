@@ -1,0 +1,25 @@
+.realisations {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  width: 100%;
+  gap: 20px;
+
+  &__text {
+    font-size: 45px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+  }
+}
