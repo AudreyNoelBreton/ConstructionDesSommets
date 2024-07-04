@@ -1,0 +1,45 @@
+.contact {
+  background-image: url("../../../public/nous-joindre-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #242318;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+  }
+  &__title {
+    font-family: Eurostile Bold;
+    font-size: 45px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-family: Eurostile Medium;
+    font-size: 15px;
+  }
+
+  &__members {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__member {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// .contact::before {
+//   content: "";
+//   display: block;
+//   width: 100%;
+//   padding-top: calc(600 / 500 * 100%);
+// }

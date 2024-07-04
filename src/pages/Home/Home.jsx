@@ -3,6 +3,7 @@ import Header from "../../components/Header/header";
 import Slogan from "../../Sections/Slogan-section/slogansection";
 import Infos from "../../Sections/General-infos/infos";
 import Realisations from "../../Sections/Realisations/realisations";
+import Contact from "../../Sections/Contact-section/contact-section";
 import Carousel from "../../components/Carousel/carousel";
 import data from "../../data/data";
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <Slogan />
       <Infos />
       <Realisations></Realisations>
+      <Contact />
     </div>
   );
 };

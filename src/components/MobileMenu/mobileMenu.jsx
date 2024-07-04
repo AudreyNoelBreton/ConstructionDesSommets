@@ -11,12 +11,17 @@ const MobileMenu = () => {
           </Link>
         </li>
         <li>
-          <Link to="/about" className="mobile-menu__link">
+          <Link to="/realisations" className="mobile-menu__link">
             <span className="mobile-menu__text">NOS RÉALISATIONS</span>
           </Link>
         </li>
         <li>
-          <Link to="/services" className="mobile-menu__link">
+          <Link to="/team" className="mobile-menu__link">
+            <span className="mobile-menu__text">NOTRE ÉQUIPE</span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/about" className="mobile-menu__link">
             <span className="mobile-menu__text">NOUS JOINDRE</span>
           </Link>
         </li>
