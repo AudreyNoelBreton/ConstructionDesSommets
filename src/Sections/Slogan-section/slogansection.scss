@@ -1,7 +1,7 @@
 .slogan {
   width: 100%;
   display: flex;
-  padding: 20px;
+  padding: 30px 20px;
   flex-direction: column;
   gap: 5px;
   &__title {
@@ -11,7 +11,7 @@
   }
 
   &__secteurs {
-    font-family: Eurostile Medium;
+    font-family: Eurostile Bold;
     font-size: 16px;
     text-transform: uppercase;
   }

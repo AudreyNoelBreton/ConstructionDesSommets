@@ -4,7 +4,7 @@ import "./hero.scss";
 const Hero = ({ imagePath, text }) => {
   return (
     <div className="hero">
-      <img class="hero__img" src={imagePath} alt="Background" />
+      <img className="hero__img" src={imagePath} alt="Background" />
       <div className="hero__overlay">
         <div className="hero__text">{text}</div>
       </div>

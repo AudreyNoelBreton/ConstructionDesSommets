@@ -1,6 +1,6 @@
 import MainImage from "../../components/Project-Main-Image/main-image";
 import "./realisation.scss";
-import "../../components/btn.scss";
+import "../../components/Btn.scss";
 const Realisations = () => {
   const ferreolaiseImage = "/la-ferréolaise-1.jpg";
   const ferreolaiseText = "la ferréolaise";

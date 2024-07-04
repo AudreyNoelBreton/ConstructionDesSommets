@@ -1,0 +1,21 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+
+  &__img {
+    width: 100%;
+  }
+
+  &__title {
+    font-family: Eurostile Bold;
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-family: Eurostile Medium;
+    font-size: 14px;
+  }
+}

@@ -1,12 +1,22 @@
 .btn {
   display: flex;
+  width: fit-content;
   background-color: #242318;
   color: #f7f4f0;
-  padding: 15px;
+  padding: 15px 20px;
   border-radius: 15px;
 
   &__text {
+    font-family: Eurostile Bold;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 13px;
+  }
+
+  &--end {
+    align-self: end;
+  }
+
+  &--start {
+    align-self: flex-start;
   }
 }
