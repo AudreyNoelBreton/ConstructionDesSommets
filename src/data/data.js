@@ -12,4 +12,22 @@ const sliderImages = [
     src: "/l'olympique-1.jpg",
   },
 ];
-export default sliderImages;
+
+const consecrationImages = [
+  {
+    src: "/project-1.jpg",
+  },
+  {
+    src: "/project-1-2.jpg",
+  },
+  {
+    src: "project-1-1.jpg",
+  },
+];
+
+const data = {
+  sliderImages,
+  consecrationImages,
+};
+
+export default data;

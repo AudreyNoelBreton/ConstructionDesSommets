@@ -24,7 +24,6 @@ const Carousel = ({ images }) => {
     return () => clearInterval(interval);
   }, [activeIndex, images.length]);
 
-  console.log(images);
   return (
     <div className="carousel">
       <div className="carousel__text-overlay">
