@@ -6,6 +6,8 @@
   gap: 20px;
 
   &__text {
+    font-family: Eurostile Bold;
+
     font-size: 45px;
     text-align: center;
     text-transform: uppercase;
@@ -15,11 +17,5 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-
-  &__btn {
-    display: flex;
-    justify-self: center;
-    align-self: center;
   }
 }

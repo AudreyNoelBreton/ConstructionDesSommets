@@ -1,0 +1,55 @@
+.temoignages {
+  width: 100%;
+  height: 300px;
+  background-color: #f7f4f0;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  gap: 20px;
+
+  &__container {
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    transition: transform 0.5s ease-in-out;
+    &.animating {
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+  &__title {
+    display: flex;
+    width: 100%;
+    font-family: Eurostile Bold;
+    position: absolute;
+    text-transform: uppercase;
+    top: 30px;
+
+    margin-bottom: 20px;
+    font-size: 45px;
+
+    color: #242318; // Adjust the color as needed
+    z-index: 10;
+  }
+
+  &__item {
+    text-align: start;
+    align-items: center;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+  }
+
+  &__text {
+    display: flex;
+    width: 100%;
+    font-family: Eurostile Medium;
+    padding-bottom: 20px;
+    font-size: 15px;
+    color: #242318; // Adjust the color as needed
+  }
+}

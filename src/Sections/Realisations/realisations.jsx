@@ -1,6 +1,7 @@
 import MainImage from "../../components/Project-Main-Image/main-image";
 import "./realisation.scss";
 import "../../components/Btn.scss";
+import { useNavigate } from "react-router-dom";
 const Realisations = () => {
   const ferreolaiseImage = "/la-ferréolaise-1.jpg";
   const ferreolaiseText = "la ferréolaise";
@@ -10,6 +11,13 @@ const Realisations = () => {
   const petiteMaisonText = "La petite maison verte";
   const olympImage = "/l'olympique-1.jpg";
   const olympText = "l'olympique";
+
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate("/realisations");
+  };
+
   return (
     <section className="realisations">
       <div className="realisations__text">Nos réalisations</div>
@@ -28,11 +36,10 @@ const Realisations = () => {
         ></MainImage>
         <MainImage mainImage={olympImage} mainText={olympText}></MainImage>
       </div>
-      <div className="realisations__btn">
-        <btn className="btn">
-          <div className="btn__text">voir tout nos projets</div>
-        </btn>
-      </div>
+
+      <button className="btn btn--center" onClick={handleButtonClick}>
+        <div className="btn__text">Voir tous nos projets</div>
+      </button>
     </section>
   );
 };
