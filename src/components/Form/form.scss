@@ -1,0 +1,52 @@
+.form-container {
+  background-color: #877851;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 450px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  &__content {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+  }
+
+  &__item {
+    flex: 1;
+    opacity: 20%;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: Eurostile Medium;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__item-full {
+    flex: 1 1 100%;
+  }
+
+  &__title {
+    font-family: Eurostile Bold;
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-family: Eurostile Bold;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+}
