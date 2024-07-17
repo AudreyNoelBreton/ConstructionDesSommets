@@ -1,5 +1,7 @@
 import "./mobileMenu.scss";
 import { Link } from "react-router-dom";
+import { FaFacebookF } from "react-icons/fa6";
+import { GrInstagram } from "react-icons/gr";
 
 const MobileMenu = () => {
   return (
@@ -27,8 +29,12 @@ const MobileMenu = () => {
         </li>
       </ul>
       <ul className="mobile-menu__socials">
-        <li className="mobile-menu__icon">FB</li>
-        <li>IS</li>
+        <li className="mobile-menu__social">
+          <FaFacebookF size={25} />
+        </li>
+        <li className="mobile-menu__social">
+          <GrInstagram size={25} />
+        </li>
       </ul>
     </div>
   );

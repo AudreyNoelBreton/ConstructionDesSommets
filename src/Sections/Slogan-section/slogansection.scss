@@ -4,6 +4,7 @@
   padding: 30px 20px;
   flex-direction: column;
   gap: 5px;
+
   &__title {
     font-family: Eurostile Bold;
     font-size: 45px;
@@ -22,13 +23,13 @@
   }
 
   &__logo {
-    justify-items: flex-end;
-    align-items: flex-end;
-  }
-
-  &__img {
-    display: block;
     width: 100%;
-    height: auto;
+
+    .img {
+      display: flex;
+      justify-self: flex-end;
+      width: fit-content;
+      height: auto;
+    }
   }
 }

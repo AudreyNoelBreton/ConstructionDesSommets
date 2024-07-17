@@ -28,17 +28,9 @@ body {
   overflow-x: hidden;
   background: var(--primary-bg);
 }
-// styling the  scrollbar
 ::-webkit-scrollbar {
-  width: 10px;
+  display: none; // Hide the scrollbar
 }
-::-webkit-scrollbar-track {
-  background: #454545;
-}
-::-webkit-scrollbar-thumb {
-  background-color: rgb(128, 128, 128);
-}
-
 p {
   line-height: 1.5;
   margin-bottom: 1rem;
@@ -59,7 +51,6 @@ ul {
 }
 a {
   text-decoration: none;
-  color: var(--primary-color);
 }
 
 .fake-big {

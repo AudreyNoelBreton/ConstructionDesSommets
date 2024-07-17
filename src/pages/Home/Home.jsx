@@ -6,7 +6,7 @@ import Realisations from "../../Sections/Realisations/realisations";
 import Contact from "../../Sections/Contact-section/contact-section";
 import Links from "../../Sections/Links-section/link-section";
 import Carousel from "../../components/Carousel/carousel";
-import Form from "../../components/Form/form";
+import Footer from "../../components/Footer/footer";
 import data from "../../data/data";
 const Home = () => {
   return (
@@ -18,7 +18,8 @@ const Home = () => {
       <Realisations></Realisations>
       <Contact />
       <Form /> */}
-      <Links links={data.questions} />
+      {/* <Links links={data.questions} /> */}
+      <Footer />
     </div>
   );
 };

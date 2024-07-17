@@ -1,0 +1,13 @@
+.members {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  padding-top: 20px;
+
+  &__text {
+    text-align: center;
+    font-family: Eurostile Medium;
+    font-size: 14px;
+  }
+}

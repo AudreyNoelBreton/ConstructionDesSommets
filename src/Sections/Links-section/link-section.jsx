@@ -4,7 +4,6 @@ import "./link-section.scss";
 import Link from "../../components/Link/link";
 
 const Links = ({ links }) => {
-  console.log(links);
   return (
     <section className="links">
       <div className="links__title">Questions frequentes</div>

@@ -23,4 +23,14 @@
   &--center {
     align-self: center;
   }
+
+  &--soumission {
+    flex-direction: row;
+    gap: 10px;
+    margin-left: auto;
+    justify-self: end;
+    align-self: end;
+    background-color: #877851;
+    color: #242318;
+  }
 }
