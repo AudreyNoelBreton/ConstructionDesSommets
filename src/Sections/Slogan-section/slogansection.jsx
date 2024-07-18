@@ -17,7 +17,11 @@ const Slogan = () => {
       </div>
 
       <div className="slogan__logo">
-        <img src="/logo-moutains.svg" alt="Logo" className="slogan__img" />
+        <img
+          src="/logo-moutains-cropped.svg"
+          alt="Logo"
+          className="slogan__img"
+        />
       </div>
     </section>
   );

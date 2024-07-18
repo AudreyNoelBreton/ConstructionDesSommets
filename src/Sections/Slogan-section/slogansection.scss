@@ -1,9 +1,9 @@
 .slogan {
-  width: 100%;
+  width: auto;
   display: flex;
   padding: 30px 20px;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 
   &__title {
     font-family: Eurostile Bold;
@@ -23,13 +23,14 @@
   }
 
   &__logo {
-    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-items: end;
+    justify-content: flex-end;
+  }
 
-    .img {
-      display: flex;
-      justify-self: flex-end;
-      width: fit-content;
-      height: auto;
-    }
+  .img {
+    width: 100%;
+    height: 100%;
   }
 }

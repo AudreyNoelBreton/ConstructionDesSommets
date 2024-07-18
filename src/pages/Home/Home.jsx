@@ -14,11 +14,10 @@ const Home = () => {
       <Header />
       <Carousel images={data.sliderImages} />
       <Slogan />
-      {/* <Infos />
+      <Infos />
       <Realisations></Realisations>
+      <Links links={data.questions} />
       <Contact />
-      <Form /> */}
-      {/* <Links links={data.questions} /> */}
       <Footer />
     </div>
   );

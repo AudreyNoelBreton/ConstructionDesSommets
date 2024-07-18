@@ -1,9 +1,30 @@
 .infos {
   width: 100%;
   height: 100%;
-  display: flex;
-  padding: 30px 20px 30px 20px;
-  flex-direction: column;
-  background-color: #877851;
-  gap: 30px;
+
+  &__services {
+    background-color: #877851;
+    padding: 30px 20px 150px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__secteurs {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f4f0;
+  }
+
+  &__produits {
+    margin-top: -150px;
+    padding: 30px 20px 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__produit {
+    width: 100%;
+  }
 }
