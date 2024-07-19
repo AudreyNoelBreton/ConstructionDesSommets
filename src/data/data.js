@@ -3,7 +3,7 @@ const sliderImages = [
     src: "/project-1.jpg",
   },
   {
-    src: "/la-ferréolaise-1.jpg",
+    src: "/la-ferreeolaise-1.jpg",
   },
   {
     src: "/petite-maison-verte-1.jpg",
@@ -68,12 +68,48 @@ const questions = [
     text: "La grande majorité des projets sur lesquels nous travaillons requièrent du propriétaire qu'il obtienne un permis auprès de la municipalité avant le début des travaux. Contactez votre municipalité pour savoir ce qui est requis et faire votre demande.",
   },
 ];
+
+const projects = [
+  {
+    text: "La consecration",
+    image1: "/project-1.jpg",
+    image2: "/project-1-2.jpg",
+    image3: "/project-1-1.jpg",
+    url: "/consecration",
+  },
+
+  {
+    text: "La petite maison verte",
+    image1: "/petite-maison-verte-1.jpg",
+    image2: "/petite-maison-verte-2.jpg",
+    image3: "/petite-maison-verte-3.jpg",
+    url: "/maison-verte",
+  },
+
+  {
+    text: "la ferréolaise",
+    image1: "/la-ferreeolaise-1.jpg",
+    image2: "/la-ferreolaise-2.jpg",
+    image3: "/la-ferreeolaise-3.jpg",
+    url: "/ferreolaise",
+  },
+
+  {
+    text: "l'olympique",
+    image1: "/l'olympique-1.jpg",
+    image2: "/l'olympique-2.jpg",
+    image3: "/l'olympique-3.jpg",
+    url: "/olympique",
+  },
+];
+
 const data = {
   sliderImages,
   consecrationImages,
   cardHomePage,
   sliderTemoignages,
   questions,
+  projects,
 };
 
 export default data;

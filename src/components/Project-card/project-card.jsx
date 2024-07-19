@@ -1,14 +1,14 @@
 import "./project-card.scss";
 import MainImage from "../Project-Main-Image/main-image";
-const ProjectCard = ({ mainImage, mainText, secondImage, thirdImage }) => {
+const ProjectCard = ({ image1, text, image2, image3, url }) => {
   return (
     <div className="project-card">
-      <div className="project-card__main">
-        <MainImage mainImage={mainImage} mainText={mainText} />
-      </div>
+      <a className="project-card__main">
+        <MainImage mainImage={image1} mainText={text} url={url} />
+      </a>
       <div className="project-card__secondary">
-        <img src={secondImage} className="project-card__img"></img>
-        <img src={thirdImage} className="project-card__img"></img>
+        <img src={image2} className="project-card__img" />
+        <img src={image3} className="project-card__img"></img>
       </div>
     </div>
   );
