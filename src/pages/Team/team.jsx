@@ -6,6 +6,7 @@ import Temoignages from "../../components/Temoignages/temoignages";
 import "./team.scss";
 import data from "../../data/data";
 import Footer from "../../components/Footer/footer";
+import Links from "../../Sections/Links-section/link-section";
 const Team = () => {
   const imagePath = "/petite-maison-verte-2.jpg";
   const text = "Passionnés de la qualité";
@@ -15,6 +16,7 @@ const Team = () => {
       <Hero imagePath={imagePath} text={text} />
       <Members />
       <Temoignages temoignages={data.sliderTemoignages} />
+      <Links />
       <Footer />
     </div>
   );

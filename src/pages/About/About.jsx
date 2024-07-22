@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/Header/header";
 import Hero from "../../components/Hero/hero";
-import Questions from "../../components/Questions/questions";
+import Links from "../../Sections/Links-section/link-section";
 import "./About.scss";
 import Footer from "../../components/Footer/footer";
 const About = () => {
@@ -11,7 +11,7 @@ const About = () => {
     <div>
       <Header />
       <Hero imagePath={imagePath} text={text} />
-      <Questions />
+      <Links />
       <Footer />
     </div>
   );

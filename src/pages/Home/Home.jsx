@@ -16,7 +16,7 @@ const Home = () => {
       <Slogan />
       <Infos />
       <Realisations></Realisations>
-      <Links links={data.questions} />
+      <Links />
       <Contact />
       <Footer />
     </div>

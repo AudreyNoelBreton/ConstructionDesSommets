@@ -11,4 +11,9 @@
     padding: 20px;
     border-bottom: 1px solid #242318;
   }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
 }
