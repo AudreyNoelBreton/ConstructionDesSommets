@@ -14,7 +14,7 @@ const Team = () => {
       <Header />
       <Hero imagePath={imagePath} text={text} />
       <Members />
-      {/* <Temoignages temoignages={data.sliderTemoignages} /> */}
+      <Temoignages temoignages={data.sliderTemoignages} />
       <Footer />
     </div>
   );

@@ -15,10 +15,22 @@ const sliderImages = [
 
 const sliderTemoignages = [
   {
+    back: "plain_background.jpg",
     text: "Merci à Louis Brochu Marier d'avoir pris en charge mon projet. Louis maîtrise toutes les exigences de son entreprise et s'adjoint une équipe de spécialistes aussi perfectionnistes et professionnels que lui. Les résultats ont dépassé mes espérances!",
     name: "- Nicole P.",
   },
   {
+    back: "plain_background.jpg",
+    text: "Merci à Louis Brochu Marier d'avoir pris en charge mon projet. Louis maîtrise toutes les exigences de son entreprise et s'adjoint une équipe de spécialistes aussi perfectionnistes et professionnels que lui. Les résultats ont dépassé mes espérances!",
+    name: "- Nicole P.",
+  },
+  {
+    back: "plain_background.jpg",
+    text: "Merci à Louis Brochu Marier d'avoir pris en charge mon projet. Louis maîtrise toutes les exigences de son entreprise et s'adjoint une équipe de spécialistes aussi perfectionnistes et professionnels que lui. Les résultats ont dépassé mes espérances!",
+    name: "- Nicole P.",
+  },
+  {
+    back: "plain_background.jpg",
     text: "Merci à Louis Brochu Marier d'avoir pris en charge mon projet. Louis maîtrise toutes les exigences de son entreprise et s'adjoint une équipe de spécialistes aussi perfectionnistes et professionnels que lui. Les résultats ont dépassé mes espérances!",
     name: "- Nicole P.",
   },

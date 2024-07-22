@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
-
 import "./temoignages.scss";
+import data from "../../data/data";
 
-const Temoignages = ({ temoignages }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+const Temoignages = () => {
+  const valeur = data.sliderTemoignages.filter(
+    (val) => val !== undefined && val !== null
+  );
   const [isAnimating, setIsAnimating] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
   const goToSlide = (index) => {
     setActiveIndex(index);
   };
   useEffect(() => {
     const interval = setInterval(() => {
-      if (activeIndex === temoignages.length - 1) {
+      if (activeIndex === valeur.length - 1) {
         setIsAnimating(false);
         setActiveIndex(0);
         setTimeout(() => {
@@ -21,20 +24,32 @@ const Temoignages = ({ temoignages }) => {
       }
     }, 5000);
     return () => clearInterval(interval);
-  }, [activeIndex, temoignages.length]);
+  }, [activeIndex, valeur.length]);
 
   return (
     <div className="temoignages">
-      <div className="temoignages__title">Temoignages</div>
+      <div className="temoignages__text-overlay">Témoignages</div>
       <div
         className={`temoignages__container ${isAnimating ? "animating" : ""}`}
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
-        {temoignages.map((tem, index) => (
+        {valeur.map((val, index) => (
           <div className="temoignages__item" key={index}>
-            <div className="temoignages__text">{tem.text}</div>
-            <div className="temoignages__text">{tem.name}</div>
+            <img src={val.back} alt={`temoignages ${index}`} />
+            <div className="temoignages__text">{val.text}</div>
+            <div className="temoignages__name">{val.name}</div>
           </div>
+        ))}
+      </div>
+      <div className="temoignages__dots">
+        {valeur.map((_, index) => (
+          <span
+            key={index}
+            className={`temoignages__dot ${
+              index === activeIndex ? "active" : ""
+            }`}
+            onClick={() => goToSlide(index)}
+          ></span>
         ))}
       </div>
     </div>
