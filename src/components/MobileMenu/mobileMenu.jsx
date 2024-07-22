@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { FaFacebookF } from "react-icons/fa6";
 import { GrInstagram } from "react-icons/gr";
 
-const MobileMenu = () => {
+const MobileMenu = ({ isOpen }) => {
   return (
-    <div className="mobile-menu mobile-menu--open">
+    <div className={`mobile-menu ${isOpen ? "mobile-menu--open" : ""}`}>
       <ul className="mobile-menu__text">
         <li>
           <Link to="/" className="mobile-menu__link">

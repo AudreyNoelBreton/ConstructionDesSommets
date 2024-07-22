@@ -8,6 +8,7 @@ import Links from "../../Sections/Links-section/link-section";
 import Carousel from "../../components/Carousel/carousel";
 import Footer from "../../components/Footer/footer";
 import data from "../../data/data";
+import Soumission from "../../Sections/Soumission/soumission";
 const Home = () => {
   return (
     <div>
@@ -16,6 +17,7 @@ const Home = () => {
       <Slogan />
       <Infos />
       <Realisations></Realisations>
+      <Soumission />
       <Links />
       <Contact />
       <Footer />

@@ -5,7 +5,7 @@
   left: 0;
   background-color: #242318;
   transition: transform 0.8s ease-in-out;
-  transform: translateY(-100%);
+  transform: translateY(-130%);
   z-index: 10000;
   width: 100%;
   height: calc(100% - 96px - 96px);
@@ -13,12 +13,12 @@
   justify-content: center;
 
   &__text {
+    margin: 0;
     font-family: Eurostile Medium;
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 13px;
-    margin: 0;
   }
 
   &__link {

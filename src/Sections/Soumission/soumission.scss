@@ -1,0 +1,44 @@
+.soumission {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+    background-color: #877851;
+    border-radius: 15px;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  &__title {
+    color: #242318;
+    text-align: center;
+    max-width: 100%;
+    font-family: Eurostile Bold;
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__input {
+    width: auto;
+    display: flex;
+    background-color: #242318;
+    opacity: 0.2;
+    border-radius: 12px;
+    padding: 10px;
+    min-width: 40%;
+    color: #fff; // Text color inside the input
+  }
+}
