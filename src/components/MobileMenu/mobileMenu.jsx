@@ -8,18 +8,13 @@ const MobileMenu = ({ isOpen }) => {
     <div className={`mobile-menu ${isOpen ? "mobile-menu--open" : ""}`}>
       <ul className="mobile-menu__text">
         <li>
-          <Link to="/" className="mobile-menu__link">
+          <Link to="/team" className="mobile-menu__link">
             <span className="mobile-menu__text">À PROPOS</span>
           </Link>
         </li>
         <li>
           <Link to="/realisations" className="mobile-menu__link">
             <span className="mobile-menu__text">NOS RÉALISATIONS</span>
-          </Link>
-        </li>
-        <li>
-          <Link to="/team" className="mobile-menu__link">
-            <span className="mobile-menu__text">NOTRE ÉQUIPE</span>
           </Link>
         </li>
         <li>

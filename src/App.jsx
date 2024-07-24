@@ -7,19 +7,23 @@ import Realisations from "./pages/Realisations/realisations";
 import Team from "./pages/Team/team";
 import Consecration from "./pages/Consecration/consecration";
 import PageTransition from "./components/PageTransition/PageTransition";
+import Alert from "./components/Alert/Alert";
 
 const App = () => {
   const location = useLocation();
 
   return (
     <PageTransition>
-      <Routes location={location}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/realisations" element={<Realisations />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/consecration" element={<Consecration />} />
-      </Routes>
+      <React.Fragment>
+        {/* <Alert message="Obtenir une soumission" /> */}
+        <Routes location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/realisations" element={<Realisations />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/consecration" element={<Consecration />} />
+        </Routes>
+      </React.Fragment>
     </PageTransition>
   );
 };

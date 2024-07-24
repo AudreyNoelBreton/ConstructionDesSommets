@@ -1,14 +1,14 @@
 .mobile-menu {
   display: block;
   position: fixed;
-  top: 96px;
+  top: 0;
   left: 0;
   background-color: #242318;
   transition: transform 0.8s ease-in-out;
-  transform: translateY(-130%);
+  transform: translatex(130%);
   z-index: 10000;
   width: 100%;
-  height: calc(100% - 96px - 96px);
+  height: 100%;
   align-content: center;
   justify-content: center;
 
@@ -19,11 +19,30 @@
     flex-direction: column;
     text-align: center;
     gap: 13px;
+    font-size: 35px;
+    text-decoration: none;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0; // Position the underline at the bottom of the link
+      left: -5%;
+      width: 110%;
+      height: 2px; // Adjust the thickness of the underline
+      background-color: currentColor; // Use the current text color
+      transform: scaleX(0);
+      transform-origin: bottom left;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
   }
 
   &__link {
-    font-size: 35px;
     color: #f7f4f0;
+    position: relative;
+    display: inline-block;
   }
 
   &__socials {

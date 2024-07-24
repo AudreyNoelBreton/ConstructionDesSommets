@@ -1,0 +1,19 @@
+.alert {
+  background-color: #242318;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 20000;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  transform: translateY(0);
+  opacity: 1;
+  cursor: pointer;
+
+  &--hide {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
