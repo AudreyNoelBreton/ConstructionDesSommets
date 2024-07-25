@@ -39,8 +39,22 @@ const Footer = () => {
           </div>
           <div className="footer__element">
             <div className="footer__socials">
-              <FaFacebookF />
-              <GrInstagram />
+              <a
+                href="https://www.facebook.com/votrepage"
+                className="footer__social"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://www.instagram.com/votrepage"
+                className="footer__social"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GrInstagram />
+              </a>
             </div>
           </div>
         </div>

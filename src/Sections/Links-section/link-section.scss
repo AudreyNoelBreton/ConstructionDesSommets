@@ -17,3 +17,12 @@
     flex-direction: column;
   }
 }
+@media (min-width: 576px) {
+  .links {
+    padding: 30px 40px;
+
+    &__title {
+      padding: 30px;
+    }
+  }
+}

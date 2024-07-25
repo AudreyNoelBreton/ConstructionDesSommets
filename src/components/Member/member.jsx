@@ -48,9 +48,9 @@ const Member = ({ position }) => {
                 patelin adoptif, la Côte-de-Beaupré. Vous aurez donc compris le
                 double sens derrière le nom Les Habitations du Sommet...
               </div>
-              <button className="btn btn--end">
+              <a href="tel:581-994-8738" className="btn btn--end">
                 <div className="btn__text">581-994-8738</div>
-              </button>
+              </a>
             </div>
           </div>
         </>
@@ -98,9 +98,9 @@ const Member = ({ position }) => {
                 patelin adoptif, la Côte-de-Beaupré. Vous aurez donc compris le
                 double sens derrière le nom Les Habitations du Sommet...
               </div>
-              <button className="btn btn--end">
+              <a href="tel:581-991-9485" className="btn btn--end">
                 <div className="btn__text">581-991-9485</div>
-              </button>
+              </a>
             </div>
           </div>
         </>

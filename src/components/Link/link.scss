@@ -40,3 +40,19 @@
     max-height: 12em;
   }
 }
+
+@media (min-width: 576px) {
+  .link {
+    &__title {
+      font-size: 25px;
+    }
+
+    &__text {
+      font-size: 20px;
+    }
+
+    &.active &__text {
+      padding: 1rem 0.5rem;
+    }
+  }
+}

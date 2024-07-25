@@ -35,6 +35,12 @@
     display: flex;
     flex-direction: column;
   }
+
+  &__logo {
+    max-width: 131px;
+    justify-self: center;
+    align-self: center;
+  }
 }
 
 // .contact::before {

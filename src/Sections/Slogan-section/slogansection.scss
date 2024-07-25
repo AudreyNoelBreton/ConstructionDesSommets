@@ -5,6 +5,11 @@
   flex-direction: column;
   gap: 10px;
 
+  &__infos {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__title {
     font-family: Eurostile Bold;
     font-size: 45px;
@@ -27,10 +32,19 @@
     align-items: end;
     justify-items: end;
     justify-content: flex-end;
+    width: 100%;
+    height: auto;
   }
 
   .img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    max-width: none;
+  }
+}
+@media (min-width: 576px) {
+  .slogan {
+    padding: 30px 40px;
+    flex-direction: row;
   }
 }

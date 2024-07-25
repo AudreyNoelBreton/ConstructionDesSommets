@@ -8,6 +8,7 @@ import Team from "./pages/Team/team";
 import Consecration from "./pages/Consecration/consecration";
 import PageTransition from "./components/PageTransition/PageTransition";
 import Alert from "./components/Alert/Alert";
+import ScrollToTop from "./components/scrollToTop";
 
 const App = () => {
   const location = useLocation();
@@ -15,6 +16,8 @@ const App = () => {
   return (
     <PageTransition>
       <React.Fragment>
+        <ScrollToTop />
+
         {/* <Alert message="Obtenir une soumission" /> */}
         <Routes location={location}>
           <Route path="/" element={<Home />} />

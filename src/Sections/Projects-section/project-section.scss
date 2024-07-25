@@ -4,3 +4,8 @@
   flex-direction: column;
   gap: 15px;
 }
+@media (min-width: 576px) {
+  .project {
+    padding: 40px;
+  }
+}

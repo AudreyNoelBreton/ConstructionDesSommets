@@ -14,17 +14,20 @@ const Card = ({ infos, isRight }) => {
   return (
     <section className="card">
       <img className="card__img" src={src} alt="project" />
-      <div className="card__title">{title}</div>
-      <div className="card__text">{text}</div>
-      {isRight ? (
-        <button className="btn btn--end" onClick={handleButtonClick}>
-          <div className="btn__text">{buttonText}</div>
-        </button>
-      ) : (
-        <button className="btn btn--start" onClick={handleButtonClick}>
-          <div className="btn__text">{buttonText}</div>
-        </button>
-      )}
+
+      <div className="card__content">
+        <div className="card__title">{title}</div>
+        <div className="card__text">{text}</div>
+        {isRight ? (
+          <button className="btn btn--end" onClick={handleButtonClick}>
+            <div className="btn__text">{buttonText}</div>
+          </button>
+        ) : (
+          <button className="btn btn--start" onClick={handleButtonClick}>
+            <div className="btn__text">{buttonText}</div>
+          </button>
+        )}
+      </div>
     </section>
   );
 };

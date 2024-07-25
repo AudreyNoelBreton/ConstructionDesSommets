@@ -21,3 +21,20 @@
     width: 50%;
   }
 }
+@media (min-width: 576px) {
+  .project-card {
+    flex-direction: row;
+    width: 100%;
+    &__main {
+      width: 100%;
+    }
+    &__secondary {
+      flex-direction: column;
+      width: 60%;
+      height: 100%;
+    }
+    &__img {
+      width: 100%;
+    }
+  }
+}

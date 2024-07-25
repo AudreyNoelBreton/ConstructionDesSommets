@@ -28,3 +28,15 @@
     width: 100%;
   }
 }
+
+@media (min-width: 576px) {
+  .infos {
+    &__services {
+      background-color: #877851;
+      padding: 30px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+}
