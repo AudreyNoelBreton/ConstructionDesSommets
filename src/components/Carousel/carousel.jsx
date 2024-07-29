@@ -1,13 +1,23 @@
 import React, { useState, useEffect } from "react";
-
+import { useMediaQuery } from "react-responsive";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { FaFacebookF } from "react-icons/fa6";
+import { GrInstagram } from "react-icons/gr";
 import "./carousel.scss";
 
 const Carousel = ({ images }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const goToSlide = (index) => {
-    setActiveIndex(index);
+    if (index < 0) {
+      setActiveIndex(images.length - 1);
+    } else if (index >= images.length) {
+      setActiveIndex(0);
+    } else {
+      setActiveIndex(index);
+    }
   };
+  const isMobile = useMediaQuery({ maxWidth: 575 });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,9 +36,20 @@ const Carousel = ({ images }) => {
 
   return (
     <div className="carousel">
-      <div className="carousel__text-overlay">
-        ENTREPRENEUR GÉNÉRAL EN CONSTRUCTION
-      </div>
+      {!isMobile && (
+        <div className="carousel__content">
+          <div className="carousel__title">Les habitations du sommet</div>
+          <div className="carousel__text-overlay">
+            ENTREPRENEUR GÉNÉRAL EN CONSTRUCTION
+          </div>
+        </div>
+      )}
+
+      {isMobile && (
+        <div className="carousel__text-overlay">
+          ENTREPRENEUR GÉNÉRAL EN CONSTRUCTION
+        </div>
+      )}
       <div
         className={`carousel__container ${isAnimating ? "animating" : ""}`}
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
@@ -39,15 +60,46 @@ const Carousel = ({ images }) => {
           </div>
         ))}
       </div>
-      <div className="carousel__dots">
-        {images.map((_, index) => (
-          <span
-            key={index}
-            className={`carousel__dot ${index === activeIndex ? "active" : ""}`}
-            onClick={() => goToSlide(index)}
-          ></span>
-        ))}
-      </div>
+
+      {isMobile && (
+        <div className="carousel__dots">
+          {images.map((_, index) => (
+            <span
+              key={index}
+              className={`carousel__dot ${
+                index === activeIndex ? "active" : ""
+              }`}
+              onClick={() => goToSlide(index)}
+            ></span>
+          ))}
+        </div>
+      )}
+
+      {!isMobile && (
+        <div className="carousel__bottom">
+          <div className="carousel__socials">
+            <a
+              href="https://www.facebook.com/votrepage"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://www.instagram.com/votrepage"
+              className="footer__social"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GrInstagram />
+            </a>
+          </div>
+          <div className="carousel__arrows">
+            <IoIosArrowBack onClick={() => goToSlide(activeIndex - 1)} />
+            <IoIosArrowForward onClick={() => goToSlide(activeIndex + 1)} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
