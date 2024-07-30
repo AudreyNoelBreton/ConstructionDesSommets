@@ -4,6 +4,7 @@ import Hero from "../../components/Hero/hero";
 import Links from "../../Sections/Links-section/link-section";
 import "./About.scss";
 import Footer from "../../components/Footer/footer";
+import Soumission from "../../Sections/Soumission/soumission";
 const About = () => {
   const imagePath = "/nous-joindre-header-mobile.jpg";
   const text = "Nous joindre";
@@ -11,6 +12,7 @@ const About = () => {
     <div>
       <Header />
       <Hero imagePath={imagePath} text={text} />
+      <Soumission />
       <Links />
       <Footer />
     </div>

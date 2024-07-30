@@ -46,5 +46,26 @@
   .slogan {
     padding: 30px 40px;
     flex-direction: row;
+
+    &__title {
+      font-family: Eurostile Bold;
+      font-size: 75px;
+      text-transform: uppercase;
+    }
+    &__infos {
+      max-width: 75%;
+      gap: 15px;
+    }
+    &__logo {
+      width: 25%;
+    }
+
+    &__secteurs {
+      font-size: 27px;
+    }
+
+    &__text {
+      font-size: 23px;
+    }
   }
 }
