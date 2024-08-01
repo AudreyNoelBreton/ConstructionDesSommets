@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./soumission.scss";
-import { CiImport } from "react-icons/ci";
+import "../../components/Btn.scss";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { useMediaQuery } from "react-responsive";
 
+import Modal from "../../components/Modal/modal";
 const Soumission = () => {
   const [nom, setNom] = useState("");
   const [numero, setNumero] = useState("");
@@ -9,107 +12,188 @@ const Soumission = () => {
   const [resume, setResume] = useState("");
   const [delais, setDelais] = useState("");
   const [courriel, setCourriel] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 575 });
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsModalOpen(true);
+  };
 
-    // Affiche l'alerte pour rappeler à l'utilisateur de joindre les plans
-    if (window.confirm("N'oubliez pas de joindre vos plans dans le message.")) {
-      // Prépare le contenu de l'email
-      const emailContent = `
-        Nom: ${nom}\n
-        Numéro de téléphone: ${numero}\n
-        Lieu des travaux: ${lieu}\n
-        Résumé du projet: ${resume}\n
-        Délais souhaité: ${delais}\n
-        Courriel: ${courriel}
-      `;
+  const handleConfirm = () => {
+    const emailContent = `
+      Nom: ${nom}\n
+      Numéro de téléphone: ${numero}\n
+      Lieu des travaux: ${lieu}\n
+      Résumé du projet: ${resume}\n
+      Délais souhaité: ${delais}\n
+      Courriel: ${courriel}
+    `;
 
-      // Ouvre le client de messagerie par défaut avec les informations préremplies
-      window.location.href = `mailto:?subject=Demande de soumission&body=${encodeURIComponent(
-        emailContent
-      )}`;
-    }
+    window.location.href = `mailto:?subject=Demande de soumission&body=${encodeURIComponent(
+      emailContent
+    )}`;
+    setIsModalOpen(false);
   };
 
   return (
     <section className="soumission">
+      {isModalOpen && (
+        <Modal
+          message="N'oubliez pas de joindre vos plans en pièces jointes dans le courriel."
+          onClose={() => setIsModalOpen(false)}
+          onConfirm={handleConfirm}
+        />
+      )}
       <form className="soumission__container" onSubmit={handleSubmit}>
         <div className="soumission__title">Demander une soumission</div>
 
         <div className="soumission__inputs">
-          <div className="soumission__row">
-            <div className="soumission__input soumission__input--nom">
-              <div className="soumission__text">Nom</div>
-              <input
-                type="text"
-                value={nom}
-                onChange={(e) => setNom(e.target.value)}
-                required
-              />
-            </div>
-            <div className="soumission__input soumission__input--numero">
-              <div className="soumission__text">Numéro de téléphone</div>
-              <input
-                type="text"
-                value={numero}
-                onChange={(e) => setNumero(e.target.value)}
-                required
-              />
-            </div>
-          </div>
-          <div className="soumission__row">
-            <div className="soumission__input">
-              <div className="soumission__text">Lieu des travaux</div>
-              <input
-                type="text"
-                value={lieu}
-                onChange={(e) => setLieu(e.target.value)}
-                required
-              />
-            </div>
-          </div>
-          <div className="soumission__row">
-            <div className="soumission__input">
-              <div className="soumission__text">Résumé du projet</div>
-              <input
-                type="text"
-                value={resume}
-                onChange={(e) => setResume(e.target.value)}
-                required
-              />
-            </div>
-          </div>
-          <div className="soumission__row">
-            <div className="soumission__input">
-              <div className="soumission__text">Délais souhaité</div>
-              <input
-                type="text"
-                value={delais}
-                onChange={(e) => setDelais(e.target.value)}
-                required
-              />
-            </div>
-          </div>
+          {isMobile && (
+            <>
+              <div className="soumission__row">
+                <div className="soumission__input soumission__input--nom">
+                  <input
+                    type="text"
+                    placeholder="Nom"
+                    value={nom}
+                    onChange={(e) => setNom(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="soumission__input soumission__input--numero">
+                  <input
+                    type="text"
+                    placeholder="Numéro de téléphone"
+                    value={numero}
+                    onChange={(e) => setNumero(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="soumission__row">
+                <div className="soumission__input">
+                  <input
+                    type="text"
+                    placeholder="Lieu des travaux"
+                    value={lieu}
+                    onChange={(e) => setLieu(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="soumission__row">
+                <div className="soumission__input">
+                  <input
+                    type="text"
+                    placeholder="Résumé du projet"
+                    value={resume}
+                    onChange={(e) => setResume(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="soumission__row">
+                <div className="soumission__input">
+                  <input
+                    type="text"
+                    placeholder="Délais souhaité"
+                    value={delais}
+                    onChange={(e) => setDelais(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
 
-          <div className="soumission__row">
-            <div className="soumission__input">
-              <div className="soumission__text">Inscrire votre courriel</div>
-              <input
-                type="email"
-                value={courriel}
-                onChange={(e) => setCourriel(e.target.value)}
-                required
-              />
-            </div>
-          </div>
-          <div className="soumission__row">
-            <div className="soumission__input">
-              <button type="submit" className="soumission__text">
-                Envoyer
-              </button>
-            </div>
-          </div>
+              <div className="soumission__row">
+                <div className="soumission__input">
+                  <input
+                    type="email"
+                    placeholder="Inscrire votre courriel"
+                    value={courriel}
+                    onChange={(e) => setCourriel(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="soumission__row soumission__row--end">
+                <button className="btn">
+                  <div className="btn__text">Envoyer</div>
+                  <FaArrowRightLong />
+                </button>
+              </div>
+            </>
+          )}
+          {!isMobile && (
+            <>
+              <div className="soumission__row">
+                <div className="soumission__input ">
+                  <input
+                    type="text"
+                    placeholder="Nom"
+                    value={nom}
+                    onChange={(e) => setNom(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="soumission__input ">
+                  <input
+                    type="text"
+                    placeholder="Numéro de téléphone"
+                    value={numero}
+                    onChange={(e) => setNumero(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="soumission__row">
+                <div className="soumission__input">
+                  <input
+                    type="text"
+                    placeholder="Lieu des travaux"
+                    value={lieu}
+                    onChange={(e) => setLieu(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="soumission__input">
+                  <input
+                    type="text"
+                    placeholder="Résumé du projet"
+                    value={resume}
+                    onChange={(e) => setResume(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="soumission__row">
+                <div className="soumission__input">
+                  <input
+                    type="text"
+                    placeholder="Délais souhaité"
+                    value={delais}
+                    onChange={(e) => setDelais(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="soumission__input">
+                  <input
+                    type="email"
+                    placeholder="Inscrire votre courriel"
+                    value={courriel}
+                    onChange={(e) => setCourriel(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="soumission__row soumission__row--end">
+                <button className="btn">
+                  <div className="btn__text">Envoyer</div>
+                  <FaArrowRightLong />
+                </button>
+              </div>
+            </>
+          )}
         </div>
       </form>
     </section>

@@ -5,7 +5,7 @@ import { FaFacebookF } from "react-icons/fa6";
 import { GrInstagram } from "react-icons/gr";
 import "./carousel.scss";
 
-const Carousel = ({ images }) => {
+const Carousel = ({ images = [] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const goToSlide = (index) => {
@@ -20,6 +20,7 @@ const Carousel = ({ images }) => {
   const isMobile = useMediaQuery({ maxWidth: 575 });
 
   useEffect(() => {
+    if (images.length === 0) return;
     const interval = setInterval(() => {
       if (activeIndex === images.length - 1) {
         setIsAnimating(false);
@@ -33,6 +34,9 @@ const Carousel = ({ images }) => {
     }, 5000);
     return () => clearInterval(interval);
   }, [activeIndex, images.length]);
+  if (images.length === 0) {
+    return <div className="carousel">No images available</div>;
+  }
 
   return (
     <div className="carousel">

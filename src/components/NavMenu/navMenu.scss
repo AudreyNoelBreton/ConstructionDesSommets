@@ -47,4 +47,7 @@
       transform: scaleX(1);
     }
   }
+  &--consecration .navMenu__link .navMenu__text {
+    color: black; // Changer la couleur du texte en noir
+  }
 }

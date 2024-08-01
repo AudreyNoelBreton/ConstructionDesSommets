@@ -44,7 +44,7 @@
 }
 @media (min-width: 576px) {
   .slogan {
-    padding: 30px 40px;
+    padding: 60px 40px;
     flex-direction: row;
 
     &__title {
@@ -53,11 +53,12 @@
       text-transform: uppercase;
     }
     &__infos {
-      max-width: 75%;
+      max-width: 65%;
       gap: 15px;
     }
     &__logo {
-      width: 25%;
+      min-width: 200px;
+      width: 40%;
     }
 
     &__secteurs {

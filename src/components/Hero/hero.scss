@@ -23,13 +23,28 @@
   }
 
   &__text {
-    font-family: Eurostile Medium;
+    font-family: Eurostile Bold;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
     width: 100%;
     padding: 1rem 2rem;
     font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  &__chatWidget {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    overflow: hidden;
+    z-index: 40000;
+  }
+}
+@media (min-width: 576px) {
+  .hero {
+    &__text {
+      font-size: 5rem;
+      padding: 1rem 12rem;
+    }
   }
 }

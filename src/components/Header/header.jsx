@@ -7,10 +7,11 @@ import NavMenu from "../NavMenu/navMenu";
 import { useMediaQuery } from "react-responsive";
 import "./header.scss";
 
-const Header = () => {
+const Header = ({ logo }) => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation().pathname;
   const logoWhite = location != "/consecration";
+
   const isMobile = useMediaQuery({ maxWidth: 575 });
 
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -48,14 +49,12 @@ const Header = () => {
     >
       <div className="header__content">
         <div className="header__bar">
-          {logoWhite && (
-            <Link
-              to="/"
-              className={` ${isOpen ? "header__logo--hidden" : "header__logo"}`}
-            >
-              <img src="/logo-habitations.svg" alt="Logo" className="logo" />
-            </Link>
-          )}
+          <Link
+            to="/"
+            className={` ${isOpen ? "header__logo--hidden" : "header__logo"}`}
+          >
+            <img src={logo} alt="Logo" className="logo" />
+          </Link>
 
           {isMobile && logoWhite && (
             <Hamburger

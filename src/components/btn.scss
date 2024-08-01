@@ -5,6 +5,8 @@
   color: #f7f4f0;
   padding: 15px 20px;
   border-radius: 15px;
+  justify-content: space-between;
+  gap: 10px;
 
   &__text {
     font-family: Eurostile Bold;
@@ -32,5 +34,14 @@
     align-self: end;
     background-color: #877851;
     color: #242318;
+  }
+}
+@media (min-width: 576px) {
+  .btn {
+    padding: 20px 25px;
+
+    &__text {
+      font-size: 18px;
+    }
   }
 }

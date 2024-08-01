@@ -3,7 +3,7 @@ import "./realisation.scss";
 import "../../components/Btn.scss";
 import { useNavigate } from "react-router-dom";
 const Realisations = () => {
-  const ferreolaiseImage = "/la-ferréolaise-1.jpg";
+  const ferreolaiseImage = "/la-ferreeolaise-1.jpg";
   const ferreolaiseText = "la ferréolaise";
   const consecrationImage = "/project-1.jpg";
   const consecrationText = "La consecration";

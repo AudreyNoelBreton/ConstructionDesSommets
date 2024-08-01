@@ -10,16 +10,27 @@ import Carousel from "../../components/Carousel/carousel";
 import Footer from "../../components/Footer/footer";
 import data from "../../data/data";
 import Soumission from "../../Sections/Soumission/soumission";
+import { useMediaQuery } from "react-responsive";
 
 const Home = () => {
+  const isMobile = useMediaQuery({ maxWidth: 575 });
+  const imagePath = isMobile ? data.sliderImagesMobile : data.sliderImages;
+
+  const logoPath = "/logo-habitations.svg";
   return (
     <div className="home">
-      <Header />
-      <Carousel images={data.sliderImages} />
+      <Header logo={logoPath} />
+      <Carousel images={imagePath} />
       <Slogan />
       <Infos />
       <Realisations></Realisations>
-      <Soumission />
+      <div className="home__soumission">
+        <img className="home__image" src="/soumission.jpg" alt="project" />
+      </div>
+
+      <div className="home__soumission">
+        <Soumission />
+      </div>
       <Links />
       <Contact />
       <Footer />

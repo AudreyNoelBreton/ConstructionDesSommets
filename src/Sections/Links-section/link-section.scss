@@ -5,7 +5,7 @@
   padding: 20px;
   &__title {
     text-align: center;
-    font-family: Eurostile Medium;
+    font-family: Eurostile Bold;
     font-size: 35px;
     text-transform: uppercase;
     padding: 20px;
@@ -19,10 +19,10 @@
 }
 @media (min-width: 576px) {
   .links {
-    padding: 30px 40px;
+    padding: 40px 90px 60px 90px;
 
     &__title {
-      padding: 30px;
+      font-size: 50px;
     }
   }
 }

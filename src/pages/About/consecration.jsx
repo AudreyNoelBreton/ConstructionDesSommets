@@ -9,11 +9,10 @@ const Consecration = () => {
       break;
     }
   }
-  const logoPath = "/logo-habitations-dark.svg";
 
   return (
     <div>
-      <Header logo={logoPath} />
+      <Header />
       <div className="consecration">
         <div className="consecration__title">{foundProject.text}</div>
         <div className="consecration__gallery">

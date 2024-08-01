@@ -1,18 +1,32 @@
+const sliderImagesMobile = [
+  {
+    src: "/homepage-header-mobile.jpg",
+  },
+  {
+    src: "/à-propos-header-mobile.jpg",
+  },
+  {
+    src: "/nos-realisations-header-mobile.jpg",
+  },
+  {
+    src: "/nous-joindre-header-mobile.jpg",
+  },
+];
+
 const sliderImages = [
   {
     src: "/project-1.jpg",
   },
   {
-    src: "/la-ferreeolaise-1.jpg",
+    src: "/à-propos-header.jpg",
   },
   {
-    src: "/petite-maison-verte-1.jpg",
+    src: "/nos-realisations-header.jpg",
   },
   {
-    src: "/l'olympique-1.jpg",
+    src: "/nous-joindre-header.jpg",
   },
 ];
-
 const sliderTemoignages = [
   {
     back: "plain_background.jpg",
@@ -117,6 +131,7 @@ const projects = [
 
 const data = {
   sliderImages,
+  sliderImagesMobile,
   consecrationImages,
   cardHomePage,
   sliderTemoignages,

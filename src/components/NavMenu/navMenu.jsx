@@ -4,9 +4,9 @@ import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const location = useLocation();
-
+  const isConsecration = location.pathname === "/consecration";
   return (
-    <div className="navMenu">
+    <div className={`navMenu ${isConsecration ? "navMenu--consecration" : ""}`}>
       <ul className="navMenu__links">
         <Link
           to="/team"

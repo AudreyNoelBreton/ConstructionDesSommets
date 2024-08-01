@@ -1,0 +1,32 @@
+.chatWidget {
+  width: 300px;
+
+  border-radius: 10px;
+  background-color: #fff;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    background-color: #877851;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-family: Eurostile Bold;
+    text-transform: uppercase;
+    color: #242318;
+    text-align: center;
+    align-self: center;
+    font-size: 20px;
+  }
+
+  &__body {
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+}

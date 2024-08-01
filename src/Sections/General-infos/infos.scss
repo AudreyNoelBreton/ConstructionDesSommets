@@ -32,11 +32,12 @@
 @media (min-width: 576px) {
   .infos {
     &__services {
-      background-color: #877851;
-      padding: 30px 40px 150px 40px;
+      width: 100%;
+      padding: 60px 40px 150px 40px;
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 90px;
+      justify-content: space-between;
     }
 
     &__secteurs {

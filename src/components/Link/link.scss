@@ -36,7 +36,7 @@
   }
 
   &.active &__text {
-    padding: 0.5rem 0.5rem;
+    padding: 0 0.5rem 1rem 0.5rem;
     max-height: 12em;
   }
 }
@@ -44,15 +44,11 @@
 @media (min-width: 576px) {
   .link {
     &__title {
-      font-size: 25px;
+      font-size: 27px;
     }
 
     &__text {
       font-size: 20px;
-    }
-
-    &.active &__text {
-      padding: 1rem 0.5rem;
     }
   }
 }

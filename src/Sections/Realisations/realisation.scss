@@ -19,3 +19,14 @@
     gap: 20px;
   }
 }
+
+@media (min-width: 576px) {
+  .realisations {
+    padding: 40px;
+
+    &__text {
+      padding-bottom: 30px;
+      font-size: 75px;
+    }
+  }
+}
