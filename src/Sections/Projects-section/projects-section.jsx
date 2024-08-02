@@ -9,6 +9,7 @@ const Projects = () => {
       {data.projects.map((project, index) => (
         <ProjectCard
           key={index}
+          className={index % 2 === 0 ? "column" : "column-reverse"}
           image1={project.image1}
           text={project.text}
           image2={project.image2}

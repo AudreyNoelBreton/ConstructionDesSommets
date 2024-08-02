@@ -5,7 +5,9 @@
   gap: 15px;
 }
 @media (min-width: 576px) {
-  .project {
+  .projects {
     padding: 40px;
+    justify-content: space-between;
+    gap: 30px;
   }
 }

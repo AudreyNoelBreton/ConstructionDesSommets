@@ -23,7 +23,7 @@ const Home = () => {
       <Carousel images={imagePath} />
       <Slogan />
       <Infos />
-      <Realisations></Realisations>
+      <Realisations />
       <div className="home__soumission">
         <img className="home__image" src="/soumission.jpg" alt="project" />
       </div>

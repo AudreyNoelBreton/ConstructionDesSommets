@@ -1,8 +1,8 @@
 import "./project-card.scss";
 import MainImage from "../Project-Main-Image/main-image";
-const ProjectCard = ({ image1, text, image2, image3, url }) => {
+const ProjectCard = ({ className, image1, text, image2, image3, url }) => {
   return (
-    <div className="project-card">
+    <div className={`project-card ${className}`}>
       <a className="project-card__main">
         <MainImage mainImage={image1} mainText={text} url={url} />
       </a>

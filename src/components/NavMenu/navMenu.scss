@@ -29,7 +29,7 @@
     font-family: Eurostile Bold;
     font-size: clamp(0.8rem, 2vw, 3rem);
     text-transform: uppercase;
-    color: aliceblue;
+    color: #f7f4f0;
     &::before {
       content: "";
       position: absolute;
@@ -48,6 +48,6 @@
     }
   }
   &--consecration .navMenu__link .navMenu__text {
-    color: black; // Changer la couleur du texte en noir
+    color: black;
   }
 }

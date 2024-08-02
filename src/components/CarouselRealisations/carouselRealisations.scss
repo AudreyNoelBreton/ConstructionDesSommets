@@ -1,0 +1,81 @@
+.carouselRealisations {
+  display: flex;
+  position: relative;
+  max-height: 400px;
+
+  &__container {
+    position: relative;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: fit-content;
+
+    &.animating {
+      transition: transform 0.5s ease-in-out;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 50%;
+    scroll-snap-align: start;
+    max-width: fit-content;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__overlay {
+    display: flex;
+    align-items: center; // Aligne le texte et l'icône sur la même ligne
+    position: relative; // Utilisez `absolute` si vous voulez que le texte soit superposé à l'image
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    justify-content: space-between;
+  }
+
+  &__text {
+    color: white;
+    font-size: 25px;
+    margin-right: 0.5rem; // Espace entre le texte et l'icône
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -5%;
+      width: 110%;
+      height: 2px;
+      background-color: currentColor;
+      transform: scaleX(0);
+      transform-origin: bottom left;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+
+  &__icon {
+    font-size: 25px;
+    color: #f7f4f0;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: scaleX(1.5);
+      transform-origin: center;
+    }
+  }
+}

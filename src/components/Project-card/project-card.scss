@@ -3,6 +3,7 @@
   width: 100%;
   flex-direction: column;
   gap: 15px;
+  justify-content: space-between;
 
   &__main {
     width: 100%;
@@ -12,7 +13,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     gap: 15px;
     overflow: hidden;
   }
@@ -21,10 +22,17 @@
     width: 50%;
   }
 }
+
+.column {
+  flex-direction: column;
+}
+
 @media (min-width: 576px) {
   .project-card {
     flex-direction: row;
     width: 100%;
+    gap: 30px;
+
     &__main {
       width: 100%;
     }
@@ -32,9 +40,18 @@
       flex-direction: column;
       width: 60%;
       height: 100%;
+      gap: 30px;
     }
     &__img {
       width: 100%;
     }
+  }
+
+  .column {
+    flex-direction: row;
+  }
+
+  .column-reverse {
+    flex-direction: row-reverse;
   }
 }
