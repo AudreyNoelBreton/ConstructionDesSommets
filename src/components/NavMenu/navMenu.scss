@@ -8,13 +8,13 @@
     width: 100%;
     align-self: end;
     justify-content: flex-end;
-    gap: 20px;
+    gap: 30px;
   }
 
   &__link {
     display: inline-block;
     justify-self: flex-end;
-    opacity: 0.8;
+    opacity: 0.7;
     &:hover {
       opacity: 1;
     }
@@ -27,7 +27,7 @@
   &__text {
     position: relative;
     font-family: Eurostile Bold;
-    font-size: clamp(0.8rem, 2vw, 3rem);
+    font-size: 23px;
     text-transform: uppercase;
     color: #f7f4f0;
     &::before {

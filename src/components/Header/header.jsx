@@ -10,9 +10,10 @@ import "./header.scss";
 const Header = ({ logo }) => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation().pathname;
-  const logoWhite = location != "/consecration";
+  const logoWhite = location !== "/realisations/consecration";
+  const logoHabitations = "/logo-habitations.svg";
 
-  const isMobile = useMediaQuery({ maxWidth: 575 });
+  const isMobile = useMediaQuery({ maxWidth: 1024 });
 
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isFixed, setIsFixed] = useState(false);
@@ -53,7 +54,15 @@ const Header = ({ logo }) => {
             to="/"
             className={` ${isOpen ? "header__logo--hidden" : "header__logo"}`}
           >
-            <img src={logo} alt="Logo" className="logo" />
+            <img
+              src={
+                isScrolled && location === "/realisations/consecration"
+                  ? logoHabitations
+                  : logo
+              }
+              alt="Logo"
+              className="logo"
+            />
           </Link>
 
           {isMobile && logoWhite && (
@@ -70,7 +79,7 @@ const Header = ({ logo }) => {
             <Hamburger
               size={30}
               isOpen={isOpen}
-              color={isOpen ? "#F7F4F0" : "#242318"}
+              color={isScrolled ? "#F7F4F0" : isOpen ? "#F7F4F0" : "#242318"}
               onToggle={() => setIsOpen(!isOpen)}
               className="header__hamburger"
             />

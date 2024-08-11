@@ -43,12 +43,13 @@
   }
 
   &__text {
-    color: white;
+    color: #f7f4f0;
     font-size: 25px;
+    font-family: Eurostile Bold;
     margin-right: 0.5rem; // Espace entre le texte et l'icône
     position: relative;
     cursor: pointer;
-
+    text-transform: uppercase;
     &::before {
       content: "";
       position: absolute;
@@ -76,6 +77,16 @@
     &:hover {
       transform: scaleX(1.5);
       transform-origin: center;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .carouselRealisations {
+    padding: 0 2.5rem; /* 40px => 2.5rem */
+
+    &__overlay {
+      transform: translateX(-50%);
+      padding: 0.5rem 2rem;
     }
   }
 }

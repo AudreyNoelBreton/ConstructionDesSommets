@@ -6,7 +6,7 @@
   background-color: #242318;
   transition: transform 0.8s ease-in-out;
   transform: translatex(130%);
-  z-index: 30000;
+  z-index: 300;
   width: 100%;
   height: 100%;
   align-content: center;
@@ -15,11 +15,12 @@
   &__text {
     margin: 0;
     font-family: Eurostile Medium;
+
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 13px;
-    font-size: 35px;
+    gap: 2.1875rem;
+    font-size: 2.1875rem;
     text-decoration: none;
     &::before {
       content: "";
@@ -43,6 +44,7 @@
     color: #f7f4f0;
     position: relative;
     display: inline-block;
+    text-decoration: none; /* Ensure no underline on links */
   }
 
   &__socials {
@@ -61,5 +63,12 @@
 
   &--open {
     transform: translateY(0);
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    &__text {
+      font-size: 3.5rem;
+    }
   }
 }

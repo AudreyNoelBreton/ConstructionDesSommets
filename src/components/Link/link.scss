@@ -2,11 +2,11 @@
   display: flex;
   flex-direction: column;
   color: #242318;
-  border-bottom: 1px solid #242318;
+  border-bottom: 2px solid #242318;
   &__title {
-    padding: 1rem 0.5rem;
-    font-family: Eurostile Medium;
-    font-size: 20px;
+    padding: 1.8rem 0.5rem;
+    font-family: Eurostile Bold;
+    font-size: 30px;
     cursor: pointer;
 
     display: flex;
@@ -27,17 +27,16 @@
   }
 
   &__text {
-    padding: 0 0.5rem;
     max-height: 0;
     font-family: Eurostile Medium;
-    font-size: 14px;
+    font-size: 25px;
     overflow: hidden;
     transition: 0.4s ease-in-out;
   }
 
   &.active &__text {
-    padding: 0 0.5rem 1rem 0.5rem;
-    max-height: 12em;
+    padding: 0 0.5rem 1.8rem 0.5rem;
+    max-height: 25em;
   }
 }
 

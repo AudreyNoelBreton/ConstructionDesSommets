@@ -2,14 +2,15 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 20px;
+  padding: 3.75rem 1.875rem; /* 60px => 3.75rem, 30px => 1.875rem */
+
   &__title {
     text-align: center;
     font-family: Eurostile Bold;
-    font-size: 35px;
+    font-size: 2.8125rem; /* 45px => 2.8125rem */
     text-transform: uppercase;
-    padding: 20px;
-    border-bottom: 1px solid #242318;
+    padding-bottom: 2.5rem; /* 40px => 2.5rem */
+    border-bottom: 0.125rem solid #242318; /* 2px => 0.125rem */
   }
 
   &__content {
@@ -17,12 +18,13 @@
     flex-direction: column;
   }
 }
+
 @media (min-width: 576px) {
   .links {
-    padding: 40px 90px 60px 90px;
+    padding: 2.5rem 5.625rem 3.75rem 5.625rem; /* 40px => 2.5rem, 90px => 5.625rem, 60px => 3.75rem */
 
     &__title {
-      font-size: 50px;
+      font-size: 3.125rem; /* 50px => 3.125rem */
     }
   }
 }

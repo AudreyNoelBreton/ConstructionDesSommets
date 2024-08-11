@@ -8,8 +8,20 @@ const sliderImagesMobile = [
   {
     src: "/nos-realisations-header-mobile.jpg",
   },
+];
+
+const sliderSecteurs = [
   {
-    src: "/nous-joindre-header-mobile.jpg",
+    src: "/charpente.jpg",
+    txt: "Charpente",
+  },
+  {
+    src: "/la-ferreolaise-2.jpg",
+    txt: "Finition",
+  },
+  {
+    src: "/petite-maison-verte-2.jpg",
+    txt: "Revetement",
   },
 ];
 
@@ -101,7 +113,7 @@ const projects = [
     image1: "/project-1.jpg",
     image2: "/project-1-2.jpg",
     image3: "/project-1-1.jpg",
-    url: "/consecration",
+    url: "/realisations/consecration",
   },
 
   {
@@ -109,7 +121,7 @@ const projects = [
     image1: "/petite-maison-verte-1.jpg",
     image2: "/petite-maison-verte-2.jpg",
     image3: "/petite-maison-verte-3.jpg",
-    url: "/maison-verte",
+    url: "/realisations/maison-verte",
   },
 
   {
@@ -117,7 +129,7 @@ const projects = [
     image1: "/la-ferreeolaise-1.jpg",
     image2: "/la-ferreolaise-2.jpg",
     image3: "/la-ferreeolaise-3.jpg",
-    url: "/ferreolaise",
+    url: "/realisations/ferreolaise",
   },
 
   {
@@ -125,7 +137,7 @@ const projects = [
     image1: "/l'olympique-1.jpg",
     image2: "/l'olympique-2.jpg",
     image3: "/l'olympique-3.jpg",
-    url: "/olympique",
+    url: "/realisations/olympique",
   },
 ];
 
@@ -137,6 +149,7 @@ const data = {
   sliderTemoignages,
   questions,
   projects,
+  sliderSecteurs,
 };
 
 export default data;

@@ -1,6 +1,12 @@
 import "./consecration.scss";
 import Header from "../../components/Header/header";
 import data from "../../data/data";
+import Soumission from "../../Sections/Soumission/soumission";
+import Cart from "../../Sections/Cart-section/cartSection";
+import Contact from "../../Sections/Contact-section/contact-section";
+import Links from "../../Sections/Links-section/link-section";
+import Footer from "../../components/Footer/footer";
+
 const Consecration = () => {
   let foundProject = null;
   for (let i = 0; i < data.projects.length; i++) {
@@ -109,6 +115,11 @@ const Consecration = () => {
           </div>
         </div>
       </div>
+      <Soumission />
+      <Links />
+      <Contact />
+      <Cart />
+      <Footer />
     </div>
   );
 };

@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   overflow: hidden;
-
+  max-height: 1100px;
   &__container {
     position: relative;
     display: flex;
@@ -14,20 +14,23 @@
   }
 
   &__text-overlay {
-    text-align: center;
-    display: flex;
     width: 100%;
-    font-family: Eurostile Medium;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-family: Eurostile Bold;
     position: absolute;
     text-transform: uppercase;
-    bottom: 30px;
+    bottom: calc(2.5rem + 2.1875rem);
     left: 50%;
-    transform: translateX(-50%);
-    padding: 10px;
-    font-size: 32px;
-
-    color: #f7f4f0; // Adjust the color as needed
+    transform: translate(-50%);
+    font-size: 2rem;
+    color: #f7f4f0;
     z-index: 10;
+    padding: 0 1.875rem;
   }
 
   &__item {
@@ -44,24 +47,26 @@
 
   &__dots {
     position: absolute;
-    bottom: 10px;
     width: 100%;
     text-align: center;
     z-index: 5;
+    bottom: 2.5rem;
   }
 
   &__dot {
     display: inline-block;
-    width: 30px;
-    height: 5px;
-    margin: 0 5px;
+    width: 3.75rem;
+    height: 0.4375rem;
+    margin: 0 0.625rem;
     background-color: #f7f4f0;
     border-radius: 0%;
     cursor: pointer;
     transition: background-color 0.3s;
+    opacity: 0.6;
 
     &.active {
-      background-color: #333;
+      background-color: #f7f4f0;
+      opacity: 1;
     }
   }
 
@@ -69,9 +74,9 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 30px;
+    padding: 0 1.875rem;
     position: absolute;
-    bottom: 30px;
+    bottom: 1.875rem;
     color: #f7f4f0;
     z-index: 10;
     box-sizing: border-box;
@@ -82,7 +87,7 @@
     display: flex;
     justify-content: space-between;
     width: auto;
-    gap: 5px;
+    gap: 0.3125rem;
     svg {
       cursor: pointer;
       font-size: 2rem;
@@ -95,7 +100,7 @@
     display: flex;
     justify-content: space-between;
     width: auto;
-    gap: 10px;
+    gap: 0.625rem;
     svg {
       cursor: pointer;
       font-size: 1.5rem;
@@ -112,32 +117,82 @@
 @media (min-width: 576px) {
   .carousel {
     &__content {
-      justify-content: space-between;
       display: flex;
-      flex-direction: column;
+      flex-direction: column; /* Assure l'alignement vertical */
+      justify-content: center; /* Centre les éléments verticalement */
+      align-items: center; /* Centre les éléments horizontalement */
       text-align: center;
       width: 100%;
-
       position: absolute;
-
-      top: 40%;
+      top: 55%;
       left: 50%;
-      transform: translateX(-50%);
-      padding: 50px;
-      gap: 20px;
+      transform: translate(-50%, -50%); /* Centre le contenu */
+      padding: 3.125rem;
+      gap: 1.25rem; /* Ajoute un espacement entre le titre et le texte */
       z-index: 10;
     }
+
+    &__bottom {
+      padding: 0 2.5rem;
+    }
+
     &__title {
       font-family: Eurostile bold;
       text-transform: uppercase;
-      font-size: 75px;
+      font-size: 4.6875rem;
 
       color: #f7f4f0;
     }
-    &__text-overlay {
-      justify-content: center;
-      font-size: 30px;
+    &__text-overlay-desktop {
+      display: flex;
+      width: 100%;
+
+      font-size: 1.875rem;
       position: relative;
+      color: #f7f4f0;
+      font-family: Eurostile Bold;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .carousel {
+    &__title {
+      font-size: 4.6875rem;
+    }
+    &__text-overlay-desktop {
+      display: flex;
+      width: 100%;
+
+      font-size: 2rem;
+      position: relative;
+      color: #f7f4f0;
+      font-family: Eurostile Bold;
+      text-align: center;
+      justify-content: center;
+    }
+
+    &__bottom {
+      padding: 0 4.6875rem 2.5rem 4.6875rem;
+    }
+
+    &__socials {
+      gap: 1.25rem;
+
+      svg {
+        font-size: 2.5rem;
+      }
+    }
+    &__arrows {
+      z-index: 2000;
+      display: flex;
+      justify-content: space-between;
+      width: auto;
+      gap: 0.625rem;
+      svg {
+        font-size: 2.5rem;
+      }
     }
   }
 }

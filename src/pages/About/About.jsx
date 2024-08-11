@@ -19,7 +19,10 @@ const About = () => {
   return (
     <div>
       <Header logo={logoPath} />
-      <Hero imagePath={imagePath} text={text} />
+      <div className="about__header">
+        <Hero imagePath={imagePath} text={text} />
+      </div>
+
       <Soumission />
       <Links />
       <Contact />

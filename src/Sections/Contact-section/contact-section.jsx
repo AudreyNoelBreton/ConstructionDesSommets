@@ -1,5 +1,6 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 import "./contact-section.scss";
 
@@ -29,12 +30,13 @@ const Contact = () => {
                 <div className="contact__text">581-991-9485</div>
               </div>
             </div>
-            <a
+            <button
               href="mailto:info@habitationsdusommet.com"
               className={`btn ${isMobile ? "btn--center" : "btn--end"}`}
             >
               <div className="btn__text">info@habitationsdusommet.com</div>
-            </a>
+              <FaArrowRightLong className="btn__icon" />
+            </button>
           </div>
         </div>
 

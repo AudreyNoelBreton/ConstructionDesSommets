@@ -1,0 +1,48 @@
+.cart {
+  position: relative;
+  text-align: center;
+
+  .cart-img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__text-overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 40px;
+    width: 100%;
+    top: 20%; /* 100px du haut */
+    left: 50%;
+    transform: translateX(-50%); /* Pour centrer horizontalement */
+  }
+
+  &__title {
+    font-size: 38px; /* Taille de la police, à ajuster selon vos besoins */
+    color: #f7f4f0; /* Couleur du texte */
+    text-transform: uppercase;
+    font-family: Eurostile Bold;
+  }
+
+  &__text {
+    font-size: 15px; /* Taille de la police, à ajuster selon vos besoins */
+    color: #f7f4f0; /* Couleur du texte */
+    text-transform: uppercase;
+    font-family: Eurostile Medium;
+  }
+}
+@media (min-width: 576px) {
+  .cart {
+    &__text-overlay {
+      justify-content: center;
+      font-size: 30px;
+      position: absolute;
+      text-transform: uppercase;
+
+      color: #f7f4f0;
+    }
+  }
+}

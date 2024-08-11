@@ -3,22 +3,23 @@
   flex-direction: column;
   width: 100%;
   gap: 20px;
-  padding-top: 20px;
+  padding-top: 60px;
   overflow-x: hidden;
   justify-content: space-between;
 
   &__text {
+    padding: 0 30px;
     text-align: center;
     font-family: Eurostile Medium;
-    font-size: 14px;
+    font-size: 22px;
   }
 }
 @media (min-width: 576px) {
   .members {
-    gap: 150px;
-    padding: 80px;
+    gap: 20px;
+
     &__text {
-      padding: 2rem 6rem;
+      padding: 2rem 4rem;
       font-size: 35px;
     }
   }

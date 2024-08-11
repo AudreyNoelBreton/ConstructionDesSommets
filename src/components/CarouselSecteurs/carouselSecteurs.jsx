@@ -1,32 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./carouselSecteurs.scss";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import "../../components/Btn.scss";
+import data from "../../data/data";
 
 const CarouselSecteurs = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const images = [
-    { src: "/charpente.jpg", alt: "Charpente" },
-    { src: "/la-ferreolaise-2.jpg", alt: "Finition" },
-    { src: "/petite-maison-verte-2.jpg", alt: "Réalisations" },
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (activeIndex === images.length - 1) {
-        setIsAnimating(false);
-        setActiveIndex(0);
-        setTimeout(() => {
-          setIsAnimating(true);
-        }, 0);
-      } else {
-        setActiveIndex((prevIndex) => prevIndex + 1);
-      }
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [activeIndex, images.length]);
   const goToSlide = (index) => {
     if (index < 0) {
       setActiveIndex(images.length - 1);
@@ -37,40 +17,54 @@ const CarouselSecteurs = () => {
     }
   };
 
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
+  const images = data.sliderSecteurs;
 
-  const goToNext = () => {
-    const isLastSlide = currentIndex === images.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
+  useEffect(() => {
+    if (images.length === 0) return;
+    const interval = setInterval(() => {
+      if (activeIndex === images.length - 1) {
+        setIsAnimating(false);
+        setActiveIndex(0);
+        setTimeout(() => {
+          setIsAnimating(true);
+        }, 0);
+      } else {
+        setActiveIndex((prevIndex) => prevIndex + 1);
+      }
+    }, 8000);
+    return () => clearInterval(interval);
+  }, [activeIndex, images.length]);
+
+  if (images.length === 0) {
+    return <div className="carousel-secteurs">No images available</div>;
+  }
 
   return (
-    <div className="carousel-secteurs">
+    <section className="carousel-secteurs">
       <div
-        className="carousel-secteurs__inner"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        className={`carousel-secteurs__container ${
+          isAnimating ? "animating" : ""
+        }`}
+        style={{
+          transform: `translateX(-${(activeIndex / images.length) * 100}%)`,
+        }}
       >
-        {images.map((image, index) => (
-          <div
+        {images.map((img, index) => (
+          <a
+            href="/"
             className="carousel-secteurs__item"
             key={index}
-            style={{ backgroundImage: `url(${image.src})` }}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <span>{image.alt}</span>
-          </div>
+            <img src={img.src} alt={`carousel-secteurs ${index}`} />
+            <div className="carousel-secteurs__overlay">
+              <div className="carousel-secteurs__text">{img.txt}</div>
+            </div>
+          </a>
         ))}
       </div>
-
-      <div className="carousel-secteurs__elements">
-        <div className="carousel-secteurs__arrows">
-          <IoIosArrowBack onClick={goToPrevious} />
-          <IoIosArrowForward onClick={goToNext} />
-        </div>
+      <div className="carousel-secteurs__bottom">
         <div className="carousel-secteurs__dots">
           {images.map((_, index) => (
             <span
@@ -83,7 +77,7 @@ const CarouselSecteurs = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -5,10 +5,10 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const MainImage = ({ mainImage, mainText, url }) => {
   const navigate = useNavigate();
-
   const handleClick = (e) => {
     e.preventDefault();
     navigate(url);
+    console.log(url);
   };
 
   return (

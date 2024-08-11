@@ -1,39 +1,41 @@
 .slogan {
+  max-width: 100%;
   width: auto;
   display: flex;
-  padding: 30px 20px;
+  padding: 3.125rem 1.875rem;
   flex-direction: column;
-  gap: 10px;
+  gap: 3.4375rem;
 
   &__infos {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 0.625rem;
   }
 
   &__title {
     font-family: Eurostile Bold;
-    font-size: 45px;
+    font-size: 2.5rem;
     text-transform: uppercase;
   }
 
   &__secteurs {
     font-family: Eurostile Bold;
-    font-size: 16px;
+    font-size: 1.1875rem;
     text-transform: uppercase;
   }
 
   &__text {
     font-family: Eurostile Medium;
-    font-size: 14px;
+    font-size: 1rem;
   }
 
   &__logo {
     display: flex;
-    align-items: end;
-    justify-items: end;
-    justify-content: flex-end;
-    width: 100%;
-    height: auto;
+    align-self: flex-end;
+    width: 60%;
+    opacity: 0; // Initialement invisible
+    animation: fadeIn 2s forwards; // Ajoutez cette ligne pour l'animation
   }
 
   .img {
@@ -41,32 +43,75 @@
     height: auto;
     max-width: none;
   }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
-@media (min-width: 576px) {
+
+@media (min-width: 375px) {
   .slogan {
-    padding: 60px 40px;
+    &__title {
+      font-size: 3.125rem;
+    }
+  }
+}
+
+@media (min-width: 756px) {
+  .slogan {
+    padding: 3.125rem 2.5rem;
+
+    &__title {
+      font-size: 4.6875rem;
+    }
+    &__infos {
+      gap: 0.9375rem;
+    }
+
+    &__secteurs {
+      font-size: 1.6875rem;
+    }
+
+    &__text {
+      font-size: 1.4375rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .slogan {
+    padding: 6.25rem;
     flex-direction: row;
+    width: 100%;
 
     &__title {
       font-family: Eurostile Bold;
-      font-size: 75px;
+      font-size: 4.6875rem;
       text-transform: uppercase;
     }
     &__infos {
       max-width: 65%;
-      gap: 15px;
+      gap: 0.9375rem;
     }
     &__logo {
-      min-width: 200px;
-      width: 40%;
+      display: flex;
+      width: 100%;
+      align-self: flex-end;
+      align-items: flex-end;
+      justify-items: end;
     }
 
     &__secteurs {
-      font-size: 27px;
+      font-size: 1.6875rem;
     }
 
     &__text {
-      font-size: 23px;
+      font-size: 1.4375rem;
     }
   }
 }

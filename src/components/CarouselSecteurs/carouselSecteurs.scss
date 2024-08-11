@@ -1,95 +1,148 @@
 .carousel-secteurs {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  width: 100%;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0);
-  margin-top: -100px;
-  padding: 0 0 0 40px;
+  max-height: 25rem; // 400px
+  max-width: fit-content;
+  margin-top: -6.25rem; // -100px
+  padding: 0 2.5rem; // 40px
+  gap: 0.3125rem; // 5px
 
-  &__inner {
+  &__container {
     position: relative;
     display: flex;
-    width: 100%;
     transition: transform 0.5s ease-in-out;
+    justify-content: space-between;
+    gap: 3.125rem; // 50px
+    max-width: fit-content;
+    z-index: 800;
+
     &.animating {
       transition: transform 0.5s ease-in-out;
     }
-    gap: 60px;
   }
 
   &__item {
-    width: 100%;
-    max-height: 350px;
-    min-height: 250px;
-    background-position: center;
-    background-size: cover;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-align: center;
-    background-size: auto;
-
-    flex: 1 0 60%;
+    flex-direction: column;
+    flex: 1 0 50%;
     scroll-snap-align: start;
+    max-width: fit-content;
+    position: relative; // Important pour le positionnement absolu du texte
+
     img {
       height: 100%;
       width: 100%;
       object-fit: cover;
     }
-  }
-}
-@media (min-width: 576px) {
-  .carousel-secteurs {
-    margin-bottom: 40px;
-    &__elements {
+
+    &__overlay {
       display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
       align-items: center;
-      position: relative;
-      flex-wrap: wrap;
-    }
-
-    &__arrows {
-      width: fit-content;
-      padding-right: 30px;
-      display: flex;
-      padding-top: 20px;
-      justify-content: flex-end;
-      flex: 1;
-      svg {
-        cursor: pointer;
-        font-size: 2rem;
-        color: #242318;
-      }
-    }
-
-    &__dots {
-      padding-top: 50px;
-      position: absolute;
+      position: absolute; // Changez à absolute
+      bottom: 3.75rem; // Ajustez selon vos besoins
       left: 50%;
       transform: translateX(-50%);
+      padding: 0.5rem 1rem;
+      border-radius: 0.3125rem;
+      justify-content: space-between;
+    }
+  }
+
+  &__text {
+    color: #f7f4f0;
+    font-size: 1.875rem; // 30px
+    margin-right: 0.3125rem;
+    font-family: Eurostile Bold;
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -5%;
+      width: 110%;
+      height: 0.125rem; // 2px
+      background-color: currentColor;
+      transform: scaleX(0);
+      transform-origin: bottom left;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    z-index: 2000;
+  }
+
+  &__arrows {
+    padding-top: 3.125rem; // 50px
+    position: absolute;
+    right: 10%;
+    transform: translateX(-50%);
+
+    svg {
+      cursor: pointer;
+      font-size: 2rem; // 32px
+      color: #242318;
+    }
+  }
+
+  &__dots {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__dot {
+    display: inline-block;
+    width: 2.5rem; // 40px
+    height: 0.4375rem; // 7px
+    margin: 0 0.3125rem;
+    background-color: #bab2aa;
+    opacity: 0.5; // 50%
+    border-radius: 0%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 1.875rem; // 30px
+
+    &.active {
+      background-color: #bab2aa;
+      opacity: 1; // 100%
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .carousel-secteurs {
+    max-height: 50rem; // 400px
+    padding: 0 6.25rem;
+    align-items: center; /* Ajoutez cette ligne pour centrer les éléments */
+    gap: 2rem;
+    &__text {
+      font-size: 2.5rem;
+      padding-left: 3.75rem;
+      bottom: 4.75rem; // Ajustez pour le positionnement
+    }
+
+    &__bottom {
+      width: 100%;
     }
 
     &__dot {
-      display: inline-block;
-      width: 40px;
-      height: 7px;
-      margin: 0 5px;
-      background-color: #bab2aa;
-      opacity: 50%;
-      border-radius: 0%;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      margin-bottom: 30px;
-
-      &.active {
-        background-color: #bab2aa;
-        opacity: 100%;
-      }
+      height: 0.5rem; // 7px
+      width: 3rem; // 40px
+      margin: 0 0.6125rem;
     }
   }
 }

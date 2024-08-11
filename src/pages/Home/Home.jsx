@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./home.scss";
 import Header from "../../components/Header/header";
 import Slogan from "../../Sections/Slogan-section/slogansection";
@@ -11,7 +11,7 @@ import Footer from "../../components/Footer/footer";
 import data from "../../data/data";
 import Soumission from "../../Sections/Soumission/soumission";
 import { useMediaQuery } from "react-responsive";
-
+import Cart from "../../Sections/Cart-section/cartSection";
 const Home = () => {
   const isMobile = useMediaQuery({ maxWidth: 575 });
   const imagePath = isMobile ? data.sliderImagesMobile : data.sliderImages;
@@ -25,7 +25,11 @@ const Home = () => {
       <Infos />
       <Realisations />
       <div className="home__soumission">
-        <img className="home__image" src="/soumission.jpg" alt="project" />
+        <img
+          className="home__image"
+          src="/soumission-mobile (1).jpg"
+          alt="project"
+        />
       </div>
 
       <div className="home__soumission">
@@ -33,6 +37,7 @@ const Home = () => {
       </div>
       <Links />
       <Contact />
+      <Cart />
       <Footer />
     </div>
   );

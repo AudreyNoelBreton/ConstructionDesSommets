@@ -8,6 +8,7 @@ import data from "../../data/data";
 import Footer from "../../components/Footer/footer";
 import Links from "../../Sections/Links-section/link-section";
 import { useMediaQuery } from "react-responsive";
+import Soumission from "../../Sections/Soumission/soumission";
 
 const Team = () => {
   const isMobile = useMediaQuery({ maxWidth: 575 });
@@ -22,6 +23,16 @@ const Team = () => {
       <Hero imagePath={imagePath} text={text} />
       <Members />
       <Temoignages temoignages={data.sliderTemoignages} />
+      <div className="team__soumission">
+        <img
+          className="team__image"
+          src="/la-ferreeolaise-3.jpg"
+          alt="project"
+        />
+      </div>
+      <div className="team__soumission">
+        <Soumission />
+      </div>
       <Links />
       <Footer />
     </div>

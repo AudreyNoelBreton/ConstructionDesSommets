@@ -7,8 +7,13 @@ const ProjectCard = ({ className, image1, text, image2, image3, url }) => {
         <MainImage mainImage={image1} mainText={text} url={url} />
       </a>
       <div className="project-card__secondary">
-        <img src={image2} className="project-card__img" />
-        <img src={image3} className="project-card__img"></img>
+        <a href={url} className="project-card__link">
+          <img src={image2} className="project-card__img" />
+        </a>
+        <a href={url} className="project-card__link">
+          {" "}
+          <img src={image3} className="project-card__img"></img>
+        </a>
       </div>
     </div>
   );

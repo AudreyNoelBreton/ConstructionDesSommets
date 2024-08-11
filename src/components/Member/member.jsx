@@ -8,18 +8,11 @@ const Member = ({ position }) => {
       {position === "first" && (
         <>
           <div className="member">
-            <div className="member__images-stack-left">
-              <img
-                src="louis-brochu.jpg"
-                alt="Skiing"
-                className="background-image"
-              />
-              <img
-                src="louis-brochu-2.jpg"
-                alt="Construction"
-                className="overlay-image"
-              />
-            </div>
+            <img
+              src="louis-brochu-2.jpg"
+              alt="Construction"
+              className="overlay-image"
+            />
             <div className="member__content">
               <div className="member__name">Louis brochu</div>
               <div className="member__text">
@@ -58,18 +51,12 @@ const Member = ({ position }) => {
       {position === "second" && (
         <>
           <div className="member member--background-green">
-            <div className="member__images-stack-right">
-              <img
-                src="william-viens.jpg"
-                alt="Biking"
-                className="background-image"
-              />
-              <img
-                src="william-viens-2.jpg"
-                alt="Construction"
-                className="overlay-image"
-              />
-            </div>
+            <img
+              src="william-viens-2.jpg"
+              alt="Construction"
+              className="overlay-image"
+            />
+
             <div className="member__content">
               <div className="member__name">William viens</div>
               <div className="member__text">

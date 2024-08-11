@@ -23,14 +23,24 @@ const MobileMenu = ({ isOpen }) => {
           </Link>
         </li>
       </ul>
-      <ul className="mobile-menu__socials">
-        <li className="mobile-menu__social">
-          <FaFacebookF size={25} />
-        </li>
-        <li className="mobile-menu__social">
-          <GrInstagram size={25} />
-        </li>
-      </ul>
+      <div className="mobile-menu__socials">
+        <a
+          href="https://www.facebook.com/profile.php?id=100085617410260&mibextid=LQQJ4d"
+          className="footer__social"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaFacebookF />
+        </a>
+        <a
+          href="https://www.instagram.com/leshabitationsdusommet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          className="footer__social"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <GrInstagram />
+        </a>
+      </div>
     </div>
   );
 };

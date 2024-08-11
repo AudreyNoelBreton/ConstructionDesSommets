@@ -1,32 +1,52 @@
 .realisations {
   display: flex;
   flex-direction: column;
-  padding: 20px 20px;
+  padding: 0 1.875rem 2.5rem 1.875rem; /* 30px => 1.875rem, 40px => 2.5rem */
   width: 100%;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 1.875rem; /* 30px => 1.875rem */
 
   &__text {
     font-family: Eurostile Bold;
-
-    font-size: 45px;
+    font-size: 2.8rem; /* 57px => 3.5625rem */
     text-align: center;
     text-transform: uppercase;
+    padding-bottom: 1.5rem; /* 40px => 2.5rem */
   }
 
   &__projects {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.875rem; /* 30px => 1.875rem */
+  }
+}
+
+@media (min-width: 420px) {
+  .realisations {
+    &__text {
+      font-size: 3.5rem; /* 75px => 4.6875rem */
+      padding-bottom: 2.5rem; /* 40px => 2.5rem */
+    }
   }
 }
 
 @media (min-width: 576px) {
   .realisations {
-    padding: 40px;
+    padding: 2.5rem; /* 40px => 2.5rem */
 
     &__text {
-      padding-bottom: 30px;
-      font-size: 75px;
+      padding-bottom: 1.875rem; /* 30px => 1.875rem */
+      font-size: 4.6875rem; /* 75px => 4.6875rem */
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .realisations {
+    padding: 2.5rem 0; /* 40px => 2.5rem */
+
+    &__text {
+      padding-bottom: 1.875rem; /* 30px => 1.875rem */
+      font-size: 4.6875rem; /* 75px => 4.6875rem */
     }
   }
 }

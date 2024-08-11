@@ -3,16 +3,22 @@
   width: fit-content;
   background-color: #242318;
   color: #f7f4f0;
-  padding: 15px 20px;
-  border-radius: 15px;
+  padding: 1.25rem;
+  border-radius: 0.9375rem;
   justify-content: space-between;
-  gap: 10px;
   z-index: 1;
+  gap: 2.8125rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajout de l'ombre */
+  border: none; /* Supprime toute bordure par défaut */
 
   &__text {
     font-family: Eurostile Bold;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 0.9375rem;
+  }
+
+  &__icon {
+    font-size: 0.9375rem;
   }
 
   &--end {
@@ -29,7 +35,7 @@
 
   &--soumission {
     flex-direction: row;
-    gap: 10px;
+    gap: 60px;
     margin-left: auto;
     justify-self: end;
     align-self: end;

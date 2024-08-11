@@ -2,45 +2,78 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-top: 100px;
-  padding: 20px;
+  margin-top: 7.5rem; /* 120px => 7.5rem */
+  padding: 0 1.875rem 3.75rem 1.875rem; /* 30px => 1.875rem, 60px => 3.75rem */
   justify-content: center;
+  justify-content: space-between;
+  gap: 3.125rem; /* 50px => 3.125rem */
 
   &__title {
-    font-family: Eurostile Medium;
+    font-family: Eurostile Bold;
     color: #242318;
     background-color: transparent;
     width: 100%;
-
-    font-size: 3rem;
+    font-size: 2.8125rem; /* 45px => 2.8125rem */
     text-align: center;
     text-transform: uppercase;
-    padding-bottom: 20px;
   }
 
   &__gallery {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.9375rem; /* 15px => 0.9375rem */
   }
 
   &__items {
     display: flex;
     flex-direction: row;
-
     justify-content: center;
     max-width: 100%;
-    gap: 10px;
+    gap: 0.9375rem; /* 15px => 0.9375rem */
   }
+
   &__item {
     flex: 1;
     max-width: 100%;
     position: relative;
     overflow: hidden;
   }
+
   &__item img {
     width: auto;
     height: auto;
     object-fit: cover;
+  }
+}
+
+@media (min-width: 420px) {
+  .consecration {
+    &__title {
+      font-size: 3.5625rem; /* 57px => 3.5625rem */
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .consecration {
+    &__title {
+      padding: 2rem 2rem;
+      font-size: 5rem; /* 57px => 3.5625rem */
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .consecration {
+    &__title {
+      padding: 3rem 15rem;
+      font-size: 7rem; /* 57px => 3.5625rem */
+    }
+
+    &__gallery {
+      gap: 3.75rem;
+    }
+    &__items {
+      gap: 3.75rem;
+    }
   }
 }

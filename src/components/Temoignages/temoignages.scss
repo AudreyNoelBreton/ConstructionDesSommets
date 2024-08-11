@@ -39,7 +39,7 @@
     color: #242318;
     position: relative;
     transform: translateX(-50%);
-    font-size: 15px;
+    font-size: 17px;
   }
 
   &__name {
@@ -62,8 +62,8 @@
     text-transform: uppercase;
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 40px;
-    font-size: 40px;
+    padding-top: 75px;
+    font-size: 57px;
 
     color: #242318;
     z-index: 10;
@@ -71,7 +71,7 @@
 
   &__dots {
     position: absolute;
-    bottom: 20px;
+    bottom: 10%;
     width: 100%;
     text-align: center;
     z-index: 5;
@@ -92,6 +92,48 @@
     &.active {
       background-color: #bab2aa;
       opacity: 100%;
+    }
+  }
+}
+@media (min-width: 576px) {
+  .temoignages {
+    padding-top: 20px;
+    max-height: 500px;
+    &__container {
+      max-height: 400px;
+    }
+    &__text-overlay {
+      font-size: 50px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      flex: 1 0 100%;
+      scroll-snap-align: start;
+      padding: 20px 40px;
+      max-height: 500px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &__text {
+      bottom: 100%;
+      font-size: 25px;
+    }
+
+    &__name {
+      bottom: 95%;
+      font-size: 25px;
+    }
+
+    &__dots {
+      position: absolute;
+      bottom: -20%;
+      width: 100%;
+      text-align: center;
+      z-index: 5;
     }
   }
 }

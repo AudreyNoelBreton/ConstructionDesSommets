@@ -43,15 +43,17 @@ const Carousel = ({ images = [] }) => {
       {!isMobile && (
         <div className="carousel__content">
           <div className="carousel__title">Les habitations du sommet</div>
-          <div className="carousel__text-overlay">
-            ENTREPRENEUR GÉNÉRAL EN CONSTRUCTION
+          <div className="carousel__text-overlay-desktop ">
+            <div>ENTREPRENEUR GÉNÉRAL</div>
+            <div>EN CONSTRUCTION</div>
           </div>
         </div>
       )}
 
       {isMobile && (
         <div className="carousel__text-overlay">
-          ENTREPRENEUR GÉNÉRAL EN CONSTRUCTION
+          <div>ENTREPRENEUR GÉNÉRAL</div>
+          <div>EN CONSTRUCTION</div>
         </div>
       )}
       <div
@@ -83,15 +85,14 @@ const Carousel = ({ images = [] }) => {
         <div className="carousel__bottom">
           <div className="carousel__socials">
             <a
-              href="https://www.facebook.com/votrepage"
+              href="https://www.facebook.com/profile.php?id=100085617410260&mibextid=LQQJ4d"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaFacebookF />
             </a>
             <a
-              href="https://www.instagram.com/votrepage"
-              className="footer__social"
+              href="https://www.instagram.com/leshabitationsdusommet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
             >

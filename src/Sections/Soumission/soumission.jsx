@@ -119,7 +119,7 @@ const Soumission = () => {
               <div className="soumission__row soumission__row--end">
                 <button className="btn">
                   <div className="btn__text">Envoyer</div>
-                  <FaArrowRightLong />
+                  <FaArrowRightLong className="btn__icon" />
                 </button>
               </div>
             </>
