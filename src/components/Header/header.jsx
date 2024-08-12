@@ -10,7 +10,9 @@ import "./header.scss";
 const Header = ({ logo }) => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation().pathname;
-  const logoWhite = location !== "/realisations/consecration";
+  const logoWhite =
+    location !== "/realisations/consecration" &&
+    location !== "/realisations/ferreolaise";
   const logoHabitations = "/logo-habitations.svg";
 
   const isMobile = useMediaQuery({ maxWidth: 1024 });
@@ -55,11 +57,7 @@ const Header = ({ logo }) => {
             className={` ${isOpen ? "header__logo--hidden" : "header__logo"}`}
           >
             <img
-              src={
-                isScrolled && location === "/realisations/consecration"
-                  ? logoHabitations
-                  : logo
-              }
+              src={isScrolled ? logoHabitations : logo}
               alt="Logo"
               className="logo"
             />

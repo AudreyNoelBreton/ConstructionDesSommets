@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+
   &__links {
     display: flex;
     flex-direction: row;
@@ -14,7 +15,9 @@
   &__link {
     display: inline-block;
     justify-self: flex-end;
-    opacity: 0.7;
+    opacity: 0.6;
+    transition: opacity 0.3s ease; /* Add a smooth transition */
+
     &:hover {
       opacity: 1;
     }
@@ -24,12 +27,17 @@
     opacity: 1;
   }
 
+  .navMenu__link--realisations {
+    opacity: 0.9; /* Higher opacity for the Realisations link */
+  }
+
   &__text {
     position: relative;
     font-family: Eurostile Bold;
     font-size: 23px;
     text-transform: uppercase;
-    color: #f7f4f0;
+    color: #f7f4f0; /* Default color */
+
     &::before {
       content: "";
       position: absolute;
@@ -47,7 +55,9 @@
       transform: scaleX(1);
     }
   }
-  &--consecration .navMenu__link .navMenu__text {
-    color: black;
+
+  /* Modifier class with higher specificity */
+  .navMenu__text--dark {
+    color: #242318 !important; /* Dark color with !important to override */
   }
 }

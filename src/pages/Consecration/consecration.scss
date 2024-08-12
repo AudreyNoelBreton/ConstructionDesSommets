@@ -17,6 +17,19 @@
     text-align: center;
     text-transform: uppercase;
   }
+  @keyframes waveFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   &__gallery {
     display: flex;
@@ -37,6 +50,7 @@
     max-width: 100%;
     position: relative;
     overflow: hidden;
+    animation: waveFadeIn 1.7s ease forwards;
   }
 
   &__item img {
@@ -64,8 +78,10 @@
 }
 @media (min-width: 1024px) {
   .consecration {
+    padding: 6.25rem 4rem 6.25rem 4rem; /* Converti en rem */
+
     &__title {
-      padding: 3rem 15rem;
+      padding: 3rem 4rem;
       font-size: 7rem; /* 57px => 3.5625rem */
     }
 
