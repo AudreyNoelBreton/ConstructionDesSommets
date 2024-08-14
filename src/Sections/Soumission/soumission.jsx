@@ -159,6 +159,17 @@ const Soumission = () => {
                 <div className="soumission__input">
                   <input
                     type="text"
+                    placeholder="Délais souhaité"
+                    value={delais}
+                    onChange={(e) => setDelais(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="soumission__row">
+                <div className="soumission__input">
+                  <input
+                    type="text"
                     placeholder="Résumé du projet"
                     value={resume}
                     onChange={(e) => setResume(e.target.value)}
@@ -169,15 +180,6 @@ const Soumission = () => {
               <div className="soumission__row">
                 <div className="soumission__input">
                   <input
-                    type="text"
-                    placeholder="Délais souhaité"
-                    value={delais}
-                    onChange={(e) => setDelais(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className="soumission__input">
-                  <input
                     type="email"
                     placeholder="Inscrire votre courriel"
                     value={courriel}
@@ -185,11 +187,9 @@ const Soumission = () => {
                     required
                   />
                 </div>
-              </div>
-              <div className="soumission__row soumission__row--end">
                 <button className="btn">
                   <div className="btn__text">Envoyer</div>
-                  <FaArrowRightLong />
+                  <FaArrowRightLong className="btn__icon" />
                 </button>
               </div>
             </>

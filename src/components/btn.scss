@@ -3,18 +3,23 @@
   width: fit-content;
   background-color: #242318;
   color: #f7f4f0;
-  padding: 1.25rem;
+  padding: 1rem;
   border-radius: 0.9375rem;
   justify-content: space-between;
   z-index: 1;
-  gap: 2.8125rem;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajout de l'ombre */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Amplification de l'ombre */
   border: none; /* Supprime toute bordure par défaut */
-
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout d'une transition pour un effet fluide */
+  &:hover {
+    transform: translateY(-5px); /* Déplace légèrement le bouton vers le haut */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4); /* Amplifie l'effet de shadow lors du survol */
+    cursor: pointer;
+  }
   &__text {
     font-family: Eurostile Bold;
     text-transform: uppercase;
-    font-size: 0.9375rem;
+    font-size: 0.7rem;
   }
 
   &__icon {
@@ -35,20 +40,72 @@
 
   &--soumission {
     flex-direction: row;
-    gap: 60px;
     margin-left: auto;
-    justify-self: end;
+    justify-self: flex-end;
     align-self: end;
+    gap: 14px;
     background-color: #877851;
     color: #242318;
   }
 }
-@media (min-width: 576px) {
+
+@media (min-width: 420px) {
   .btn {
     padding: 20px 25px;
 
     &__text {
       font-size: 18px;
+    }
+
+    &__icon {
+      font-size: 18px;
+    }
+  }
+}
+@media (min-width: 576px) {
+  .btn {
+    padding: 25px 30px;
+
+    &__text {
+      font-size: 18px;
+    }
+
+    &__icon {
+      font-size: 18px;
+    }
+
+    &--soumission-bottom {
+      flex-direction: row;
+
+      justify-self: flex-end;
+      align-self: end;
+      gap: 14px;
+      background-color: #877851;
+      color: #242318;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .btn {
+    padding: 20px 25px;
+
+    &__text {
+      font-size: 18px;
+    }
+
+    &__icon {
+      font-size: 18px;
+    }
+
+    &--soumission-bottom {
+      flex-direction: row;
+
+      justify-self: flex-end;
+      align-self: end;
+      gap: 14px;
+      background-color: #877851;
+      color: #242318;
     }
   }
 }

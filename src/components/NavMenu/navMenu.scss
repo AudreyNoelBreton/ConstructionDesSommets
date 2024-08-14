@@ -9,7 +9,7 @@
     width: 100%;
     align-self: end;
     justify-content: flex-end;
-    gap: 30px;
+    gap: 1.5625rem;
   }
 
   &__link {
@@ -27,14 +27,10 @@
     opacity: 1;
   }
 
-  .navMenu__link--realisations {
-    opacity: 0.9; /* Higher opacity for the Realisations link */
-  }
-
   &__text {
     position: relative;
     font-family: Eurostile Bold;
-    font-size: 23px;
+    font-size: 1.125rem;
     text-transform: uppercase;
     color: #f7f4f0; /* Default color */
 
@@ -59,5 +55,16 @@
   /* Modifier class with higher specificity */
   .navMenu__text--dark {
     color: #242318 !important; /* Dark color with !important to override */
+  }
+}
+
+@media (min-width: 1200px) {
+  .navMenu {
+    &__links {
+      gap: 2.5rem;
+    }
+    &__text {
+      font-size: 1.4375rem;
+    }
   }
 }

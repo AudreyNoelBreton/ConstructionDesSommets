@@ -9,7 +9,7 @@ import { useMediaQuery } from "react-responsive";
 
 const Footer = () => {
   const imagePath = "/logo-habitations.svg";
-  const isMobile = useMediaQuery({ maxWidth: 575 });
+  const isMobile = useMediaQuery({ maxWidth: 1024 });
 
   return (
     <footer className="footer">
@@ -17,31 +17,27 @@ const Footer = () => {
         <>
           <div className="footer__container">
             <div className="footer__container-elements">
-              <div className="footer__element">
-                <Link to={"/"} className="footer__logo">
-                  <img src={imagePath} alt="Logo" className="logo" />
+              <Link to={"/"} className="footer__logo">
+                <img src={imagePath} alt="Logo" />
+              </Link>
+              <div className="footer__links">
+                <Link to="/realisations" className="footer__link">
+                  Modeles
                 </Link>
-              </div>
-              <div className="footer__element">
-                <div className="footer__links">
-                  <Link to="/realisations" className="footer__link">
-                    Modeles
-                  </Link>
-                  <Link to="/team" className="footer__link">
-                    a propos
-                  </Link>
-                  <Link to="/about" className="footer__link">
-                    contact
-                  </Link>
-                </div>
+                <Link to="/team" className="footer__link">
+                  a propos
+                </Link>
+                <Link to="/about" className="footer__link">
+                  contact
+                </Link>
               </div>
             </div>
             <div className="footer__container-elements">
               <div className="footer__element">
-                <button className="btn btn--soumission">
+                <Link to="/about" className="btn btn--soumission">
                   <div className="btn__text">soumission</div>
                   <FaArrowRightLong />
-                </button>
+                </Link>
               </div>
               <div className="footer__element">
                 <div className="footer__socials">
@@ -70,7 +66,54 @@ const Footer = () => {
       {!isMobile && (
         <>
           <div className="footer__row-container">
+            <Link to={"/"} className="footer__logo-bottom">
+              <img src={imagePath} alt="Logo" />
+            </Link>
+            <div className="footer__links-bottom">
+              <Link to="/team" className="footer__link-bottom">
+                a propos
+              </Link>
+              <Link to="/realisations" className="footer__link-bottom">
+                Nos realisations
+              </Link>
+              <Link to="/about" className="footer__link-bottom">
+                Nous joindres
+              </Link>
+            </div>
             <div className="footer__element-bottom">
+              <div className="footer__socials-bottom">
+                <a
+                  href="https://www.facebook.com/votrepage"
+                  className="footer__social"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaFacebookF />
+                </a>
+                <a
+                  href="https://www.instagram.com/votrepage"
+                  className="footer__social"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GrInstagram />
+                </a>
+              </div>
+              <Link to="/about" className="btn btn--soumission-bottom">
+                <div className="btn__text">soumission</div>
+                <FaArrowRightLong />
+              </Link>
+            </div>
+          </div>
+        </>
+      )}
+    </footer>
+  );
+};
+
+export default Footer;
+{
+  /* <div className="footer__element-bottom">
               <Link to={"/"} className="footer__logo-bottom">
                 <img src={imagePath} alt="Logo" className="logo" />
               </Link>
@@ -105,12 +148,5 @@ const Footer = () => {
                 <div className="btn__text">soumission</div>
                 <FaArrowRightLong />
               </button>
-            </div>
-          </div>
-        </>
-      )}
-    </footer>
-  );
-};
-
-export default Footer;
+            </div> */
+}

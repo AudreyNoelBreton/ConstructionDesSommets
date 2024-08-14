@@ -2,13 +2,22 @@ import React from "react";
 import "./navMenu.scss";
 import { Link, useLocation } from "react-router-dom";
 
-const NavMenu = () => {
+const NavMenu = ({ isScrolled }) => {
   const location = useLocation();
 
   const linkWhite =
     location.pathname !== "/realisations/consecration" &&
     location.pathname !== "/realisations/ferreolaise";
-
+  const isRealisationActive = location.pathname.startsWith("/realisations");
+  const getTextClass = () => {
+    if (linkWhite) {
+      return "navMenu__text";
+    } else if (!linkWhite && !isScrolled) {
+      return "navMenu__text navMenu__text--dark";
+    } else if (!linkWhite && isScrolled) {
+      return "navMenu__text";
+    }
+  };
   console.log(linkWhite);
   return (
     <div className="navMenu">
@@ -19,27 +28,15 @@ const NavMenu = () => {
             location.pathname === "/team" ? "nav-link-active" : ""
           }`}
         >
-          <div
-            className={`navMenu__text ${
-              !linkWhite ? "navMenu__text--dark" : ""
-            }`}
-          >
-            A propos de nous
-          </div>
+          <div className={getTextClass()}>A propos de nous</div>
         </Link>
         <Link
           to="/realisations"
-          className={`navMenu__link navMenu__link--realisations${
-            location.pathname === "/realisations" ? "nav-link-active" : ""
+          className={`navMenu__link ${
+            isRealisationActive ? "nav-link-active" : ""
           }`}
         >
-          <div
-            className={`navMenu__text ${
-              !linkWhite ? "navMenu__text--dark" : ""
-            }`}
-          >
-            Nos Realisations
-          </div>
+          <div className={getTextClass()}>Nos Realisations</div>
         </Link>
         <Link
           to="/about"
@@ -47,13 +44,7 @@ const NavMenu = () => {
             location.pathname === "/about" ? "nav-link-active" : ""
           }`}
         >
-          <div
-            className={`navMenu__text ${
-              !linkWhite ? "navMenu__text--dark" : ""
-            }`}
-          >
-            Nous joindre
-          </div>
+          <div className={getTextClass()}>Nous joindre</div>
         </Link>
       </ul>
     </div>

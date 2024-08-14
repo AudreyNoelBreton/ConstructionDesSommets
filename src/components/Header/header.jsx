@@ -83,7 +83,7 @@ const Header = ({ logo }) => {
             />
           )}
 
-          {!isMobile && <NavMenu />}
+          {!isMobile && <NavMenu isScrolled={isScrolled} />}
         </div>
         <MobileMenu isOpen={isOpen} />
       </div>

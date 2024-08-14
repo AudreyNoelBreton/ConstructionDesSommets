@@ -1,5 +1,12 @@
 .about {
   &__header {
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
+  }
+}
+@media (min-width: 1024px) {
+  .about {
+    &__header {
+      padding-bottom: 6.25rem;
+    }
   }
 }

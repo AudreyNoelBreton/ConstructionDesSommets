@@ -89,7 +89,7 @@ const Carousel = ({ images = [] }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebookF />
+              <FaFacebookF className="carousel__effect" />
             </a>
             <a
               href="https://www.instagram.com/leshabitationsdusommet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
