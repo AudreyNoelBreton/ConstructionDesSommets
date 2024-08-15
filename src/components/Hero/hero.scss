@@ -26,10 +26,12 @@
     font-family: Eurostile Bold;
     color: white;
     width: 100%;
-    padding: 1rem 3.125rem; /* 50px = 3.125rem */
-    font-size: 3.625rem; /* 58px = 3.625rem */
+    padding: 1rem 2.425rem; /* 50px = 3.125rem */
+    font-size: 2.825rem; /* 58px = 3.625rem */
     text-align: center;
     text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.4),
+      3px 3px 8px rgba(0, 0, 0, 0.4);
   }
 
   &__chatWidget {
@@ -41,6 +43,13 @@
   }
 }
 
+@media (min-width: 400px) {
+  .hero {
+    &__text {
+      font-size: 3rem; /* 57px => 3.5625rem */
+    }
+  }
+}
 @media (min-width: 576px) {
   .hero {
     &__overlay {

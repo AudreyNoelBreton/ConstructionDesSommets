@@ -1,19 +1,28 @@
 .alert {
-  background-color: #242318;
   position: fixed;
-  top: 0;
-  width: 100%;
-  color: #fff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #242318;
+  color: white;
   text-align: center;
-  padding: 10px 0;
-  z-index: 20000;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-  transform: translateY(0);
-  opacity: 1;
-  cursor: pointer;
+  padding: 1.125rem 2.5rem;
+  z-index: 1000;
+  transition: transform 0.8s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(100%); /* L'alerte commence hors de l'écran */
 
-  &--hide {
-    transform: translateY(-100%);
-    opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.625rem;
+  &__text {
+    font-family: Eurostile Bold;
+    font-size: 0.935rem;
+    text-transform: uppercase;
+  }
+  &.active {
+    opacity: 1;
+    transform: translateY(0); /* L'alerte remonte à sa position normale */
   }
 }

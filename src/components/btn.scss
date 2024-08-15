@@ -7,6 +7,7 @@
   border-radius: 0.9375rem;
   justify-content: space-between;
   z-index: 1;
+  gap: 14px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Amplification de l'ombre */
   border: none; /* Supprime toute bordure par défaut */
   align-items: center;
@@ -17,6 +18,12 @@
     cursor: pointer;
   }
   &__text {
+    font-family: Eurostile Bold;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+  }
+
+  &__text-email {
     font-family: Eurostile Bold;
     text-transform: uppercase;
     font-size: 0.7rem;
@@ -56,7 +63,9 @@
     &__text {
       font-size: 18px;
     }
-
+    &__text-email {
+      font-size: 18px;
+    }
     &__icon {
       font-size: 18px;
     }
@@ -106,6 +115,14 @@
       gap: 14px;
       background-color: #877851;
       color: #242318;
+    }
+
+    &--email {
+      font-size: 12px;
+    }
+
+    &__text-email {
+      font-size: 15px;
     }
   }
 }

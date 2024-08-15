@@ -5,7 +5,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import "./contact-section.scss";
 
 const Contact = () => {
-  const isMobile = useMediaQuery({ maxWidth: 575 });
+  const isMobile = useMediaQuery({ maxWidth: 1200 });
   const image = isMobile ? "/nous-joindre-mobile.jpg" : "/nous-joindre.jpg";
 
   const sectionStyle = {
@@ -13,7 +13,9 @@ const Contact = () => {
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
-
+  const handleEmailClick = () => {
+    window.location.href = "mailto:info@habitationsdusommet.com";
+  };
   return (
     <section className="contact" style={sectionStyle}>
       <div className="contact__content">
@@ -31,10 +33,14 @@ const Contact = () => {
               </div>
             </div>
             <button
-              href="mailto:info@habitationsdusommet.com"
-              className={`btn ${isMobile ? "btn--center" : "btn--end"}`}
+              onClick={handleEmailClick}
+              className={`btn ${
+                isMobile ? "btn--center" : "btn--email btn--end"
+              }`}
             >
-              <div className="btn__text">info@habitationsdusommet.com</div>
+              <div className="btn__text-email">
+                info@habitationsdusommet.com
+              </div>
               <FaArrowRightLong className="btn__icon" />
             </button>
           </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.scss";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
@@ -13,13 +13,26 @@ import ScrollToTop from "./components/scrollToTop";
 
 const App = () => {
   const location = useLocation();
+  const [isAlertActive, setIsAlertActive] = useState(false);
+
+  useEffect(() => {
+    if (location.pathname !== "/about") {
+      setIsAlertActive(false); // Désactiver l'alerte
+      setTimeout(() => {
+        setIsAlertActive(true); // Réactiver l'alerte pour relancer l'animation
+      }, 0);
+    }
+  }, [location]);
 
   return (
     <PageTransition>
       <React.Fragment>
         <ScrollToTop />
-
-        {/* <Alert message="Obtenir une soumission" /> */}
+        <Alert
+          key={location.key}
+          message="Demander une soumission"
+          isActive={isAlertActive}
+        />
         <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
