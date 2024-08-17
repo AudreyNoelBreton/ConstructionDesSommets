@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./home.scss";
 import Header from "../../components/Header/header";
 import Slogan from "../../Sections/Slogan-section/slogansection";
@@ -12,24 +12,52 @@ import data from "../../data/data";
 import Soumission from "../../Sections/Soumission/soumission";
 import { useMediaQuery } from "react-responsive";
 import Cart from "../../Sections/Cart-section/cartSection";
-const Home = () => {
-  const isMobile = useMediaQuery({ maxWidth: 575 });
-  const imagePath = isMobile ? data.sliderImagesMobile : data.sliderImages;
+import Alert from "../..//components/Alert/Alert";
+import { useLocation } from "react-router-dom";
 
+const Home = () => {
+  const location = useLocation();
+
+  const isMobile = useMediaQuery({ maxWidth: 1024 });
+  const imagePath = isMobile ? data.sliderImagesMobile : data.sliderImages;
+  const [isAlertActive, setIsAlertActive] = useState(false);
+
+  useEffect(() => {
+    if (location.pathname !== "/about") {
+      setIsAlertActive(false);
+      setTimeout(() => {
+        setIsAlertActive(true);
+      }, 0);
+    }
+  }, [location]);
   const logoPath = "/logo-habitations.svg";
   return (
     <div className="home">
+      <Alert
+        key={location.key}
+        message="Demander une soumission"
+        isActive={isAlertActive}
+      />
       <Header logo={logoPath} />
       <Carousel images={imagePath} />
       <Slogan />
       <Infos />
       <Realisations />
       <div className="home__soumission">
-        <img
-          className="home__image"
-          src="/soumission-mobile (1).jpg"
-          alt="project"
-        />
+        {isMobile && (
+          <>
+            <img
+              className="home__image"
+              src="/soumission-mobile (1).jpg"
+              alt="project"
+            />
+          </>
+        )}
+        {!isMobile && (
+          <>
+            <img className="home__image" src="/soumission.jpg" alt="project" />
+          </>
+        )}
       </div>
 
       <div className="home__soumission">

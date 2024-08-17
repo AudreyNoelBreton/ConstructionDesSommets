@@ -1,0 +1,97 @@
+.maison {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 7.5rem; /* 120px => 7.5rem */
+  padding: 0 1.875rem 3.75rem 1.875rem; /* 30px => 1.875rem, 60px => 3.75rem */
+  justify-content: center;
+  justify-content: space-between;
+  gap: 3.125rem; /* 50px => 3.125rem */
+
+  &__title {
+    font-family: Eurostile Bold;
+    color: #242318;
+    background-color: transparent;
+    width: 100%;
+    font-size: 2.8125rem; /* 45px => 2.8125rem */
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1),
+      3px 3px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @keyframes waveFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &__gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9375rem; /* 15px => 0.9375rem */
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
+    gap: 0.9375rem; /* 15px => 0.9375rem */
+  }
+
+  &__item {
+    flex: 1;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    animation: waveFadeIn 1.7s ease forwards;
+  }
+
+  &__item img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 420px) {
+  .maison {
+    &__title {
+      font-size: 3.5625rem; /* 57px => 3.5625rem */
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .maison {
+    &__title {
+      padding: 2rem 2rem;
+      font-size: 5rem; /* 57px => 3.5625rem */
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .maison {
+    padding: 6.25rem 4rem 6.25rem 4rem; /* Converti en rem */
+
+    &__title {
+      padding: 3rem 4rem;
+      font-size: 7rem; /* 57px => 3.5625rem */
+    }
+
+    &__gallery {
+      gap: 3.75rem;
+    }
+    &__items {
+      gap: 3.75rem;
+    }
+  }
+}

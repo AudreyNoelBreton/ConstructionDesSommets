@@ -12,7 +12,9 @@ const Header = ({ logo }) => {
   const location = useLocation().pathname;
   const logoWhite =
     location !== "/realisations/consecration" &&
-    location !== "/realisations/ferreolaise";
+    location !== "/realisations/ferreolaise" &&
+    location !== "/realisations/maison-verte" &&
+    location !== "/realisations/olympique";
   const logoHabitations = "/logo-habitations.svg";
 
   const isMobile = useMediaQuery({ maxWidth: 1024 });

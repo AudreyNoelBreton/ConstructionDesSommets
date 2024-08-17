@@ -8,7 +8,6 @@ const MainImage = ({ mainImage, mainText, url }) => {
   const handleClick = (e) => {
     e.preventDefault();
     navigate(url);
-    console.log(url);
   };
 
   return (

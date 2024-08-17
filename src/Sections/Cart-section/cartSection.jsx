@@ -4,8 +4,9 @@ import "./cartSection.scss";
 import { useMediaQuery } from "react-responsive";
 
 const Cart = () => {
-  const isMobile = useMediaQuery({ maxWidth: 575 });
+  const isMobile = useMediaQuery({ maxWidth: 1024 });
 
+  console.log(isMobile);
   return (
     <section className="cart">
       {isMobile && (

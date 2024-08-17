@@ -1,28 +1,28 @@
 .temoignages {
   width: 100%;
-
+  // min-height: 28.75rem;
   display: flex;
   position: relative;
   overflow: hidden;
   flex-direction: column;
 
+  // padding: 3.125rem;
   &__container {
     position: relative;
     display: flex;
-
     width: 100%;
-
     transition: transform 0.5s ease-in-out;
     &.animating {
       transition: transform 0.5s ease-in-out;
     }
   }
   &__item {
-    display: flex;
+    display: inline-block; /* Change from flex to inline-block for adjusting to content size */
+    width: auto; /* Remove fixed width if any */
     flex-direction: column;
     flex: 1 0 100%;
     scroll-snap-align: start;
-    padding: 20px 30px;
+    padding: 0 30px;
 
     img {
       width: 100%;
@@ -35,7 +35,7 @@
     width: 100%;
     font-family: Eurostile Medium;
     left: 50%;
-    bottom: 35%;
+    bottom: 50%;
     color: #242318;
     position: relative;
     transform: translateX(-50%);
@@ -55,18 +55,17 @@
   }
 
   &__text-overlay {
-    text-align: center;
-    width: 100%;
     font-family: Eurostile Bold;
-    position: absolute;
     text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 75px;
-    font-size: 57px;
+    z-index: 1000;
+    font-size: 45px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1),
       3px 3px 8px rgba(0, 0, 0, 0.1);
-
     color: #242318;
     z-index: 10;
   }

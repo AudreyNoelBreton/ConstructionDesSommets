@@ -7,7 +7,9 @@ const NavMenu = ({ isScrolled }) => {
 
   const linkWhite =
     location.pathname !== "/realisations/consecration" &&
-    location.pathname !== "/realisations/ferreolaise";
+    location.pathname !== "/realisations/ferreolaise" &&
+    location.pathname !== "/realisations/maison-verte" &&
+    location.pathname !== "/realisations/olympique";
   const isRealisationActive = location.pathname.startsWith("/realisations");
   const getTextClass = () => {
     if (linkWhite) {
@@ -18,7 +20,7 @@ const NavMenu = ({ isScrolled }) => {
       return "navMenu__text";
     }
   };
-  console.log(linkWhite);
+
   return (
     <div className="navMenu">
       <ul className="navMenu__links">

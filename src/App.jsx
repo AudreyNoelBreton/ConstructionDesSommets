@@ -8,18 +8,18 @@ import Team from "./pages/Team/team";
 import Consecration from "./pages/Consecration/consecration";
 import Falaise from "./pages/Falaise/falaise";
 import PageTransition from "./components/PageTransition/PageTransition";
-import Alert from "./components/Alert/Alert";
 import ScrollToTop from "./components/scrollToTop";
-
+import Maison from "./pages/Maison/maison";
+import Olympique from "./pages/Olympique/olympique";
 const App = () => {
   const location = useLocation();
   const [isAlertActive, setIsAlertActive] = useState(false);
 
   useEffect(() => {
     if (location.pathname !== "/about") {
-      setIsAlertActive(false); // Désactiver l'alerte
+      setIsAlertActive(false);
       setTimeout(() => {
-        setIsAlertActive(true); // Réactiver l'alerte pour relancer l'animation
+        setIsAlertActive(true);
       }, 0);
     }
   }, [location]);
@@ -28,17 +28,15 @@ const App = () => {
     <PageTransition>
       <React.Fragment>
         <ScrollToTop />
-        <Alert
-          key={location.key}
-          message="Demander une soumission"
-          isActive={isAlertActive}
-        />
+
         <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/realisations" element={<Realisations />}>
             <Route path="consecration" element={<Consecration />} />
             <Route path="ferreolaise" element={<Falaise />} />
+            <Route path="maison-verte" element={<Maison />} />
+            <Route path="olympique" element={<Olympique />} />
           </Route>
           <Route path="/team" element={<Team />} />
         </Routes>

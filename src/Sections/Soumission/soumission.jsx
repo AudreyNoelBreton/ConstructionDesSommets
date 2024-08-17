@@ -4,7 +4,6 @@ import "../../components/Btn.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useMediaQuery } from "react-responsive";
 
-import Modal from "../../components/Modal/modal";
 const Soumission = () => {
   const [nom, setNom] = useState("");
   const [numero, setNumero] = useState("");
@@ -12,39 +11,34 @@ const Soumission = () => {
   const [resume, setResume] = useState("");
   const [delais, setDelais] = useState("");
   const [courriel, setCourriel] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 575 });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsModalOpen(true);
-  };
 
-  const handleConfirm = () => {
-    const emailContent = `
-      Nom: ${nom}\n
-      Numéro de téléphone: ${numero}\n
-      Lieu des travaux: ${lieu}\n
-      Résumé du projet: ${resume}\n
-      Délais souhaité: ${delais}\n
-      Courriel: ${courriel}
-    `;
+    // Message d'alerte natif du navigateur
+    const confirmMessage =
+      "N'oubliez pas de joindre vos plans en pièces jointes dans le courriel.";
+    const userConfirmed = window.confirm(confirmMessage);
 
-    window.location.href = `mailto:?subject=Demande de soumission&body=${encodeURIComponent(
-      emailContent
-    )}`;
-    setIsModalOpen(false);
+    if (userConfirmed) {
+      const emailContent = `
+        Nom: ${nom}\n
+        Numéro de téléphone: ${numero}\n
+        Lieu des travaux: ${lieu}\n
+        Résumé du projet: ${resume}\n
+        Délais souhaité: ${delais}\n
+        Courriel: ${courriel}
+      `;
+
+      window.location.href = `mailto:?subject=Demande de soumission&body=${encodeURIComponent(
+        emailContent
+      )}`;
+    }
   };
 
   return (
     <section className="soumission">
-      {isModalOpen && (
-        <Modal
-          message="N'oubliez pas de joindre vos plans en pièces jointes dans le courriel."
-          onClose={() => setIsModalOpen(false)}
-          onConfirm={handleConfirm}
-        />
-      )}
       <form className="soumission__container" onSubmit={handleSubmit}>
         <div className="soumission__title">Demander une soumission</div>
 
@@ -176,8 +170,6 @@ const Soumission = () => {
                     required
                   />
                 </div>
-              </div>
-              <div className="soumission__row">
                 <div className="soumission__input">
                   <input
                     type="email"
@@ -187,6 +179,8 @@ const Soumission = () => {
                     required
                   />
                 </div>
+              </div>
+              <div className="soumission__row soumission__row--end">
                 <button className="btn">
                   <div className="btn__text">Envoyer</div>
                   <FaArrowRightLong className="btn__icon" />
