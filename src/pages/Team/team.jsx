@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Header from "../../components/Header/header";
 import Hero from "../../components/Hero/hero";
 import Members from "../../Sections/Members/members";
@@ -15,12 +15,20 @@ import { useLocation } from "react-router-dom";
 const Team = () => {
   const location = useLocation();
   const isMobile = useMediaQuery({ maxWidth: 575 });
+  const [isAlertActive, setIsAlertActive] = useState(true);
+  const [alertHeight, setAlertHeight] = useState(0);
+  const alertRef = useRef(null);
+
+  useEffect(() => {
+    if (alertRef.current) {
+      setAlertHeight(alertRef.current.offsetHeight);
+    }
+  }, [isAlertActive]);
   const imagePath = isMobile
     ? "/à-propos-header-mobile.jpg"
     : "/à-propos-header.jpg";
   const logoPath = "/logo-habitations.svg";
   const text = "Passionnés de la qualité";
-  const [isAlertActive, setIsAlertActive] = useState(false);
 
   useEffect(() => {
     if (location.pathname !== "/about") {
@@ -33,6 +41,7 @@ const Team = () => {
   return (
     <div>
       <Alert
+        ref={alertRef}
         key={location.key}
         message="Demander une soumission"
         isActive={isAlertActive}
@@ -65,7 +74,7 @@ const Team = () => {
         <Soumission />
       </div>
       <Links />
-      <Footer />
+      <Footer isAlertActive={isAlertActive} alertHeight={alertHeight} />
     </div>
   );
 };

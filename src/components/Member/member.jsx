@@ -9,7 +9,7 @@ const Member = ({ position }) => {
         <>
           <div className="member">
             <img
-              src="louis-brochu-2.jpg"
+              src="SOMMET_14.png"
               alt="Construction"
               className="member__img"
             />
@@ -52,7 +52,7 @@ const Member = ({ position }) => {
         <>
           <div className="member member--background-green">
             <img
-              src="william-viens-2.jpg"
+              src="SOMMET_9.png"
               alt="Construction"
               className="member__img"
             />

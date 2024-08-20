@@ -59,15 +59,20 @@
     padding: 4.75rem 4.6875rem; /* 40px */
     gap: 1.645rem; /* 20px */
     &__name {
+      width: 100%;
+      padding: 1rem 6.6875rem 0 6.6875rem;
+      text-align: center;
       font-size: 5rem; /* 80px */
+      align-self: center;
     }
 
     &__text {
+      padding: 1rem 6.6875rem;
       font-size: 1.875rem; /* 30px */
     }
 
     &__img {
-      width: 70%;
+      width: 100%;
       height: fit-content;
       align-self: center;
     }

@@ -50,7 +50,7 @@ const CarouselSecteurs = () => {
         }}
       >
         {images.map((img, index) => (
-          <a
+          <div
             href="/"
             className="carousel-secteurs__item"
             key={index}
@@ -61,7 +61,7 @@ const CarouselSecteurs = () => {
             <div className="carousel-secteurs__overlay">
               <div className="carousel-secteurs__text">{img.txt}</div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
       <div className="carousel-secteurs__bottom">

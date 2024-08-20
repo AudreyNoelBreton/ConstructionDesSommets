@@ -55,25 +55,10 @@
     margin-right: 0.3125rem;
     font-family: Eurostile Bold;
     position: relative;
-    cursor: pointer;
+
     text-transform: uppercase;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: -5%;
-      width: 110%;
-      height: 0.125rem; // 2px
-      background-color: currentColor;
-      transform: scaleX(0);
-      transform-origin: bottom left;
-      transition: transform 0.4s ease-in-out;
-    }
-
-    &:hover::before {
-      transform: scaleX(1);
-    }
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5),
+      3px 3px 8px rgba(0, 0, 0, 0.5);
   }
 
   &__bottom {
@@ -123,7 +108,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 575px) {
   .carousel-secteurs {
     max-height: 50rem; // 400px
     padding: 0 6.25rem;

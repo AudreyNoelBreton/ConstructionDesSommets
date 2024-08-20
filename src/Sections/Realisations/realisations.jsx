@@ -30,18 +30,21 @@ const Realisations = () => {
         <>
           <div className="realisations__projects">
             <MainImage
-              mainImage={ferreolaiseImage}
+              mainImage={[ferreolaiseImage]}
               mainText={ferreolaiseText}
             ></MainImage>
             <MainImage
-              mainImage={consecrationImage}
+              mainImage={[consecrationImage]}
               mainText={consecrationText}
             ></MainImage>
             <MainImage
-              mainImage={petiteMaisonImage}
+              mainImage={[petiteMaisonImage]}
               mainText={petiteMaisonText}
             ></MainImage>
-            <MainImage mainImage={olympImage} mainText={olympText}></MainImage>
+            <MainImage
+              mainImage={[olympImage]}
+              mainText={olympText}
+            ></MainImage>
           </div>
 
           <button className="btn btn--center" onClick={handleButtonClick}>
@@ -53,7 +56,7 @@ const Realisations = () => {
         <>
           <div className="realisations__projects">
             <MainImage
-              mainImage={ferreolaiseImage}
+              mainImage={[ferreolaiseImage]}
               mainText={ferreolaiseText}
             ></MainImage>
           </div>

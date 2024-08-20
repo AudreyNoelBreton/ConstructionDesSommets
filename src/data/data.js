@@ -109,6 +109,11 @@ const questions = [
 
 const projects = [
   {
+    images: [
+      "/project-1.jpg",
+      "/Projet/Habitations-du-sommet-rue-du-sommet-15.jpg",
+      "/Projet/Habitations-du-sommet-rue-du-sommet-14.jpg",
+    ],
     text: "La consecration",
     image1: "/project-1.jpg",
     image2: "/project-1-2.jpg",
@@ -117,6 +122,12 @@ const projects = [
   },
 
   {
+    images: [
+      "/petite-maison-verte-1.jpg",
+      "/maison/Habitations-du-sommet-petite-maison-verte-6.jpg",
+      "/maison/Habitations-du-sommet-petite-maison-verte-7.jpg",
+      "/maison/Habitations-du-sommet-petite-maison-verte-3.jpg",
+    ],
     text: "La petite maison verte",
     image1: "/petite-maison-verte-1.jpg",
     image2: "/petite-maison-verte-2.jpg",
@@ -125,6 +136,12 @@ const projects = [
   },
 
   {
+    images: [
+      "/la-ferreeolaise-1.jpg",
+      "/Falaise/Habitations-du-sommet-la-falaise-27.jpg",
+      "/Falaise/Habitations-du-sommet-la-falaise-31.jpg",
+      "/Falaise/Habitations-du-sommet-la-falaise-32.jpg",
+    ],
     text: "la ferréolaise",
     image1: "/la-ferreeolaise-1.jpg",
     image2: "/la-ferreolaise-2.jpg",
@@ -133,6 +150,11 @@ const projects = [
   },
 
   {
+    images: [
+      "/l'olympique-1.jpg",
+      "/olympique/habitations-du-sommet-bloc-3.jpg",
+      "/olympique/habitations-du-sommet-bloc-1.jpg",
+    ],
     text: "l'olympique",
     image1: "/l'olympique-1.jpg",
     image2: "/l'olympique-2.jpg",
