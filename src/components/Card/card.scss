@@ -73,3 +73,20 @@
     }
   }
 }
+@media (min-width: 1400px) {
+  .card {
+    gap: 3.5rem;
+
+    &__title {
+      width: 80%;
+      font-size: 5.5rem;
+    }
+
+    &__content {
+      max-width: 50%;
+    }
+    &__text {
+      font-size: 1.75rem;
+    }
+  }
+}

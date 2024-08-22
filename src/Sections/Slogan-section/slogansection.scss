@@ -33,6 +33,8 @@
   }
 
   &__logo {
+    margin-left: auto; /* Pour pousser le logo à la droite */
+
     display: flex;
     align-self: flex-end;
     width: 60%;
@@ -106,6 +108,8 @@
       align-self: flex-end;
       align-items: flex-end;
       justify-items: end;
+      align-content: flex-end;
+      max-width: 350px;
     }
 
     &__secteurs {

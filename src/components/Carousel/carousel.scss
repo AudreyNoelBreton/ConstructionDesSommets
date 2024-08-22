@@ -179,6 +179,8 @@
 }
 @media (min-width: 1024px) {
   .carousel {
+    max-height: 100vh; /* Limite la hauteur totale du carrousel à la hauteur de l'écran */
+
     &__title {
       font-size: 4.6875rem;
     }
@@ -214,6 +216,18 @@
       svg {
         font-size: 2.5rem;
       }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel {
+    &__title {
+      font-size: 5rem;
+    }
+
+    &__text-overlay-desktop {
+      font-size: 2.5rem;
     }
   }
 }

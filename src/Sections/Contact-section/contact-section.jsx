@@ -34,9 +34,7 @@ const Contact = () => {
             </div>
             <button
               onClick={handleEmailClick}
-              className={`btn ${
-                isMobile ? "btn--center" : "btn--email btn--end"
-              }`}
+              className={`btn ${isMobile ? "btn--center" : "btn--email"}`}
             >
               <div className="btn__text-email">
                 info@habitationsdusommet.com

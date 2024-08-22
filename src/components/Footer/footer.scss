@@ -38,6 +38,7 @@
   &__logo img {
     height: 100%;
     width: 100%;
+    max-width: 250px;
   }
 
   &__links {
@@ -47,8 +48,7 @@
     width: 100%;
     justify-self: end;
     align-self: end;
-    justify-content: space-between;
-    gap: 5px;
+    gap: 10px;
   }
 
   &__link {
@@ -232,6 +232,15 @@
     }
   }
 }
+
+@media (min-width: 1024px) {
+  .footer {
+    &__link-bottom {
+      font-size: 1rem;
+    }
+  }
+}
+
 @media (min-width: 1200px) {
   .footer {
     padding: 3.2875rem 5.3125rem;

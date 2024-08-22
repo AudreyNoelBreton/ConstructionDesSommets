@@ -98,9 +98,15 @@
     opacity: 0.5; // 50%
     border-radius: 0%;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Ajout de la transition pour box-shadow et transform */
     margin-bottom: 1.875rem; // 30px
 
+    &:hover {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.9); /* Ajout d'un effet d'illumination */
+      transform: scale(
+        1.1
+      ); /* Légère augmentation de la taille pour accentuer l'effet */
+    }
     &.active {
       background-color: #bab2aa;
       opacity: 1; // 100%
@@ -122,6 +128,35 @@
 
     &__bottom {
       width: 100%;
+    }
+    &__dots {
+      display: none;
+    }
+
+    &__dot {
+      height: 0.5rem; // 7px
+      width: 3rem; // 40px
+      margin: 0 0.6125rem;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .carousel-secteurs {
+    max-height: 50rem; // 400px
+    padding: 0 6.25rem;
+    align-items: center; /* Ajoutez cette ligne pour centrer les éléments */
+    gap: 2rem;
+    &__text {
+      font-size: 2.5rem;
+      padding-left: 3.75rem;
+      bottom: 4.75rem; // Ajustez pour le positionnement
+    }
+
+    &__bottom {
+      width: 100%;
+    }
+    &__dots {
+      display: flex;
     }
 
     &__dot {

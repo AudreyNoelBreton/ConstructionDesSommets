@@ -44,16 +44,16 @@ const Carousel = ({ images = [] }) => {
         <div className="carousel__content">
           <div className="carousel__title">Les habitations du sommet</div>
           <div className="carousel__text-overlay-desktop ">
-            <div>ENTREPRENEUR GÉNÉRAL</div>
-            <div>EN CONSTRUCTION</div>
+            <div>ENTREPRENEUR GÉNÉRAL </div>
+            <div> EN CONSTRUCTION</div>
           </div>
         </div>
       )}
 
       {isMobile && (
         <div className="carousel__text-overlay">
-          <div>ENTREPRENEUR GÉNÉRAL</div>
-          <div>EN CONSTRUCTION</div>
+          <div>ENTREPRENEUR GÉNÉRAL </div>
+          <div> EN CONSTRUCTION</div>
         </div>
       )}
       <div

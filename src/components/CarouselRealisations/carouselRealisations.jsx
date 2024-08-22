@@ -19,7 +19,7 @@ const CarouselRealisations = ({ images = [] }) => {
       } else {
         setActiveIndex((prevIndex) => prevIndex + 1);
       }
-    }, 8000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [activeIndex, images.length]);
 
