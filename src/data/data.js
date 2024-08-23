@@ -20,7 +20,7 @@ const sliderSecteurs = [
     txt: "Finition",
   },
   {
-    src: "/petite-maison-verte-2.jpg",
+    src: "/maison/Habitations-du-sommet-petite-maison-verte-3.jpg",
     txt: "Revetement",
   },
 ];
@@ -76,7 +76,7 @@ const consecrationImages = [
 
 const cardHomePage = [
   {
-    src: "/project-1-1.jpg",
+    src: "/Projet/Habitations-du-sommet-rue-du-sommet-15.jpg",
     title: "Passionnés de la qualité",
     text: "Notre équipe expérimenté se démarque par son efficacité et osn souci du détail. Chaque élément est soigneusement pris en compte pour un résultat dont vous pourrez être fiers.",
     buttonText: "à propos de nous",
@@ -84,7 +84,7 @@ const cardHomePage = [
   },
 
   {
-    src: "/petite-maison-verte-2.jpg",
+    src: "/maison/Habitations-du-sommet-petite-maison-verte-3.jpg",
     title: "Service personnalisé",
     text: "Chaque projet est unique, c'est pourquoi nous vous garantissons un service sur mesure, adapté à vos besoins. Comptez sur notre expertise pour guider vos choix en fonction de vos objectifs et votre budget",
     buttonText: "en savoir plus",
@@ -110,7 +110,7 @@ const questions = [
 const projects = [
   {
     images: [
-      "/project-1.jpg",
+      "/Projet/Habitations-du-sommet-rue-du-sommet-36.jpg",
       "/Projet/Habitations-du-sommet-rue-du-sommet-15.jpg",
       "/Projet/Habitations-du-sommet-rue-du-sommet-14.jpg",
     ],
@@ -137,7 +137,7 @@ const projects = [
 
   {
     images: [
-      "/la-ferreeolaise-1.jpg",
+      "/Falaise/Habitations-du-sommet-la-falaise-27.jpg",
       "/Falaise/Habitations-du-sommet-la-falaise-27.jpg",
       "/Falaise/Habitations-du-sommet-la-falaise-31.jpg",
       "/Falaise/Habitations-du-sommet-la-falaise-32.jpg",
@@ -151,7 +151,7 @@ const projects = [
 
   {
     images: [
-      "/l'olympique-1.jpg",
+      "/olympique/habitations-du-sommet-bloc-1.jpg",
       "/olympique/habitations-du-sommet-bloc-3.jpg",
       "/olympique/habitations-du-sommet-bloc-1.jpg",
     ],

@@ -235,6 +235,30 @@
 
 @media (min-width: 1024px) {
   .footer {
+    &__row-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & > .footer__logo-bottom {
+        flex-basis: 25%; /* Le logo prend 25% */
+        max-width: 25%;
+      }
+
+      & > .footer__links-bottom {
+        flex-basis: 50%; /* Les liens prennent 50% */
+        max-width: 50%;
+        display: flex;
+        justify-content: center; /* Centrer les liens horizontalement */
+      }
+
+      & > .footer__element-bottom {
+        flex-basis: 25%; /* L'autre section prend 25% */
+        max-width: 25%;
+        display: flex;
+        justify-content: flex-end; /* Aligner à droite */
+      }
+    }
     &__link-bottom {
       font-size: 1rem;
     }
@@ -257,6 +281,22 @@
 
     &__socials-bottom {
       gap: 1.125rem;
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .footer {
+    &__link-bottom {
+      font-size: 1.4375rem;
+    }
+    &__social {
+      justify-items: center;
+      svg {
+        font-size: 2rem;
+      }
+    }
+    &__links-bottom {
+      gap: 15px;
     }
   }
 }

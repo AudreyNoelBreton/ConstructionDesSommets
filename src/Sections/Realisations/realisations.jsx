@@ -9,12 +9,7 @@ import data from "../../data/data";
 const Realisations = () => {
   const ferreolaiseImage = "/la-ferreeolaise-1.jpg";
   const ferreolaiseText = "la ferréolaise";
-  const consecrationImage = "/project-1.jpg";
-  const consecrationText = "La consecration";
-  const petiteMaisonImage = "/petite-maison-verte-1.jpg";
-  const petiteMaisonText = "La petite maison verte";
-  const olympImage = "/l'olympique-1.jpg";
-  const olympText = "l'olympique";
+
   const isMobile = useMediaQuery({ maxWidth: 575 });
 
   const navigate = useNavigate();
@@ -29,22 +24,13 @@ const Realisations = () => {
       {isMobile && (
         <>
           <div className="realisations__projects">
-            <MainImage
-              mainImage={[ferreolaiseImage]}
-              mainText={ferreolaiseText}
-            ></MainImage>
-            <MainImage
-              mainImage={[consecrationImage]}
-              mainText={consecrationText}
-            ></MainImage>
-            <MainImage
-              mainImage={[petiteMaisonImage]}
-              mainText={petiteMaisonText}
-            ></MainImage>
-            <MainImage
-              mainImage={[olympImage]}
-              mainText={olympText}
-            ></MainImage>
+            {data.projects.map((project, index) => (
+              <MainImage
+                key={index}
+                images={project.images}
+                mainText={project.text}
+              />
+            ))}
           </div>
 
           <button className="btn btn--center" onClick={handleButtonClick}>

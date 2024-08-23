@@ -51,6 +51,35 @@
       transform: scaleX(1);
     }
   }
+  &__text-home {
+    color: #f7f4f0;
+    font-size: 1.125rem; /* 18px => 1.125rem */
+    text-align: start;
+    text-transform: uppercase;
+    font-family: "Eurostile Bold";
+    z-index: 20;
+    position: absolute;
+    left: 1.5625rem; /* 25px => 1.5625rem */
+    cursor: pointer;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.5),
+      3px 3px 8px rgba(0, 0, 0, 0.5);
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -5%;
+      width: 110%;
+      height: 0.125rem; /* 2px => 0.125rem */
+      background-color: currentColor;
+      transform: scaleX(0);
+      transform-origin: bottom left;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
 
   &__icon {
     font-size: 1.375rem; /* 22px => 1.375rem */

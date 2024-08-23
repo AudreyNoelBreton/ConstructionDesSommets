@@ -18,6 +18,20 @@
     text-transform: uppercase;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1),
       3px 3px 8px rgba(0, 0, 0, 0.1);
+    animation: waveFadeInTitle 1.7s ease forwards;
+  }
+  @keyframes waveFadeInTitle {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @keyframes waveFadeIn {
@@ -33,6 +47,7 @@
       transform: translateY(0);
     }
   }
+
   &__gallery {
     display: flex;
     flex-direction: column;
@@ -73,8 +88,7 @@
 @media (min-width: 768px) {
   .maison {
     &__title {
-      padding: 1rem 1rem;
-      font-size: 4rem; /* 57px => 3.5625rem */
+      font-size: 3rem; /* 57px => 3.5625rem */
     }
   }
 }

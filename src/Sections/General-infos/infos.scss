@@ -32,6 +32,7 @@
 
 @media (min-width: 576px) {
   .infos {
+    padding-bottom: 0;
     &__services {
       width: 100%;
       padding: 6.25rem 2.5rem 11.25rem 2.5rem;
@@ -59,6 +60,7 @@
 
 @media (min-width: 1024px) {
   .infos {
+    padding-bottom: 2.5rem;
     &__services {
       width: 100%;
       padding: 9.375rem 6.25rem 13.75rem 6.25rem; /* Converti en rem */

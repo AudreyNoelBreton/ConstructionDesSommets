@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./footer.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa6";
@@ -10,9 +10,18 @@ import { useMediaQuery } from "react-responsive";
 const Footer = () => {
   const imagePath = "/logo-habitations.svg";
   const isMobile = useMediaQuery({ maxWidth: 1024 });
+  const location = useLocation();
 
   return (
-    <footer className="footer">
+    <footer
+      className="footer"
+      style={{
+        paddingBottom:
+          location.pathname !== "/about"
+            ? "calc(2.8125rem + 50px)"
+            : "2.8125rem",
+      }}
+    >
       {isMobile && (
         <>
           <div className="footer__container">
