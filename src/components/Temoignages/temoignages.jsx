@@ -8,9 +8,11 @@ const Temoignages = () => {
   );
   const [isAnimating, setIsAnimating] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+
   const goToSlide = (index) => {
     setActiveIndex(index);
   };
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (activeIndex === valeur.length - 1) {
@@ -35,15 +37,11 @@ const Temoignages = () => {
       >
         {valeur.map((val, index) => (
           <div className="temoignages__item" key={index}>
-            <div className="temoignages__background">
-              <img src={val.back} alt={`temoignages ${index}`} />
-              <div className="temoignages__text">{val.text}</div>
-              <div className="temoignages__name">{val.name}</div>
-            </div>
+            <div className="temoignages__text">{val.text}</div>
+            <div className="temoignages__name">{val.name}</div>
           </div>
         ))}
       </div>
-      {/* 
       <div className="temoignages__dots">
         {valeur.map((_, index) => (
           <span
@@ -54,7 +52,7 @@ const Temoignages = () => {
             onClick={() => goToSlide(index)}
           ></span>
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };

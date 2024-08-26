@@ -88,7 +88,8 @@
 @media (min-width: 768px) {
   .maison {
     &__title {
-      font-size: 3rem; /* 57px => 3.5625rem */
+      padding: 2rem 2rem;
+      font-size: 4.5rem; /* 57px => 3.5625rem */
     }
   }
 }

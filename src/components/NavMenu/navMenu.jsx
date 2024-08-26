@@ -30,7 +30,7 @@ const NavMenu = ({ isScrolled }) => {
             location.pathname === "/team" ? "nav-link-active" : ""
           }`}
         >
-          <div className={getTextClass()}>A propos de nous</div>
+          <div className={getTextClass()}>À propos de nous</div>
         </Link>
         <Link
           to="/realisations"
@@ -38,7 +38,7 @@ const NavMenu = ({ isScrolled }) => {
             isRealisationActive ? "nav-link-active" : ""
           }`}
         >
-          <div className={getTextClass()}>Nos Realisations</div>
+          <div className={getTextClass()}>Nos Réalisations</div>
         </Link>
         <Link
           to="/about"

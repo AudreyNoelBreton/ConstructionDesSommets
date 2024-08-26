@@ -20,7 +20,7 @@ const Infos = () => {
             <div className="infos__produits">
               <Produit image="/charpente.jpg" text="Charpente" />
               <Produit image="/la-ferreolaise-2.jpg" text="finition" />
-              <Produit image="/petite-maison-verte-2.jpg" text="Revetement" />
+              <Produit image="/petite-maison-verte-2.jpg" text="Revêtement" />
             </div>
           </>
         )}

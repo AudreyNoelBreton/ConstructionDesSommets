@@ -22,13 +22,7 @@ const Consecration = () => {
       }, 0);
     }
   }, [location]);
-  let foundProject = null;
-  for (let i = 0; i < data.projects.length; i++) {
-    if (data.projects[i].text === "La consecration") {
-      foundProject = data.projects[i];
-      break;
-    }
-  }
+
   const logoPath = "/logo-habitations-dark.svg";
 
   return (
@@ -40,7 +34,7 @@ const Consecration = () => {
       />
       <Header logo={logoPath} />
       <div className="consecration">
-        <div className="consecration__title">{foundProject.text}</div>
+        <div className="consecration__title">La consécration</div>
         <div className="consecration__gallery">
           <div className="consecration__items">
             <img

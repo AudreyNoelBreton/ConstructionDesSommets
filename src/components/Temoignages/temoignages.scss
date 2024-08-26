@@ -1,12 +1,10 @@
 .temoignages {
   width: 100%;
-  // min-height: 28.75rem;
   display: flex;
   position: relative;
   overflow: hidden;
   flex-direction: column;
 
-  // padding: 3.125rem;
   &__container {
     position: relative;
     display: flex;
@@ -17,62 +15,59 @@
     }
   }
   &__item {
-    display: inline-block; /* Change from flex to inline-block for adjusting to content size */
-    width: auto; /* Remove fixed width if any */
+    display: flex;
     flex-direction: column;
     flex: 1 0 100%;
     scroll-snap-align: start;
-    padding: 0 30px;
-
-    img {
-      width: 100%;
-      object-fit: cover;
-    }
+    padding: 20px 40px;
+    max-height: 500px;
+    background-color: #f7f4f0; /* Couleur de fond du rectangle */
+    border-radius: 10px; /* Pour des coins arrondis, si souhaité */
   }
 
   &__text {
     text-align: left;
     width: 100%;
-    font-family: Eurostile Medium;
-    left: 50%;
-    bottom: 50%;
-    color: #242318;
+    font-family: "Eurostile Medium", sans-serif;
     position: relative;
-    transform: translateX(-50%);
+    color: #242318;
     font-size: 17px;
+    margin-bottom: 20px;
+    @media (min-width: 576px) {
+      font-size: 25px;
+    }
   }
 
   &__name {
     text-align: right;
     width: 100%;
-    font-family: Eurostile Medium;
-    left: 50%;
-    bottom: 30%;
-    color: #242318;
+    font-family: "Eurostile Medium", sans-serif;
     position: relative;
-    transform: translateX(-50%);
+    color: #242318;
     font-size: 15px;
+    @media (min-width: 576px) {
+      font-size: 25px;
+    }
   }
 
   &__text-overlay {
-    font-family: Eurostile Bold;
+    font-family: "Eurostile Bold", sans-serif;
     text-transform: uppercase;
     text-align: center;
     position: relative;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
+    padding-top: 30px;
+    margin-bottom: 30px;
     font-size: 45px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1),
       3px 3px 8px rgba(0, 0, 0, 0.1);
     color: #242318;
     z-index: 10;
+    @media (min-width: 576px) {
+      font-size: 50px;
+    }
   }
 
   &__dots {
-    position: absolute;
-    bottom: 10%;
     width: 100%;
     text-align: center;
     z-index: 5;
@@ -85,7 +80,7 @@
     margin: 0 5px;
     background-color: #bab2aa;
     opacity: 50%;
-    border-radius: 0%;
+    border-radius: 0;
     cursor: pointer;
     transition: background-color 0.3s;
     margin-bottom: 30px;
@@ -93,48 +88,6 @@
     &.active {
       background-color: #bab2aa;
       opacity: 100%;
-    }
-  }
-}
-@media (min-width: 576px) {
-  .temoignages {
-    padding-top: 20px;
-    max-height: 500px;
-    &__container {
-      max-height: 400px;
-    }
-    &__text-overlay {
-      font-size: 50px;
-    }
-
-    &__item {
-      display: flex;
-      flex-direction: column;
-      flex: 1 0 100%;
-      scroll-snap-align: start;
-      padding: 20px 40px;
-      max-height: 500px;
-      img {
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-    &__text {
-      bottom: 100%;
-      font-size: 25px;
-    }
-
-    &__name {
-      bottom: 95%;
-      font-size: 25px;
-    }
-
-    &__dots {
-      position: absolute;
-      bottom: -20%;
-      width: 100%;
-      text-align: center;
-      z-index: 5;
     }
   }
 }

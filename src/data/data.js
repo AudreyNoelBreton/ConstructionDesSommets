@@ -10,6 +10,19 @@ const sliderImagesMobile = [
   },
 ];
 
+const testimonialsData = [
+  {
+    quote:
+      "« Merci à Louis Brochu Marier d’avoir pris en charge mon projet... »",
+    author: "Nicole P.",
+  },
+  {
+    quote: "« Excellent service reçu... »",
+    author: "Mélissa T.",
+  },
+  // Ajoutez plus de témoignages ici si nécessaire
+];
+
 const sliderSecteurs = [
   {
     src: "/charpente.jpg",
@@ -21,13 +34,13 @@ const sliderSecteurs = [
   },
   {
     src: "/maison/Habitations-du-sommet-petite-maison-verte-3.jpg",
-    txt: "Revetement",
+    txt: "Revêtement",
   },
 ];
 
 const sliderImages = [
   {
-    src: "/project-1.jpg",
+    src: "/Projet/Habitations-du-sommet-rue-du-sommet-36.jpg",
   },
   {
     src: "/à-propos-header.jpg",
@@ -42,23 +55,23 @@ const sliderImages = [
 const sliderTemoignages = [
   {
     back: "plain_background.jpg",
-    text: "Merci à Louis Brochu Marier d'avoir pris en charge mon projet. Louis maîtrise toutes les exigences de son entreprise et s'adjoint une équipe de spécialistes aussi perfectionnistes et professionnels que lui. Les résultats ont dépassé mes espérances!",
+    text: "« Merci à Louis Brochu Marier d’avoir pris en charge mon projet. Louis maîtrise toutes les exigences de son entreprise et s’adjoint une équipe de spécialistes aussi perfectionnistes et professionnels que lui. Les résultats ont dépassé mes espérances! Je souligne la disponibilité de Louis et sa patience pour répondre à mes multiples questionnements.  Et s’il vous dit «Tant qu’à faire…, n’hésitez pas; ses suggestions ajouteront au confort, au côté pratique et à l’harmonie du tableau final. »",
     name: "- Nicole P.",
   },
   {
     back: "plain_background.jpg",
-    text: "Merci à Louis Brochu Marier d'avoir pris en charge mon projet. Louis maîtrise toutes les exigences de son entreprise et s'adjoint une équipe de spécialistes aussi perfectionnistes et professionnels que lui. Les résultats ont dépassé mes espérances!",
-    name: "- Nicole P.",
+    text: "« Très satisfait du travail !!, une équipe professionnelle, à l’écoute du client et de ses besoins. »",
+    name: "- Yves B.",
   },
   {
     back: "plain_background.jpg",
-    text: "Merci à Louis Brochu Marier d'avoir pris en charge mon projet. Louis maîtrise toutes les exigences de son entreprise et s'adjoint une équipe de spécialistes aussi perfectionnistes et professionnels que lui. Les résultats ont dépassé mes espérances!",
-    name: "- Nicole P.",
+    text: "« Excellent service reçu. Professionnel. Très disponible pour discuter des différentes étapes du projet. Travail de finition minutieux. Soucieux de la qualité du produit. Nous recommandons vivement cette entreprise! Merci! »",
+    name: "- Mélissa T.",
   },
   {
     back: "plain_background.jpg",
-    text: "Merci à Louis Brochu Marier d'avoir pris en charge mon projet. Louis maîtrise toutes les exigences de son entreprise et s'adjoint une équipe de spécialistes aussi perfectionnistes et professionnels que lui. Les résultats ont dépassé mes espérances!",
-    name: "- Nicole P.",
+    text: "« Excellent service ; efficace, précis et attentif. Il est à l’écoute des besoins et vraiment fiable. On le recommande++ sans hésitation. »",
+    name: "- Dominique B.M.",
   },
 ];
 
@@ -114,7 +127,7 @@ const projects = [
       "/Projet/Habitations-du-sommet-rue-du-sommet-15.jpg",
       "/Projet/Habitations-du-sommet-rue-du-sommet-14.jpg",
     ],
-    text: "La consecration",
+    text: "La consécration",
     image1: "/project-1.jpg",
     image2: "/project-1-2.jpg",
     image3: "/project-1-1.jpg",
@@ -172,6 +185,7 @@ const data = {
   questions,
   projects,
   sliderSecteurs,
+  testimonialsData,
 };
 
 export default data;

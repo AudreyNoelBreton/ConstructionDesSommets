@@ -11,19 +11,15 @@ import { useMediaQuery } from "react-responsive";
 import Soumission from "../../Sections/Soumission/soumission";
 import Alert from "../..//components/Alert/Alert";
 import { useLocation } from "react-router-dom";
+import Cart from "../../Sections/Cart-section/cartSection";
+import Contact from "../../Sections/Contact-section/contact-section";
 
 const Team = () => {
   const location = useLocation();
   const isMobile = useMediaQuery({ maxWidth: 575 });
   const [isAlertActive, setIsAlertActive] = useState(true);
-  const [alertHeight, setAlertHeight] = useState(0);
   const alertRef = useRef(null);
 
-  useEffect(() => {
-    if (alertRef.current) {
-      setAlertHeight(alertRef.current.offsetHeight);
-    }
-  }, [isAlertActive]);
   const imagePath = isMobile
     ? "/à-propos-header-mobile.jpg"
     : "/à-propos-header.jpg";
@@ -74,7 +70,9 @@ const Team = () => {
         <Soumission />
       </div>
       <Links />
-      <Footer isAlertActive={isAlertActive} alertHeight={alertHeight} />
+      <Contact />
+      <Cart />
+      <Footer />
     </div>
   );
 };

@@ -6,7 +6,7 @@ import data from "../../data/data";
 const Links = () => {
   return (
     <section className="links">
-      <div className="links__title">Questions frequentes</div>
+      <div className="links__title">Questions fréquentes</div>
       <div className="links__content">
         {data.questions.map((link, index) => (
           <div key={index}>

@@ -80,13 +80,13 @@ const Footer = () => {
             </Link>
             <div className="footer__links-bottom">
               <Link to="/team" className="footer__link-bottom">
-                a propos
+                À propos
               </Link>
               <Link to="/realisations" className="footer__link-bottom">
-                Nos realisations
+                Nos réalisations
               </Link>
               <Link to="/about" className="footer__link-bottom">
-                Nous joindres
+                Nous joindre
               </Link>
             </div>
             <div className="footer__element-bottom">
