@@ -8,7 +8,7 @@
     font-family: Eurostile Bold;
     font-size: 30px;
     cursor: pointer;
-
+    text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,6 +34,12 @@
     font-size: 18px;
     overflow: hidden;
     transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    a {
+      font-family: Eurostile Bold; /* Applique la police en gras */
+      font-weight: bold; /* Rend le texte en gras */
+      color: inherit; /* Hérite de la couleur du texte parent */
+      text-decoration: none; /* Supprime la sous-ligne par défaut des liens */
+    }
   }
 
   &.active &__text {
@@ -47,11 +53,11 @@
 @media (min-width: 576px) {
   .link {
     &__title {
-      font-size: 27px;
+      font-size: 35px;
     }
 
     &__text {
-      font-size: 20px;
+      font-size: 22px;
     }
   }
 }

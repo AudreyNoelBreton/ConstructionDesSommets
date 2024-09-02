@@ -8,7 +8,7 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
   }
   &__title {
     font-family: Eurostile Bold;
@@ -68,6 +68,7 @@
       font-size: 3.125rem;
       padding-bottom: 1.75rem;
     }
+
     &__members {
       gap: 1.75rem;
     }
@@ -80,7 +81,7 @@
     }
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   .contact {
     justify-content: space-between;
 

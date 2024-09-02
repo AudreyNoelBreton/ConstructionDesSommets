@@ -29,6 +29,7 @@ const Realisations = () => {
                 key={index}
                 images={project.images}
                 mainText={project.text}
+                url={project.url}
               />
             ))}
           </div>
@@ -41,10 +42,13 @@ const Realisations = () => {
       {!isMobile && (
         <>
           <div className="realisations__projects">
-            <MainImage
-              mainImage={[ferreolaiseImage]}
-              mainText={ferreolaiseText}
-            ></MainImage>
+            <div className="realisations__main-image">
+              <MainImage
+                key={2}
+                images={data.projects[2].images}
+                mainText={data.projects[2].text}
+              />
+            </div>
           </div>
           <CarouselRealisations images={data.projects} />
           <button className="btn btn--center" onClick={handleButtonClick}>

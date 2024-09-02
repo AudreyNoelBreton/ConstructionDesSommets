@@ -40,7 +40,7 @@ const Falaise = () => {
       />
       <Header logo={logoPath} />
       <div className="falaise">
-        <div className="falaise__title">La ferreolaise</div>
+        <div className="falaise__title">La férreolaise</div>
         <div className="falaise__gallery">
           <div className="falaise__items">
             <img

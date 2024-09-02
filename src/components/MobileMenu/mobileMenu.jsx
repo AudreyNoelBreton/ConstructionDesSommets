@@ -26,7 +26,7 @@ const MobileMenu = ({ isOpen }) => {
       <div className="mobile-menu__socials">
         <a
           href="https://www.facebook.com/profile.php?id=100085617410260&mibextid=LQQJ4d"
-          className="footer__social"
+          className="mobile-menu__social"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -34,7 +34,7 @@ const MobileMenu = ({ isOpen }) => {
         </a>
         <a
           href="https://www.instagram.com/leshabitationsdusommet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-          className="footer__social"
+          className="mobile-menu__social"
           target="_blank"
           rel="noopener noreferrer"
         >

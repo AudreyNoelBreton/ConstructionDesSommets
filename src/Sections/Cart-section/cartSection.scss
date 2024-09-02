@@ -2,59 +2,125 @@
   position: relative;
   text-align: center;
 
+  background-color: #242318;
   .cart-img {
-    display: block; /* Évite les espaces sous les images */
+    display: block;
+    image-rendering: auto;
     width: 100%;
-    height: auto; /* Pour les images responsives */
+    height: auto;
+    cursor: grab; /* Indique que l'image peut être déplacée lors du zoom */
   }
-
   &__text-overlay {
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: center; /* Centré verticalement */
+    align-items: center; /* Centré horizontalement */
+    gap: 15px;
     padding: 0 40px;
     width: 100%;
-    top: 20%; /* 100px du haut */
-    left: 50%;
-    transform: translateX(-50%); /* Pour centrer horizontalement */
-  }
+    top: 50%; /* Centre l'overlay en Y */
+    left: 50%; /* Centre l'overlay en X */
+    transform: translate(-50%, -50%); /* Centre parfaitement l'overlay */
+    color: #f7f4f0;
 
+    pointer-events: none; /* Ensure overlay isn't affected by zoom/pan */
+  }
   &__title {
-    font-size: 38px; /* Taille de la police, à ajuster selon vos besoins */
-    color: #f7f4f0; /* Couleur du texte */
-    text-transform: uppercase;
+    width: 90%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.4),
+      3px 3px 8px rgba(0, 0, 0, 0.4);
     font-family: Eurostile Bold;
-  }
-
-  &__text {
-    font-size: 0.75rem; /* Taille de la police, à ajuster selon vos besoins */
-    color: #f7f4f0; /* Couleur du texte */
+    font-size: 35px;
     text-transform: uppercase;
+  }
+  &__text {
     font-family: Eurostile Medium;
+  }
+  &__title,
+  &__text {
+    pointer-events: none; /* Prevent text interaction while zooming/panning */
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 1024px) {
   .cart {
-    &__text-overlay {
-      padding: 2rem;
-      justify-content: center;
-      font-size: 35px;
-      position: absolute;
-      text-transform: uppercase;
+    display: flex;
+    justify-content: flex-start; /* Aligne les enfants du conteneur à gauche */
+    align-items: center; /* Centre verticalement le contenu du conteneur */
 
+    &__text-overlay {
+      gap: 15px;
+      top: 50%; /* Place le texte au centre en Y */
+      left: 0; /* Aligne l'overlay à gauche */
+      transform: translateY(
+        -50%
+      ); /* Centre parfaitement l'overlay verticalement */
+      width: 60%; /* Ajustez la largeur si nécessaire */
+      justify-content: center;
+      align-items: flex-start; /* Alignement du texte à gauche */
+      padding: 2rem;
       color: #f7f4f0;
+      text-align: left; /* Assure que le texte est aligné à gauche */
     }
+
     &__title {
-      padding: 2rem 3rem;
-      font-size: 50px; /* Taille de la police, à ajuster selon vos besoins */
+      width: 100%;
+      font-size: 3.35rem;
+      font-family: Eurostile Bold;
+      text-transform: uppercase;
+      padding: 0 3rem;
     }
 
     &__text {
-      font-size: 1.25rem; /* Taille de la police, à ajuster selon vos besoins */
-      padding: 0 4rem;
+      font-size: 20px;
+      font-family: Eurostile Medium;
+      padding: 0 3rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .cart {
+    &__title {
+      font-size: 65px;
+      font-family: Eurostile Bold;
+
+      text-transform: uppercase;
+    }
+    &__text {
+      font-size: 20px;
+      font-family: Eurostile Medium;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .cart {
+    &__title {
+      width: 90%;
+      font-size: 3.75rem;
+      font-family: Eurostile Bold;
+
+      text-transform: uppercase;
+    }
+    &__text {
+      font-size: 25px;
+      font-family: Eurostile Medium;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .cart {
+    &__title {
+      font-size: 80px;
+      font-family: Eurostile Bold;
+
+      text-transform: uppercase;
+    }
+    &__text {
+      font-size: 30px;
+      font-family: Eurostile Medium;
     }
   }
 }

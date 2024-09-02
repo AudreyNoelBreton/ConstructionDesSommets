@@ -57,8 +57,15 @@
   }
 
   &__social {
-    width: auto;
-    height: 100%;
+    display: flex;
+
+    svg {
+      color: #f7f4f0;
+      font-size: 2.1875rem;
+    }
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &--open {

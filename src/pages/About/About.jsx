@@ -7,6 +7,8 @@ import { useMediaQuery } from "react-responsive";
 import "./About.scss";
 import Footer from "../../components/Footer/footer";
 import Soumission from "../../Sections/Soumission/soumission";
+import Cart from "../../Sections/Cart-section/cartSection";
+
 const About = () => {
   const isMobile = useMediaQuery({ maxWidth: 575 });
   const logoPath = "/logo-habitations.svg";
@@ -26,6 +28,8 @@ const About = () => {
       <Soumission />
       <Links />
       <Contact />
+      <Cart />
+
       <Footer />
     </div>
   );

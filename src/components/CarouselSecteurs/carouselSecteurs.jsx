@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./carouselSecteurs.scss";
 import "../../components/Btn.scss";
 import data from "../../data/data";
+import { useMediaQuery } from "react-responsive";
 
 const CarouselSecteurs = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 1024 });
 
   const goToSlide = (index) => {
     if (index < 0) {
@@ -64,19 +66,23 @@ const CarouselSecteurs = () => {
           </div>
         ))}
       </div>
-      <div className="carousel-secteurs__bottom">
-        <div className="carousel-secteurs__dots">
-          {images.map((_, index) => (
-            <span
-              key={index}
-              className={`carousel-secteurs__dot ${
-                index === activeIndex ? "active" : ""
-              }`}
-              onClick={() => goToSlide(index)}
-            ></span>
-          ))}
-        </div>
-      </div>
+      {!isMobile && (
+        <>
+          <div className="carousel-secteurs__bottom">
+            <div className="carousel-secteurs__dots">
+              {images.map((_, index) => (
+                <span
+                  key={index}
+                  className={`carousel-secteurs__dot ${
+                    index === activeIndex ? "active" : ""
+                  }`}
+                  onClick={() => goToSlide(index)}
+                ></span>
+              ))}
+            </div>
+          </div>
+        </>
+      )}
     </section>
   );
 };

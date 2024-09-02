@@ -8,6 +8,9 @@ const sliderImagesMobile = [
   {
     src: "/nos-realisations-header-mobile.jpg",
   },
+  {
+    src: "/nous-joindre-header.jpg",
+  },
 ];
 
 const testimonialsData = [
@@ -101,7 +104,7 @@ const cardHomePage = [
     title: "Service personnalisé",
     text: "Chaque projet est unique, c'est pourquoi nous vous garantissons un service sur mesure, adapté à vos besoins. Comptez sur notre expertise pour guider vos choix en fonction de vos objectifs et votre budget",
     buttonText: "en savoir plus",
-    link: "/team",
+    link: "/about",
   },
 ];
 
@@ -112,14 +115,13 @@ const questions = [
   },
   {
     title: "Comment obtenir une soumission ?",
-    text: "Vous aurez besoin des plans détaillés du projet à réaliser. Une fois que vous les avez en mains, vous pouvez remplir la rubrique OBTENIR UNE SOUMISSION ou nous les transmettre à l'adresse suivante : william@habitationsdusommet.com. Pour toute question relative aux soumissions, n'hésitez pas à contacter William Viens au 581-991-9485. Il se fera un plaisir de vous répondre !",
+    text: `Vous aurez besoin des plans détaillés du projet à réaliser. Une fois que vous les avez en mains, vous pouvez remplir la rubrique <a href="/about">OBTENIR UNE SOUMISSION</a> ou nous les transmettre à l'adresse suivante : <a href="mailto:william@habitationsdusommet.com">william@habitationsdusommet.com</a>. Pour toute question relative aux soumissions, n'hésitez pas à contacter William Viens au 581-991-9485. Il se fera un plaisir de vous répondre ! Vous pouvez également nous contacter à <a href="mailto:info@habitationsdusommet.com">info@habitationsdusommet.com</a>.`,
   },
   {
     title: "Ai-je besoin d'un permis pour effectuer mes travaux ?",
     text: "La grande majorité des projets sur lesquels nous travaillons requièrent du propriétaire qu'il obtienne un permis auprès de la municipalité avant le début des travaux. Contactez votre municipalité pour savoir ce qui est requis et faire votre demande.",
   },
 ];
-
 const projects = [
   {
     images: [

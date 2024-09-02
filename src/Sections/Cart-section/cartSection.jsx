@@ -1,31 +1,44 @@
 import React from "react";
 import "./cartSection.scss";
-
 import { useMediaQuery } from "react-responsive";
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 const Cart = () => {
-  const isMobile = useMediaQuery({ maxWidth: 1024 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
-  console.log(isMobile);
   return (
     <section className="cart">
-      {isMobile && (
+      {isMobile ? (
         <>
-          <img className="cart-img" src="/map-mobile.jpg" alt="project" />
+          <TransformWrapper>
+            <TransformComponent>
+              <img className="cart-img" src="/map-mobile.jpg" alt="project" />
+            </TransformComponent>
+          </TransformWrapper>
           <div className="cart__text-overlay">
-            <div className="cart__title">saint-ferreol-les-neiges</div>
+            <div className="cart__title">saint-ferréol-les-neiges</div>
             <div className="cart__text">
-              Implante a Saint-Ferreol, notre entreprise contribue activement au
-              developpement de la region grace a des projets novateurs et
-              soigneusement realises.
+              Implantée à Saint-Ferréol, notre entreprise contribue activement
+              au développement de la région grace à des projets novateurs et
+              soigneusement réalisés.
             </div>
           </div>
         </>
-      )}
-      {!isMobile && (
+      ) : (
         <>
-          <img className="cart-img" src="/map.jpg" alt="project" />
-          <div className="cart__text-overlay">saint-ferreol-les-neiges</div>
+          <TransformWrapper>
+            <TransformComponent>
+              <img className="cart-img" src="/map.jpg" alt="project" />
+            </TransformComponent>
+          </TransformWrapper>
+          <div className="cart__text-overlay">
+            <div className="cart__title">saint-ferréol-les-neiges</div>
+            <div className="cart__text">
+              Implantée à Saint-Ferréol, notre entreprise contribue activement
+              au développement de la région grace à des projets novateurs et
+              soigneusement réalisés.
+            </div>
+          </div>
         </>
       )}
     </section>

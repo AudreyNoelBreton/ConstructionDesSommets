@@ -33,7 +33,9 @@ const Link = (props) => {
           <img src={chevronDown} />
         </div>
       </div>
-      <div className="link__text">{props.text}</div>
+      <div className="link__text">
+        <div dangerouslySetInnerHTML={{ __html: props.text }} />
+      </div>
     </section>
   );
 };

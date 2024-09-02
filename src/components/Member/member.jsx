@@ -16,30 +16,25 @@ const Member = ({ position }) => {
             <div className="member__content">
               <div className="member__name">Louis brochu</div>
               <div className="member__text">
-                Dès son plus jeune âge, Louis est aux premières loges pour
-                observer son père bâtir son entreprise de fabrication de portes
-                et fenêtres en bois. Dès qu'il atteint l'âge de travailler,
-                Louis passe ses étés à la shop et, au fil des ans, il occupe
-                différents postes au sein de l'entreprise. De là lui vient sa
-                passion pour le bois et le travial bien fait !
+                Grâce à ses proches, Louis développe depuis son plus jeune âge
+                une passion pour le travail du bois et la minutie, ce qui le
+                pousse à choisir le domaine de la construction.
               </div>
 
               <div className="member__text">
-                Dès qu'il termine son cours en charpenterie-menuiserie, Louis
-                travaille pendant plus de 10 ans pour différents entrepreneurs
-                en construction. Son emploi au sein de TM Builders, un
-                entrepreneur haut-de-gamme à Whistler en Colombie-Britannique,
-                est une expérience particulièrement marquante qui confirme sa
-                volonté de se lancer en affaires et de mener des projets
-                d'envergure qui mise sur la qualité avant tout.
+                Une fois son diplôme de charpenterie-menuiserie en poche, Louis
+                accumule plus de 10 ans d’expérience auprès de divers
+                entrepreneurs en construction. C’est surtout son expérience pour
+                un entrepreneur haut de gamme à Whistler qui a été déterminant,
+                renforçant son désir de se lancer en affaires et de réaliser des
+                projets ambitieux axés sur la qualité.
               </div>
 
               <div className="member__text">
-                De retour au Québec, son amour pour la montagne l'amène à
-                s'installer près du Mont-Sainte-Anne et il fonde les Habitations
-                du Sommet, bien déterminé à accomplir de grands projets dans son
-                patelin adoptif, la Côte-de-Beaupré. Vous aurez donc compris le
-                double sens derrière le nom Les Habitations du Sommet...
+                De retour au Québec, son amour pour la montagne l’a conduit à
+                s’établir au Mont-Sainte-Anne, où il fonde Les Habitations du
+                Sommet avec la ferme intention de réaliser de grands projets
+                dans sa région adoptive, la Côte-de-Beaupré.
               </div>
               <a href="tel:581-994-8738" className="btn btn--end">
                 <div className="btn__text">581-994-8738</div>

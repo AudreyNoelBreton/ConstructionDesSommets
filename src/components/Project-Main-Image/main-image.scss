@@ -100,9 +100,6 @@
 
 @media (min-width: 420px) {
   .main-image {
-    &__text {
-      font-size: 1.875rem; /* 30px => 1.875rem */
-    }
     &__icon {
       font-size: 1.875rem; /* 30px => 1.875rem */
     }
@@ -111,6 +108,9 @@
 
 @media (min-width: 576px) {
   .main-image {
+    &__text-home {
+      font-size: 2.1875rem; /* 35px => 2.1875rem */
+    }
     &__overlay {
       padding: 2rem;
     }
@@ -131,6 +131,7 @@
     &__overlay {
       width: 100%;
     }
+
     &__text {
       font-size: 2.1875rem; /* 35px => 2.1875rem */
       left: 3.75rem;
@@ -139,6 +140,15 @@
     &__icon {
       font-size: 2.1875rem; /* 35px => 2.1875rem */
       right: 3.75rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-image {
+    width: 100%;
+    &__text-home {
+      margin-left: 3.5rem;
     }
   }
 }

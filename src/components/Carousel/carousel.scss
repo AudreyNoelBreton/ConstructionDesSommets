@@ -57,7 +57,7 @@
 
   &__dot {
     display: inline-block;
-    width: 3.75rem;
+    width: 2.75rem;
     height: 0.4375rem;
     margin: 0 0.625rem;
     background-color: #f7f4f0;
@@ -65,6 +65,7 @@
     cursor: pointer;
     transition: background-color 0.3s;
     opacity: 0.6;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Ajout de l'ombre */
 
     &.active {
       background-color: #f7f4f0;
@@ -95,6 +96,8 @@
       font-size: 2rem;
       color: #f7f4f0;
       transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout d'une transition pour un effet fluide */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Ajout de l'ombre sur les flèches */
+
       &:hover {
         transform: translateY(
           -5px

@@ -31,10 +31,10 @@ const Footer = () => {
               </Link>
               <div className="footer__links">
                 <Link to="/realisations" className="footer__link">
-                  Modeles
+                  Modèles
                 </Link>
                 <Link to="/team" className="footer__link">
-                  a propos
+                  Équipe
                 </Link>
                 <Link to="/about" className="footer__link">
                   contact

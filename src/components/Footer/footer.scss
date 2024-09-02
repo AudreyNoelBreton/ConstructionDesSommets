@@ -3,7 +3,7 @@
   bottom: 0;
   width: 100%;
   background-color: #242318;
-  padding: 2.8125rem 0.9375rem;
+  padding: 2.8125rem 1.875rem;
   color: #f7f4f0;
   display: flex;
   justify-content: space-between;
@@ -37,7 +37,7 @@
   }
   &__logo img {
     height: 100%;
-    width: 100%;
+    width: 90%;
     max-width: 250px;
   }
 
@@ -45,9 +45,9 @@
     display: flex;
     flex-direction: row;
     height: 100%;
-    width: 100%;
-    justify-self: end;
-    align-self: end;
+    width: 90%;
+    justify-self: start;
+    align-self: start;
     gap: 10px;
   }
 
@@ -56,7 +56,7 @@
     width: fit-content;
     max-width: 100%;
     font-family: Eurostile Bold;
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
 
     &::before {
@@ -139,11 +139,11 @@
 @media (min-width: 420px) {
   .footer {
     &__container-elements {
-      gap: 40px;
+      gap: 30px;
     }
 
     &__link {
-      font-size: 0.85rem;
+      font-size: 0.72rem;
     }
 
     &__socials {
@@ -229,6 +229,7 @@
     &__logo-bottom img {
       height: 100%;
       width: 75%;
+      max-width: 250px;
     }
   }
 }
@@ -273,7 +274,7 @@
     }
     &__logo-bottom img {
       height: 100%;
-      width: 55%;
+      width: 90%;
     }
     &__element-bottom {
       gap: 2rem;

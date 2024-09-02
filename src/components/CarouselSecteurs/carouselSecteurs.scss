@@ -62,7 +62,7 @@
   }
 
   &__bottom {
-    display: flex;
+    display: none;
     flex-direction: row;
     position: relative;
     justify-content: center;
@@ -82,39 +82,9 @@
       color: #242318;
     }
   }
-
-  &__dots {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  &__dot {
-    display: inline-block;
-    width: 2.5rem; // 40px
-    height: 0.4375rem; // 7px
-    margin: 0 0.3125rem;
-    background-color: #bab2aa;
-    opacity: 0.5; // 50%
-    border-radius: 0%;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Ajout de la transition pour box-shadow et transform */
-    margin-bottom: 1.875rem; // 30px
-
-    &:hover {
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.9); /* Ajout d'un effet d'illumination */
-      transform: scale(
-        1.1
-      ); /* Légère augmentation de la taille pour accentuer l'effet */
-    }
-    &.active {
-      background-color: #bab2aa;
-      opacity: 1; // 100%
-    }
-  }
 }
 
-@media screen and (min-width: 575px) {
+@media (min-width: 575px) {
   .carousel-secteurs {
     max-height: 50rem; // 400px
     padding: 0 6.25rem;
@@ -140,7 +110,7 @@
     }
   }
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1200px) {
   .carousel-secteurs {
     max-height: 50rem; // 400px
     padding: 0 6.25rem;
@@ -153,16 +123,37 @@
     }
 
     &__bottom {
+      display: flex;
       width: 100%;
     }
     &__dots {
+      width: 100%;
       display: flex;
+      justify-content: center;
     }
 
     &__dot {
+      display: inline-block;
       height: 0.5rem; // 7px
       width: 3rem; // 40px
       margin: 0 0.6125rem;
+      background-color: #bab2aa;
+      opacity: 0.5; // 50%
+      border-radius: 0%;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; /* Ajout de la transition pour box-shadow et transform */
+      margin-bottom: 1.875rem; // 30px
+
+      &:hover {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.9); /* Ajout d'un effet d'illumination */
+        transform: scale(
+          1.1
+        ); /* Légère augmentation de la taille pour accentuer l'effet */
+      }
+      &.active {
+        background-color: #bab2aa;
+        opacity: 1; // 100%
+      }
     }
   }
 }

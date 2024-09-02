@@ -5,7 +5,7 @@ const Slogan = () => {
     <section className="slogan">
       <div className="slogan__infos">
         <div className="slogan__title">
-          Secteurs residentiel <br />& commercial
+          Secteurs résidentiel <br />& commercial
         </div>
         <div className="slogan__secteurs">
           Côte-de-beaupré - Québec - Charlevoix
