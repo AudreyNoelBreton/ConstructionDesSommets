@@ -1,8 +1,6 @@
 {
-
   "homepage": "https://AudreyNoelBreton.github.io/ConstructionDesSommets",
-  "name": "my-react-app-louis",
-
+  "name": "ConstructionDesSommets",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
