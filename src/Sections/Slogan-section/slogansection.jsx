@@ -1,6 +1,7 @@
 import React from "react";
 import "./slogansection.scss";
 const Slogan = () => {
+  const logo = `${process.env.PUBLIC_URL}/finitions-icon.svg`;
   return (
     <section className="slogan">
       <div className="slogan__infos">
@@ -20,7 +21,7 @@ const Slogan = () => {
       </div>
 
       <div className="slogan__logo">
-        <img src="/finitions-icon.svg" alt="Logo" className="slogan__img" />
+        <img src={logo} alt="Logo" className="slogan__img" />
       </div>
     </section>
   );

@@ -5,14 +5,15 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
 const Cart = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
-
+  const cartImageMobile = `${process.env.PUBLIC_URL}/map-mobile.jpg`;
+  const cartImageDesktop = `${process.env.PUBLIC_URL}//map.jpg`;
   return (
     <section className="cart">
       {isMobile ? (
         <>
           <TransformWrapper>
             <TransformComponent>
-              <img className="cart-img" src="/map-mobile.jpg" alt="project" />
+              <img className="cart-img" src={cartImageMobile} alt="project" />
             </TransformComponent>
           </TransformWrapper>
           <div className="cart__text-overlay">
@@ -28,7 +29,7 @@ const Cart = () => {
         <>
           <TransformWrapper>
             <TransformComponent>
-              <img className="cart-img" src="/map.jpg" alt="project" />
+              <img className="cart-img" src={cartImageDesktop} alt="project" />
             </TransformComponent>
           </TransformWrapper>
           <div className="cart__text-overlay">

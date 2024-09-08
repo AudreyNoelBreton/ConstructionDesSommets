@@ -18,9 +18,18 @@ const Infos = () => {
         {isMobile && (
           <>
             <div className="infos__produits">
-              <Produit image="/charpente.jpg" text="Charpente" />
-              <Produit image="/la-ferreolaise-2.jpg" text="finition" />
-              <Produit image="/petite-maison-verte-2.jpg" text="Revêtement" />
+              <Produit
+                image={`${process.env.PUBLIC_URL}/charpente.jpg`}
+                text="Charpente"
+              />
+              <Produit
+                image={`${process.env.PUBLIC_URL}/la-ferreolaise-2.jpg`}
+                text="finition"
+              />
+              <Produit
+                image={`${process.env.PUBLIC_URL}/petite-maison-verte-2.jpg`}
+                text="Revêtement"
+              />
             </div>
           </>
         )}

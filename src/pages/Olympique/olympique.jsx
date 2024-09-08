@@ -29,7 +29,7 @@ const Olympique = () => {
       break;
     }
   }
-  const logoPath = "/logo-habitations-dark.svg";
+  const logoPath = `${process.env.PUBLIC_URL}/logo-habitations-dark.svg`;
 
   return (
     <div>
@@ -44,24 +44,24 @@ const Olympique = () => {
         <div className="maison__gallery">
           <div className="maison__items">
             <img
-              src="/olympique/habitations-du-sommet-bloc-3.jpg"
+              src={`${process.env.PUBLIC_URL}/olympique/habitations-du-sommet-bloc-3.jpg`}
               className="maison__item"
             ></img>
           </div>
           <div className="maison__items">
             <img
-              src="/olympique/habitations-du-sommet-bloc-2.jpg"
+              src={`${process.env.PUBLIC_URL}/olympique/habitations-du-sommet-bloc-2.jpg`}
               className="maison__item"
             ></img>
             <img
-              src="/olympique/habitations-du-sommet-bloc-4.jpg"
+              src={`${process.env.PUBLIC_URL}/olympique/habitations-du-sommet-bloc-4.jpg`}
               className="maison__item"
             ></img>
           </div>
 
           <div className="maison__items">
             <img
-              src="/olympique/habitations-du-sommet-bloc-1.jpg"
+              src={`${process.env.PUBLIC_URL}/olympique/habitations-du-sommet-bloc-1.jpg`}
               className="maison__item"
             ></img>
           </div>

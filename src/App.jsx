@@ -11,6 +11,7 @@ import PageTransition from "./components/PageTransition/PageTransition";
 import ScrollToTop from "./components/scrollToTop";
 import Maison from "./pages/Maison/maison";
 import Olympique from "./pages/Olympique/olympique";
+
 const App = () => {
   const location = useLocation();
   const [isAlertActive, setIsAlertActive] = useState(false);
@@ -46,7 +47,7 @@ const App = () => {
 };
 
 const AppWrapper = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/ConstructionDesSommets">
     <App />
   </BrowserRouter>
 );

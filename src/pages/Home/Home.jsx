@@ -30,7 +30,10 @@ const Home = () => {
       }, 0);
     }
   }, [location]);
-  const logoPath = "/logo-habitations.svg";
+  const logoPath = `${process.env.PUBLIC_URL}/logo-habitations.svg`;
+  const imageUrl = `${process.env.PUBLIC_URL}/soumission-mobile (1).jpg`;
+  const imageUrlDesktop = `${process.env.PUBLIC_URL}/soumission.jpg`;
+
   return (
     <div className="home">
       <Alert
@@ -46,16 +49,12 @@ const Home = () => {
       <div className="home__soumission">
         {isMobile && (
           <>
-            <img
-              className="home__image"
-              src="/soumission-mobile (1).jpg"
-              alt="project"
-            />
+            <img className="home__image" src={imageUrl} alt="project" />
           </>
         )}
         {!isMobile && (
           <>
-            <img className="home__image" src="/soumission.jpg" alt="project" />
+            <img className="home__image" src={imageUrlDesktop} alt="project" />
           </>
         )}
       </div>

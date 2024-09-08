@@ -29,7 +29,7 @@ const Falaise = () => {
       break;
     }
   }
-  const logoPath = "/logo-habitations-dark.svg";
+  const logoPath = `${process.env.PUBLIC_URL}/logo-habitations-dark.svg`;
 
   return (
     <div>
@@ -44,91 +44,88 @@ const Falaise = () => {
         <div className="falaise__gallery">
           <div className="falaise__items">
             <img
-              src="/Falaise/Habitations-du-sommet-la-falaise-27.jpg"
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-27.jpg`}
               className="falaise__item"
             ></img>
           </div>
 
           <div className="falaise__items">
             <img
-              src="/falaise/Habitations-du-sommet-la-falaise-12.jpg"
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-12.jpg`}
               className="falaise__item"
             ></img>
             <img
-              src="/falaise/Habitations-du-sommet-la-falaise-15.jpg"
-              className="falaise__item"
-            ></img>
-          </div>
-          <div className="falaise__items">
-            <img
-              src="/falaise/Habitations-du-sommet-la-falaise-22.jpg"
-              className="falaise__item"
-            ></img>
-            <img
-              src="/falaise/Habitations-du-sommet-la-falaise-16.jpg"
-              className="falaise__item"
-            ></img>
-          </div>
-
-          <div className="falaise__items">
-            <img
-              src="/falaise/Habitations-du-sommet-la-falaise-31.jpg"
-              className="falaise__item"
-            ></img>
-          </div>
-
-          <div className="falaise__items">
-            <img
-              src="/falaise/Habitations-du-sommet-la-falaise-11.jpg"
-              className="falaise__item"
-            ></img>
-            <img
-              src="/falaise/Habitations-du-sommet-la-falaise-2.jpg"
-              className="falaise__item"
-            ></img>
-          </div>
-
-          <div className="falaise__items">
-            <img
-              src="/falaise/Habitations-du-sommet-la-falaise-26.jpg"
-              className="falaise__item"
-            ></img>
-            <img
-              src="/falaise/Habitations-du-sommet-la-falaise-4.jpg"
-              className="falaise__item"
-            ></img>
-            <img
-              src="/falaise/Habitations-du-sommet-la-falaise-14.jpg"
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-15.jpg`}
               className="falaise__item"
             ></img>
           </div>
           <div className="falaise__items">
             <img
-              src="/falaise/Habitations-du-sommet-la-falaise-32.jpg"
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-26.jpg`}
+              className="falaise__item"
+            ></img>
+            <img
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-4.jpg`}
+              className="falaise__item"
+            ></img>
+            <img
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-14.jpg`}
               className="falaise__item"
             ></img>
           </div>
           <div className="falaise__items">
             <img
-              src="/falaise/Habitations-du-sommet-la-falaise-18.jpg"
-              className="falaise__item"
-            ></img>
-            <img
-              src="/falaise/Habitations-du-sommet-la-falaise-25.jpg"
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-31.jpg`}
               className="falaise__item"
             ></img>
           </div>
           <div className="falaise__items">
             <img
-              src="/falaise/Habitations-du-sommet-la-falaise-7.jpg"
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-22.jpg`}
               className="falaise__item"
             ></img>
             <img
-              src="/falaise/Habitations-du-sommet-la-falaise-30.jpg"
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-16.jpg`}
+              className="falaise__item"
+            ></img>
+          </div>
+          <div className="falaise__items">
+            <img
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-7.jpg`}
               className="falaise__item"
             ></img>
             <img
-              src="/falaise/Habitations-du-sommet-la-falaise-19.jpg"
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-30.jpg`}
+              className="falaise__item"
+            ></img>
+            <img
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-19.jpg`}
+              className="falaise__item"
+            ></img>
+          </div>
+          <div className="falaise__items">
+            <img
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-18.jpg`}
+              className="falaise__item"
+            ></img>
+            <img
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-25.jpg`}
+              className="falaise__item"
+            ></img>
+          </div>
+          <div className="falaise__items">
+            <img
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-32.jpg`}
+              className="falaise__item"
+            ></img>
+          </div>
+          <div className="falaise__items">
+            <img
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-11.jpg`}
+              className="falaise__item"
+            ></img>
+            <img
+              src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-2.jpg`}
               className="falaise__item"
             ></img>
           </div>

@@ -11,11 +11,11 @@ import Cart from "../../Sections/Cart-section/cartSection";
 
 const About = () => {
   const isMobile = useMediaQuery({ maxWidth: 575 });
-  const logoPath = "/logo-habitations.svg";
+  const logoPath = `${process.env.PUBLIC_URL}/logo-habitations.svg`;
 
   const imagePath = isMobile
-    ? "/nous-joindre-header-mobile.jpg"
-    : "/nous-joindre-header.jpg";
+    ? `${process.env.PUBLIC_URL}/nous-joindre-header-mobile.jpg`
+    : `${process.env.PUBLIC_URL}/nous-joindre-header.jpg`;
 
   const text = "Nous joindre";
   return (

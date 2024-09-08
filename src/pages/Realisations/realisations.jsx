@@ -19,12 +19,14 @@ const Realisations = () => {
 
   const isMobile = useMediaQuery({ maxWidth: 575 });
   const imagePath = isMobile
-    ? "/nos-realisations-header-mobile.jpg"
-    : "/nos-realisations-header.jpg";
-  const logoPath = "/logo-habitations.svg";
+    ? `${process.env.PUBLIC_URL}/nos-realisations-header-mobile.jpg`
+    : `${process.env.PUBLIC_URL}/nos-realisations-header.jpg`;
+  const logoPath = `${process.env.PUBLIC_URL}/logo-habitations.svg`;
   const text = "Nos réalisations";
   const [isAlertActive, setIsAlertActive] = useState(false);
 
+  const mobileImage = `${process.env.PUBLIC_URL}/soumission-3-mobile.jpg`;
+  const desktopImage = `${process.env.PUBLIC_URL}/soumission-3.jpg`;
   useEffect(() => {
     if (location.pathname !== "/about") {
       setIsAlertActive(false);
@@ -49,20 +51,12 @@ const Realisations = () => {
           <div className="realisations__soumission">
             {isMobile && (
               <>
-                <img
-                  className="team__image"
-                  src="/soumission-3-mobile.jpg"
-                  alt="project"
-                />
+                <img className="team__image" src={mobileImage} alt="project" />
               </>
             )}
             {!isMobile && (
               <>
-                <img
-                  className="team__image"
-                  src="/soumission-3.jpg"
-                  alt="project"
-                />
+                <img className="team__image" src={desktopImage} alt="project" />
               </>
             )}
           </div>

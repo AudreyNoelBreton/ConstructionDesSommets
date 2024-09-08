@@ -29,7 +29,7 @@ const Maison = () => {
       break;
     }
   }
-  const logoPath = "/logo-habitations-dark.svg";
+  const logoPath = `${process.env.PUBLIC_URL}/logo-habitations-dark.svg`;
 
   return (
     <div>
@@ -44,65 +44,65 @@ const Maison = () => {
         <div className="maison__gallery">
           <div className="maison__items">
             <img
-              src="/maison/Habitations-du-sommet-petite-maison-verte-6.jpg"
+              src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-6.jpg`}
               className="maison__item"
             ></img>
           </div>
           <div className="maison__items">
             <img
-              src="/maison/Habitations-du-sommet-petite-maison-verte-2.jpg"
+              src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-2.jpg`}
               className="maison__item"
             ></img>
             <img
-              src="/maison/Habitations-du-sommet-petite-maison-verte-11.jpg"
-              className="maison__item"
-            ></img>
-          </div>
-
-          <div className="maison__items">
-            <img
-              src="/maison/Habitations-du-sommet-petite-maison-verte-7.jpg"
-              className="maison__item"
-            ></img>
-          </div>
-          <div className="maison__items">
-            <img
-              src="/maison/Habitations-du-sommet-petite-maison-verte-4.jpg"
-              className="maison__item"
-            ></img>
-            <img
-              src="/maison/Habitations-du-sommet-petite-maison-verte-1.jpg"
-              className="maison__item"
-            ></img>
-          </div>
-          <div className="maison__items">
-            <img
-              src="/maison/Habitations-du-sommet-petite-maison-verte-9.jpg"
-              className="maison__item"
-            ></img>
-            <img
-              src="/maison/Habitations-du-sommet-petite-maison-verte-5.jpg"
-              className="maison__item"
-            ></img>
-            <img
-              src="/maison/Habitations-du-sommet-petite-maison-verte-8.jpg"
+              src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-11.jpg`}
               className="maison__item"
             ></img>
           </div>
 
           <div className="maison__items">
             <img
-              src="/maison/Habitations-du-sommet-petite-maison-verte-3.jpg"
+              src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-7.jpg`}
               className="maison__item"
             ></img>
           </div>
           <div className="maison__items">
             <img
-              src="/maison/Habitations-du-sommet-petite-maison-verte-10.jpg"
+              src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-4.jpg`}
               className="maison__item"
             ></img>
             <img
-              src="/maison/Habitations-du-sommet-petite-maison-verte-12.jpg"
+              src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-1.jpg`}
+              className="maison__item"
+            ></img>
+          </div>
+          <div className="maison__items">
+            <img
+              src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-9.jpg`}
+              className="maison__item"
+            ></img>
+            <img
+              src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-5.jpg`}
+              className="maison__item"
+            ></img>
+            <img
+              src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-8.jpg`}
+              className="maison__item"
+            ></img>
+          </div>
+
+          <div className="maison__items">
+            <img
+              src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-3.jpg`}
+              className="maison__item"
+            ></img>
+          </div>
+          <div className="maison__items">
+            <img
+              src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-10.jpg`}
+              className="maison__item"
+            ></img>
+            <img
+              src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-12.jpg`}
               className="maison__item"
             ></img>
           </div>

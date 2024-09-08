@@ -20,10 +20,12 @@ const Team = () => {
   const [isAlertActive, setIsAlertActive] = useState(true);
   const alertRef = useRef(null);
 
+  const imageMobile = `${process.env.PUBLIC_URL}/soumission-2-mobile.jpg`;
+  const imageDesktop = `${process.env.PUBLIC_URL}/soumission-2.jpg`;
   const imagePath = isMobile
-    ? "/à-propos-header-mobile.jpg"
-    : "/à-propos-header.jpg";
-  const logoPath = "/logo-habitations.svg";
+    ? `${process.env.PUBLIC_URL}/à-propos-header-mobile.jpg`
+    : `${process.env.PUBLIC_URL}/à-propos-header.jpg`;
+  const logoPath = `${process.env.PUBLIC_URL}/logo-habitations.svg`;
   const text = "Passionnés de la qualité";
 
   useEffect(() => {
@@ -49,20 +51,12 @@ const Team = () => {
       <div className="team__soumission">
         {isMobile && (
           <>
-            <img
-              className="team__image"
-              src="/soumission-2-mobile.jpg"
-              alt="project"
-            />
+            <img className="team__image" src={imageMobile} alt="project" />
           </>
         )}
         {!isMobile && (
           <>
-            <img
-              className="team__image"
-              src="/soumission-2.jpg"
-              alt="project"
-            />
+            <img className="team__image" src={imageDesktop} alt="project" />
           </>
         )}
       </div>

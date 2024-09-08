@@ -6,7 +6,7 @@ const Link = (props) => {
   const [active, setActive] = useState(false);
   const [timer, setTimer] = useState(null);
 
-  const chevronDown = "/chevron-down.svg";
+  const chevronDown = `${process.env.PUBLIC_URL}/chevron-down.svg`;
 
   useEffect(() => {
     if (timer) {

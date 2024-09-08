@@ -6,8 +6,11 @@ import "./contact-section.scss";
 
 const Contact = () => {
   const isMobile = useMediaQuery({ maxWidth: 1200 });
-  const image = isMobile ? "/nous-joindre-mobile.jpg" : "/nous-joindre.jpg";
+  const image = isMobile
+    ? `${process.env.PUBLIC_URL}/nous-joindre-mobile.jpg`
+    : `${process.env.PUBLIC_URL}/nous-joindre.jpg`;
 
+  const logo = `${process.env.PUBLIC_URL}/apchq-pastille-web-3.png`;
   const sectionStyle = {
     backgroundImage: `url(${image})`,
     backgroundSize: "cover",
@@ -45,7 +48,7 @@ const Contact = () => {
         </div>
 
         <div className="contact__bottom-right">
-          <img src="/apchq-pastille-web-3.png" className="contact__logo"></img>
+          <img src={logo} className="contact__logo"></img>
           <div className="contact__license">R.B.Q : 5820-8927-01</div>
         </div>
       </div>

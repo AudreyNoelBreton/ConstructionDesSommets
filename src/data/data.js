@@ -1,15 +1,15 @@
 const sliderImagesMobile = [
   {
-    src: "/homepage-header-mobile.jpg",
+    src: `${process.env.PUBLIC_URL}/homepage-header-mobile.jpg`,
   },
   {
-    src: "/à-propos-header-mobile.jpg",
+    src: `${process.env.PUBLIC_URL}/à-propos-header-mobile.jpg`,
   },
   {
-    src: "/nos-realisations-header-mobile.jpg",
+    src: `${process.env.PUBLIC_URL}/nos-realisations-header-mobile.jpg`,
   },
   {
-    src: "/nous-joindre-header.jpg",
+    src: `${process.env.PUBLIC_URL}/nous-joindre-header.jpg`,
   },
 ];
 
@@ -28,31 +28,31 @@ const testimonialsData = [
 
 const sliderSecteurs = [
   {
-    src: "/charpente.jpg",
+    src: `${process.env.PUBLIC_URL}/charpente.jpg`,
     txt: "Charpente",
   },
   {
-    src: "/la-ferreolaise-2.jpg",
+    src: `${process.env.PUBLIC_URL}/la-ferreolaise-2.jpg`,
     txt: "Finition",
   },
   {
-    src: "/maison/Habitations-du-sommet-petite-maison-verte-3.jpg",
+    src: `${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-3.jpg`,
     txt: "Revêtement",
   },
 ];
 
 const sliderImages = [
   {
-    src: "/Projet/Habitations-du-sommet-rue-du-sommet-36.jpg",
+    src: `${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-36.jpg`,
   },
   {
-    src: "/à-propos-header.jpg",
+    src: `${process.env.PUBLIC_URL}/à-propos-header.jpg`,
   },
   {
-    src: "/nos-realisations-header.jpg",
+    src: `${process.env.PUBLIC_URL}/nos-realisations-header.jpg`,
   },
   {
-    src: "/nous-joindre-header.jpg",
+    src: `${process.env.PUBLIC_URL}/nous-joindre-header.jpg`,
   },
 ];
 const sliderTemoignages = [
@@ -80,19 +80,19 @@ const sliderTemoignages = [
 
 const consecrationImages = [
   {
-    src: "/project-1.jpg",
+    src: `${process.env.PUBLIC_URL}/project-1.jpg`,
   },
   {
-    src: "/project-1-2.jpg",
+    src: `${process.env.PUBLIC_URL}/project-1-2.jpg`,
   },
   {
-    src: "project-1-1.jpg",
+    src: `${process.env.PUBLIC_URL}/project-1-1.jpg`,
   },
 ];
 
 const cardHomePage = [
   {
-    src: "/Projet/Habitations-du-sommet-rue-du-sommet-15.jpg",
+    src: `${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-15.jpg`,
     title: "Passionnés de la qualité",
     text: "Notre équipe expérimenté se démarque par son efficacité et osn souci du détail. Chaque élément est soigneusement pris en compte pour un résultat dont vous pourrez être fiers.",
     buttonText: "à propos de nous",
@@ -100,7 +100,7 @@ const cardHomePage = [
   },
 
   {
-    src: "/maison/Habitations-du-sommet-petite-maison-verte-3.jpg",
+    src: `${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-3.jpg`,
     title: "Service personnalisé",
     text: "Chaque projet est unique, c'est pourquoi nous vous garantissons un service sur mesure, adapté à vos besoins. Comptez sur notre expertise pour guider vos choix en fonction de vos objectifs et votre budget",
     buttonText: "en savoir plus",
@@ -125,55 +125,55 @@ const questions = [
 const projects = [
   {
     images: [
-      "/Projet/Habitations-du-sommet-rue-du-sommet-36.jpg",
-      "/Projet/Habitations-du-sommet-rue-du-sommet-15.jpg",
-      "/Projet/Habitations-du-sommet-rue-du-sommet-14.jpg",
+      `${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-36.jpg`,
+      `${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-15.jpg`,
+      `${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-14.jpg`,
     ],
     text: "La consécration",
-    image1: "/project-1.jpg",
-    image2: "/project-1-2.jpg",
-    image3: "/project-1-1.jpg",
-    url: "/realisations/consecration",
+    image1: `${process.env.PUBLIC_URL}/project-1.jpg`,
+    image2: `${process.env.PUBLIC_URL}/project-1-2.jpg`,
+    image3: `${process.env.PUBLIC_URL}/project-1-1.jpg`,
+    url: `/realisations/consecration`,
   },
 
   {
     images: [
-      "/petite-maison-verte-1.jpg",
-      "/maison/Habitations-du-sommet-petite-maison-verte-6.jpg",
-      "/maison/Habitations-du-sommet-petite-maison-verte-7.jpg",
-      "/maison/Habitations-du-sommet-petite-maison-verte-3.jpg",
+      `${process.env.PUBLIC_URL}/petite-maison-verte-1.jpg`,
+      `${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-6.jpg`,
+      `${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-7.jpg`,
+      `${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-3.jpg`,
     ],
     text: "La petite maison verte",
-    image1: "/petite-maison-verte-1.jpg",
-    image2: "/petite-maison-verte-2.jpg",
-    image3: "/petite-maison-verte-3.jpg",
+    image1: `${process.env.PUBLIC_URL}//petite-maison-verte-1.jpg`,
+    image2: `${process.env.PUBLIC_URL}/petite-maison-verte-2.jpg`,
+    image3: `${process.env.PUBLIC_URL}/petite-maison-verte-3.jpg`,
     url: "/realisations/maison-verte",
   },
 
   {
     images: [
-      "/Falaise/Habitations-du-sommet-la-falaise-27.jpg",
-      "/Falaise/Habitations-du-sommet-la-falaise-27.jpg",
-      "/Falaise/Habitations-du-sommet-la-falaise-31.jpg",
-      "/Falaise/Habitations-du-sommet-la-falaise-32.jpg",
+      `${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-27.jpg`,
+      `${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-27.jpg`,
+      `${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-31.jpg`,
+      `${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-32.jpg`,
     ],
     text: "la ferréolaise",
-    image1: "/la-ferreeolaise-1.jpg",
-    image2: "/la-ferreolaise-2.jpg",
-    image3: "/la-ferreeolaise-3.jpg",
+    image1: `${process.env.PUBLIC_URL}/la-ferreeolaise-1.jpg`,
+    image2: `${process.env.PUBLIC_URL}/la-ferreolaise-2.jpg`,
+    image3: `${process.env.PUBLIC_URL}/la-ferreeolaise-3.jpg`,
     url: "/realisations/ferreolaise",
   },
 
   {
     images: [
-      "/olympique/habitations-du-sommet-bloc-1.jpg",
-      "/olympique/habitations-du-sommet-bloc-3.jpg",
-      "/olympique/habitations-du-sommet-bloc-1.jpg",
+      `${process.env.PUBLIC_URL}/olympique/habitations-du-sommet-bloc-1.jpg`,
+      `${process.env.PUBLIC_URL}/olympique/habitations-du-sommet-bloc-3.jpg`,
+      `${process.env.PUBLIC_URL}/olympique/habitations-du-sommet-bloc-1.jpg`,
     ],
     text: "l'olympique",
-    image1: "/l'olympique-1.jpg",
-    image2: "/l'olympique-2.jpg",
-    image3: "/l'olympique-3.jpg",
+    image1: `${process.env.PUBLIC_URL}/l'olympique-1.jpg`,
+    image2: `${process.env.PUBLIC_URL}/l'olympique-2.jpg`,
+    image3: `${process.env.PUBLIC_URL}/l'olympique-3.jpg`,
     url: "/realisations/olympique",
   },
 ];

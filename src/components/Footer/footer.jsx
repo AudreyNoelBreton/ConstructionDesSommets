@@ -8,7 +8,7 @@ import "../../components/Btn.scss";
 import { useMediaQuery } from "react-responsive";
 
 const Footer = () => {
-  const imagePath = "/logo-habitations.svg";
+  const imagePath = `${process.env.PUBLIC_URL}/logo-habitations.svg`;
   const isMobile = useMediaQuery({ maxWidth: 1024 });
   const location = useLocation();
 
@@ -51,7 +51,7 @@ const Footer = () => {
               <div className="footer__element">
                 <div className="footer__socials">
                   <a
-                    href="https://www.facebook.com/votrepage"
+                    href="https://www.facebook.com/profile.php?id=100085617410260&mibextid=LQQJ4d"
                     className="footer__social"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -59,7 +59,7 @@ const Footer = () => {
                     <FaFacebookF />
                   </a>
                   <a
-                    href="https://www.instagram.com/votrepage"
+                    href="https://www.instagram.com/leshabitationsdusommet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     className="footer__social"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -92,7 +92,7 @@ const Footer = () => {
             <div className="footer__element-bottom">
               <div className="footer__socials-bottom">
                 <a
-                  href="https://www.facebook.com/votrepage"
+                  href="https://www.facebook.com/profile.php?id=100085617410260&mibextid=LQQJ4d"
                   className="footer__social"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -100,7 +100,7 @@ const Footer = () => {
                   <FaFacebookF />
                 </a>
                 <a
-                  href="https://www.instagram.com/votrepage"
+                  href="https://www.instagram.com/leshabitationsdusommet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                   className="footer__social"
                   target="_blank"
                   rel="noopener noreferrer"

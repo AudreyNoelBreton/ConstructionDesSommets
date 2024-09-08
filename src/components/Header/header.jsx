@@ -15,8 +15,9 @@ const Header = ({ logo }) => {
     location !== "/realisations/ferreolaise" &&
     location !== "/realisations/maison-verte" &&
     location !== "/realisations/olympique";
-  const logoHabitations = "/logo-habitations.svg";
+  const logoHabitations = `${process.env.PUBLIC_URL}/logo-habitations.svg`;
 
+  console.log(process.env.PUBLIC_URL);
   const isMobile = useMediaQuery({ maxWidth: 1024 });
 
   const [lastScrollY, setLastScrollY] = useState(0);
