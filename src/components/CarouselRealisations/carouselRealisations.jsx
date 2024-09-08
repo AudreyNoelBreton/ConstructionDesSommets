@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./carouselRealisations.scss";
 import "../../components/Btn.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const CarouselRealisations = ({ images = [] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const navigate = useNavigate(); // Utilisation de useNavigate
 
   useEffect(() => {
     if (images.length === 0) return;
@@ -26,7 +28,9 @@ const CarouselRealisations = ({ images = [] }) => {
   if (images.length === 0) {
     return <div className="carousel">No images available</div>;
   }
-
+  const handleImageClick = (url) => {
+    navigate(url); // Utilisation de navigate pour rediriger vers l'URL de l'image
+  };
   return (
     <section className="carouselRealisations">
       <div
@@ -37,11 +41,9 @@ const CarouselRealisations = ({ images = [] }) => {
       >
         {images.map((img, index) => (
           <a
-            href={img.url}
             className="carouselRealisations__item"
             key={index}
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={() => handleImageClick(img.url)} // Gérer le clic sur l'image
           >
             <img src={img.image1} alt={`carouselRealisations ${index}`} />
             <div className="carouselRealisations__overlay">

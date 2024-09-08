@@ -13,7 +13,7 @@ const Slogan = () => {
         </div>
 
         <div className="slogan__text">
-          Que vous vouliez contruire la maisonde vos rêves, vous lancer dans un
+          Que vous vouliez contruire la maison de vos rêves, vous lancer dans un
           agrandissement ou entreprendre des rénovations, l'équipe des
           Habitations du Sommet met toute son expertise au service de votre
           projet !

@@ -47,6 +47,7 @@ const Realisations = () => {
                 key={2}
                 images={data.projects[2].images}
                 mainText={data.projects[2].text}
+                url={data.projects[2].url}
               />
             </div>
           </div>
