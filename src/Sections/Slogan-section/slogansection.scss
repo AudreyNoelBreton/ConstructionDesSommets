@@ -33,14 +33,11 @@
   }
 
   &__logo {
-    margin-left: auto; /* Pour pousser le logo à la droite */
-
     display: flex;
     align-self: flex-end;
     width: 60%;
     opacity: 0; // Initialement invisible
     animation: fadeIn 2s forwards; // Ajoutez cette ligne pour l'animation
-    max-width: 210px;
   }
 
   @keyframes fadeIn {
@@ -50,6 +47,14 @@
     100% {
       opacity: 1;
     }
+  }
+}
+
+@media (max-width: 756px) {
+  .slogan__logo img {
+    margin-right: auto;
+    width: 100%;
+    max-width: 200px;
   }
 }
 
