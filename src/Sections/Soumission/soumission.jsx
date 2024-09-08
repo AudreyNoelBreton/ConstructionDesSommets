@@ -20,6 +20,7 @@ const Soumission = () => {
     const confirmMessage =
       "N'oubliez pas de joindre vos plans en pièces jointes dans le courriel.";
     const userConfirmed = window.confirm(confirmMessage);
+    const recipientEmail = "info@habitationsdusommet.com";
 
     if (userConfirmed) {
       const emailContent = `
@@ -31,7 +32,7 @@ const Soumission = () => {
         Courriel: ${courriel}
       `;
 
-      window.location.href = `mailto:?subject=Demande de soumission&body=${encodeURIComponent(
+      window.location.href = `mailto:${recipientEmail}?subject=Demande de soumission&body=${encodeURIComponent(
         emailContent
       )}`;
     }

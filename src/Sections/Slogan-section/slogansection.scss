@@ -40,11 +40,6 @@
     width: 60%;
     opacity: 0; // Initialement invisible
     animation: fadeIn 2s forwards; // Ajoutez cette ligne pour l'animation
-  }
-
-  .img {
-    width: 100%;
-    height: auto;
     max-width: 210px;
   }
 
@@ -75,6 +70,10 @@
 
     &__text {
       font-size: 1.4375rem;
+    }
+
+    &__logo {
+      max-width: 400px;
     }
   }
 }
