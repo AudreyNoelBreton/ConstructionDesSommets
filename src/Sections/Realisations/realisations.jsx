@@ -7,9 +7,6 @@ import CarouselRealisations from "../../components/CarouselRealisations/carousel
 import data from "../../data/data";
 
 const Realisations = () => {
-  const ferreolaiseImage = "/la-ferreeolaise-1.jpg";
-  const ferreolaiseText = "la ferréolaise";
-
   const isMobile = useMediaQuery({ maxWidth: 575 });
 
   const navigate = useNavigate();
