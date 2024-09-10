@@ -94,7 +94,7 @@ const cardHomePage = [
   {
     src: `${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-15.jpg`,
     title: "Passionnés de la qualité",
-    text: "Notre équipe expérimenté se démarque par son efficacité et osn souci du détail. Chaque élément est soigneusement pris en compte pour un résultat dont vous pourrez être fiers.",
+    text: "Notre équipe expérimenté se démarque par son efficacité et son souci du détail. Chaque élément est soigneusement pris en compte pour un résultat dont vous pourrez être fiers.",
     buttonText: "à propos de nous",
     link: "/team",
   },

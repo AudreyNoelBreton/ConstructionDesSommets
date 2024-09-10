@@ -20,7 +20,7 @@ const Cart = () => {
             <div className="cart__title">saint-ferréol-les-neiges</div>
             <div className="cart__text">
               Implantée à Saint-Ferréol, notre entreprise contribue activement
-              au développement de la région grace à des projets novateurs et
+              au développement de la région grâce à des projets novateurs et
               soigneusement réalisés.
             </div>
           </div>
@@ -36,7 +36,7 @@ const Cart = () => {
             <div className="cart__title">saint-ferréol-les-neiges</div>
             <div className="cart__text">
               Implantée à Saint-Ferréol, notre entreprise contribue activement
-              au développement de la région grace à des projets novateurs et
+              au développement de la région grâce à des projets novateurs et
               soigneusement réalisés.
             </div>
           </div>
