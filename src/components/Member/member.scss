@@ -15,7 +15,7 @@
   &__img {
     width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajout des transitions pour un effet de profondeur fluide */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8); /* Ajout d'une ombre légère pour la profondeur initiale */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); /* Ajout d'une ombre légère pour la profondeur initiale */
   }
 
   &__name {
@@ -24,8 +24,6 @@
     font-family: Eurostile Bold;
     font-size: 3.4375rem; /* 55px */
     text-transform: uppercase;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1),
-      3px 3px 8px rgba(0, 0, 0, 0.1);
   }
 
   &__text {
@@ -77,6 +75,7 @@
     &__text {
       padding: 1rem 4.75;
       font-size: 1.675rem; /* 30px */
+      line-height: 2.2rem;
     }
 
     &__img {

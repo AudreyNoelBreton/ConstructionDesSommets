@@ -2,12 +2,12 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-
+  align-items: center;
   &__links {
     display: flex;
     flex-direction: row;
     width: 100%;
-    align-self: end;
+    align-self: center;
     justify-content: flex-end;
     gap: 1.5625rem;
   }

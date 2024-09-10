@@ -60,5 +60,9 @@
     &__text {
       font-size: 22px;
     }
+
+    &.active &__text {
+      line-height: 2.2rem;
+    }
   }
 }
