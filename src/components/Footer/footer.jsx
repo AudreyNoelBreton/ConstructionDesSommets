@@ -29,15 +29,17 @@ const Footer = () => {
               <Link to={"/"} className="footer__logo">
                 <img src={imagePath} alt="Logo" />
               </Link>
+
               <div className="footer__links">
-                <Link to="/realisations" className="footer__link">
-                  Modèles
-                </Link>
                 <Link to="/team" className="footer__link">
-                  Équipe
+                  À propos
                 </Link>
+                <Link to="/realisations" className="footer__link">
+                  Nos réalisations
+                </Link>
+
                 <Link to="/about" className="footer__link">
-                  contact
+                  Nous joindre
                 </Link>
               </div>
             </div>

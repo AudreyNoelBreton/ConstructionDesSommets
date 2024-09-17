@@ -10,7 +10,7 @@ const Members = () => {
         Les Habitations du Sommet est une entreprise de construction qui vise
         l'excellence par la réalisation de projets novateurs et soigneusement
         réalisés. Notre compétence et notre dévouement font de chaque projet une
-        réussite dont vous pourrez êtres fiers.
+        réussite dont vous pourrez être fiers.
       </div>
       <Member position={"first"} />
       <Member position={"second"} />

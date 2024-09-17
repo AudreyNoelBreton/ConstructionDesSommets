@@ -46,13 +46,13 @@ const sliderImages = [
     src: `${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-36.jpg`,
   },
   {
-    src: `${process.env.PUBLIC_URL}/à-propos-header.jpg`,
+    src: `${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-3.jpg`,
   },
   {
-    src: `${process.env.PUBLIC_URL}/nos-realisations-header.jpg`,
+    src: `${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-27.jpg`,
   },
   {
-    src: `${process.env.PUBLIC_URL}/nous-joindre-header.jpg`,
+    src: `${process.env.PUBLIC_URL}/olympique/habitations-du-sommet-bloc-1.jpg`,
   },
 ];
 const sliderTemoignages = [
@@ -94,7 +94,7 @@ const cardHomePage = [
   {
     src: `${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-15.jpg`,
     title: "Passionnés de la qualité",
-    text: "Notre équipe expérimenté se démarque par son efficacité et son souci du détail. Chaque élément est soigneusement pris en compte pour un résultat dont vous pourrez être fiers.",
+    text: "Notre équipe expérimentée se démarque par son efficacité et son souci du détail. Chaque élément est soigneusement pris en compte pour un résultat dont vous pourrez être fiers.",
     buttonText: "à propos de nous",
     link: "/team",
   },
@@ -102,7 +102,7 @@ const cardHomePage = [
   {
     src: `${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-3.jpg`,
     title: "Service personnalisé",
-    text: "Chaque projet est unique, c'est pourquoi nous vous garantissons un service sur mesure, adapté à vos besoins. Comptez sur notre expertise pour guider vos choix en fonction de vos objectifs et votre budget",
+    text: "Chaque projet est unique, c'est pourquoi nous vous garantissons un service sur mesure, adapté à vos besoins. Comptez sur notre expertise pour guider vos choix en fonction de vos objectifs et votre budget.",
     buttonText: "en savoir plus",
     link: "/about",
   },
@@ -115,7 +115,7 @@ const questions = [
   },
   {
     title: "Comment obtenir une soumission ?",
-    text: `Vous aurez besoin des plans détaillés du projet à réaliser. Une fois que vous les avez en mains, vous pouvez remplir la rubrique <a href="/about">OBTENIR UNE SOUMISSION</a> ou nous les transmettre à l'adresse suivante : <a href="mailto:william@habitationsdusommet.com">william@habitationsdusommet.com</a>. Pour toute question relative aux soumissions, n'hésitez pas à contacter William Viens au 581-991-9485. Il se fera un plaisir de vous répondre ! Vous pouvez également nous contacter à <a href="mailto:info@habitationsdusommet.com">info@habitationsdusommet.com</a>.`,
+    text: `Vous aurez besoin des plans détaillés du projet à réaliser. Une fois ceux-ci obtenus, remplir la rubrique <a href="/about">OBTENIR UNE SOUMISSION</a> ou nous les transmettre à l'adresse suivante : <a href="mailto:info@habitationsdusommet.com">info@habitationsdusommet.com</a>. Pour toute question relative aux soumissions, n’hésitez pas à contacter William Viens au 581-991-9485.`,
   },
   {
     title: "Ai-je besoin d'un permis pour effectuer mes travaux ?",

@@ -13,7 +13,7 @@
     color: #242318;
     background-color: transparent;
     width: 100%;
-    font-size: 2.8125rem; /* 45px => 2.8125rem */
+    font-size: 2.125rem; /* 45px => 2.8125rem */
     text-align: center;
     text-transform: uppercase;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.1),
@@ -80,7 +80,7 @@
 @media (min-width: 420px) {
   .maison {
     &__title {
-      font-size: 3.5625rem; /* 57px => 3.5625rem */
+      font-size: 3.1625rem; /* 57px => 3.5625rem */
     }
   }
 }
@@ -99,7 +99,7 @@
 
     &__title {
       padding: 3rem 4rem;
-      font-size: 7rem; /* 57px => 3.5625rem */
+      font-size: 6rem; /* 57px => 3.5625rem */
     }
 
     &__gallery {

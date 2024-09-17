@@ -28,7 +28,7 @@ const Soumission = () => {
         Numéro de téléphone: ${numero}\n
         Lieu des travaux: ${lieu}\n
         Résumé du projet: ${resume}\n
-        Délais souhaité: ${delais}\n
+        Début des travaux souhaité : ${delais}\n
         Courriel: ${courriel}
       `;
 
@@ -92,7 +92,7 @@ const Soumission = () => {
                 <div className="soumission__input">
                   <input
                     type="text"
-                    placeholder="Délais souhaité"
+                    placeholder="Début des travaux souhaité "
                     value={delais}
                     onChange={(e) => setDelais(e.target.value)}
                     required
@@ -104,7 +104,7 @@ const Soumission = () => {
                 <div className="soumission__input">
                   <input
                     type="email"
-                    placeholder="Inscrire votre courriel"
+                    placeholder="Courriel"
                     value={courriel}
                     onChange={(e) => setCourriel(e.target.value)}
                     required
@@ -154,7 +154,7 @@ const Soumission = () => {
                 <div className="soumission__input">
                   <input
                     type="text"
-                    placeholder="Délais souhaité"
+                    placeholder="Début des travaux souhaité "
                     value={delais}
                     onChange={(e) => setDelais(e.target.value)}
                     required
@@ -174,7 +174,7 @@ const Soumission = () => {
                 <div className="soumission__input">
                   <input
                     type="email"
-                    placeholder="Inscrire votre courriel"
+                    placeholder="Courriel"
                     value={courriel}
                     onChange={(e) => setCourriel(e.target.value)}
                     required

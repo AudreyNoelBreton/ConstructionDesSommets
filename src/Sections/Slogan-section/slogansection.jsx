@@ -6,15 +6,16 @@ const Slogan = () => {
     <section className="slogan">
       <div className="slogan__infos">
         <div className="slogan__title">
-          Secteurs résidentiel <br />& commercial
+          Secteur <br />
+          résidentiel <br />& commercial
         </div>
         <div className="slogan__secteurs">
           Côte-de-beaupré - Québec - Charlevoix
         </div>
 
         <div className="slogan__text">
-          Que vous vouliez contruire la maison de vos rêves, vous lancer dans un
-          agrandissement ou entreprendre des rénovations, l'équipe des
+          Que vous souhaitiez contruire la maison de vos rêves, vous lancer dans
+          un agrandissement ou entreprendre des rénovations, l'équipe des
           Habitations du Sommet met toute son expertise au service de votre
           projet !
         </div>
