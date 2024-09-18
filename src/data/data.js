@@ -144,7 +144,7 @@ const projects = [
       `${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-3.jpg`,
     ],
     text: "La petite maison verte",
-    image1: `${process.env.PUBLIC_URL}//petite-maison-verte-1.jpg`,
+    image1: `${process.env.PUBLIC_URL}/petite-maison-verte-1.jpg`,
     image2: `${process.env.PUBLIC_URL}/petite-maison-verte-2.jpg`,
     image3: `${process.env.PUBLIC_URL}/petite-maison-verte-3.jpg`,
     url: "/realisations/maison-verte",
