@@ -47,7 +47,7 @@ const App = () => {
 };
 
 const AppWrapper = () => (
-  <BrowserRouter basename="/ConstructionDesSommets">
+  <BrowserRouter>
     <App />
   </BrowserRouter>
 );
