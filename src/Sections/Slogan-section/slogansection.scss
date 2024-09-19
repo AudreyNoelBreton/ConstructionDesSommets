@@ -119,7 +119,7 @@
     }
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   .slogan {
     padding: 6.25rem;
     flex-direction: row;
@@ -127,7 +127,7 @@
 
     &__title {
       font-family: Eurostile Bold;
-      font-size: 4.6875rem;
+      font-size: 4.2875rem;
       text-transform: uppercase;
     }
     &__infos {
@@ -145,11 +145,11 @@
     }
 
     &__secteurs {
-      font-size: 1.6875rem;
+      font-size: 1.4875rem;
     }
 
     &__text {
-      font-size: 1.4375rem;
+      font-size: 1.2375rem;
     }
   }
 }

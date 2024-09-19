@@ -60,3 +60,16 @@
     }
   }
 }
+
+@media (min-width: 1200px) {
+  .realisations {
+    padding: 2.5rem 0; /* 40px => 2.5rem */
+    &__main-image {
+      padding: 0 5.3125rem; /* 40px => 2.5rem */
+    }
+    &__text {
+      padding-bottom: 1.875rem; /* 30px => 1.875rem */
+      font-size: 4.5rem; /* 75px => 4.6875rem */
+    }
+  }
+}

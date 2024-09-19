@@ -75,20 +75,20 @@
     }
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   .card {
     gap: 3.5rem;
 
     &__title {
       width: 90%;
-      font-size: 5.5rem;
+      font-size: 4.2875rem;
     }
 
     &__content {
       max-width: 50%;
     }
     &__text {
-      font-size: 1.75rem;
+      font-size: 1.4rem;
     }
   }
 }
