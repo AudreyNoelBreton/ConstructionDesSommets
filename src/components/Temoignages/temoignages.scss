@@ -105,11 +105,14 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .temoignages {
     &__text-overlay {
       padding-top: 50px;
-      font-size: 5rem;
+      font-size: 4.5rem;
+    }
+    &__text {
+      font-size: 1.4875rem;
     }
   }
 }

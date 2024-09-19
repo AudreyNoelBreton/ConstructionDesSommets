@@ -14,7 +14,10 @@ const Member = ({ position }) => {
               className="member__img"
             />
             <div className="member__content">
-              <div className="member__name">Louis brochu Marier</div>
+              <div className="member__name">
+                Louis <b />
+                brochu Marier
+              </div>
               <div className="member__text">
                 Grâce à son entourage, Louis développe dès son jeune âge une
                 passion pour le travail du bois et la minutie, ce qui le pousse

@@ -34,3 +34,13 @@
     }
   }
 }
+@media (min-width: 1024px) {
+  .members {
+    gap: 1.25rem; /* 20px */
+    &__text {
+      padding: 2rem 6.6875rem;
+      font-size: 1.8rem; /* 35px */
+      line-height: 2.5rem;
+    }
+  }
+}
