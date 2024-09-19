@@ -9,6 +9,7 @@
     width: 100%;
     height: auto;
     cursor: grab; /* Indique que l'image peut être déplacée lors du zoom */
+    max-height: 600px;
   }
   &__text-overlay {
     position: absolute;

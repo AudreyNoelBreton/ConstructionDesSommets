@@ -32,14 +32,14 @@ const Footer = () => {
 
               <div className="footer__links">
                 <Link to="/team" className="footer__link">
-                  À propos
+                  Équipe
                 </Link>
                 <Link to="/realisations" className="footer__link">
-                  Nos réalisations
+                  réalisations
                 </Link>
 
                 <Link to="/about" className="footer__link">
-                  Nous joindre
+                  contact
                 </Link>
               </div>
             </div>
