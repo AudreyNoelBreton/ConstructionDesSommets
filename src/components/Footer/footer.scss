@@ -263,6 +263,9 @@
     &__link-bottom {
       font-size: 1rem;
     }
+    &__links-bottom {
+      gap: 20px;
+    }
   }
 }
 
@@ -297,7 +300,7 @@
       }
     }
     &__links-bottom {
-      gap: 15px;
+      gap: 30px;
     }
   }
 }
