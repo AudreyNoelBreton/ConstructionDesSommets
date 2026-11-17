@@ -40,17 +40,19 @@ const CarouselRealisations = ({ images = [] }) => {
         style={{ transform: `translateX(-${activeIndex * 30}%)` }}
       >
         {images.map((img, index) => (
-          <a
+          <button
+            type="button"
             className="carouselRealisations__item"
             key={index}
+            aria-label={`Voir le projet ${img.text}`}
             onClick={() => handleImageClick(img.url)} // Gérer le clic sur l'image
           >
-            <img src={img.image1} alt={`carouselRealisations ${index}`} />
-            <div className="carouselRealisations__overlay">
-              <div className="carouselRealisations__text">{img.text}</div>
+            <img src={img.image1} alt={`Projet ${img.text}`} />
+            <span className="carouselRealisations__overlay">
+              <span className="carouselRealisations__text">{img.text}</span>
               <FaArrowRightLong className="carouselRealisations__icon" />
-            </div>
-          </a>
+            </span>
+          </button>
         ))}
       </div>
     </section>
