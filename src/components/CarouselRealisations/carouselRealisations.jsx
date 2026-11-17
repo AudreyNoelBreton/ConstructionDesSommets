@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./carouselRealisations.scss";
-import "../../components/Btn.scss";
+import "../../components/btn.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
