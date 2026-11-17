@@ -1,7 +1,6 @@
 import "./consecration.scss";
 import React, { useState, useEffect } from "react";
 import Header from "../../components/Header/header";
-import data from "../../data/data";
 import Soumission from "../../Sections/Soumission/soumission";
 import Cart from "../../Sections/Cart-section/cartSection";
 import Contact from "../../Sections/Contact-section/contact-section";
@@ -39,91 +38,91 @@ const Consecration = () => {
           <div className="consecration__items">
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-36.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
           </div>
 
           <div className="consecration__items">
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-28.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-33.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
           </div>
           <div className="consecration__items">
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-30.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-32.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
           </div>
 
           <div className="consecration__items">
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-15.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
           </div>
 
           <div className="consecration__items">
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-7.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-9.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
           </div>
 
           <div className="consecration__items">
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-5.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-11.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-13.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
           </div>
           <div className="consecration__items">
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-14.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
           </div>
           <div className="consecration__items">
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-19.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-23.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
           </div>
           <div className="consecration__items">
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-22.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-21.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-24.jpg`}
-              className="consecration__item"
+              className="consecration__item" alt="Vue du projet La consécration"
             ></img>
           </div>
         </div>
