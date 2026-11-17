@@ -1,6 +1,6 @@
 import React from "react";
 import "./form.scss";
-import "../../components/Btn.scss";
+import "../../components/btn.scss";
 const Form = () => {
   return (
     <div className="form-container">
