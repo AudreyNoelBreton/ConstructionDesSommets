@@ -1,23 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useId, useState } from "react";
 
 import "./link.scss";
 
 const Link = (props) => {
   const [active, setActive] = useState(false);
-  const [timer, setTimer] = useState(null);
+  const contentId = useId();
 
   const chevronDown = `${process.env.PUBLIC_URL}/chevron-down.svg`;
 
   useEffect(() => {
-    if (timer) {
-      clearTimeout(timer);
-    }
-    if (active) {
-      const newTimer = setTimeout(() => {
-        setActive(false);
-      }, 6000);
-      setTimer(newTimer);
-    }
+    if (!active) return undefined;
+
+    const timer = setTimeout(() => setActive(false), 6000);
     return () => clearTimeout(timer);
   }, [active]);
 
@@ -27,13 +21,19 @@ const Link = (props) => {
 
   return (
     <section className={`link ${active ? "active" : ""}`}>
-      <div className="link__title" onClick={() => handleClick()}>
-        <div>{props.title}</div>
-        <div className="link__icon">
-          <img src={chevronDown} />
-        </div>
-      </div>
-      <div className="link__text">
+      <button
+        type="button"
+        className="link__title"
+        onClick={handleClick}
+        aria-expanded={active}
+        aria-controls={contentId}
+      >
+        <span>{props.title}</span>
+        <span className="link__icon">
+          <img src={chevronDown} alt="" aria-hidden="true" />
+        </span>
+      </button>
+      <div className="link__text" id={contentId}>
         <div dangerouslySetInnerHTML={{ __html: props.text }} />
       </div>
     </section>
