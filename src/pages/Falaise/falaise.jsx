@@ -1,7 +1,6 @@
 import "./falaise.scss";
 import React, { useState, useEffect } from "react";
 import Header from "../../components/Header/header";
-import data from "../../data/data";
 import Cart from "../../Sections/Cart-section/cartSection";
 import Contact from "../../Sections/Contact-section/contact-section";
 import Links from "../../Sections/Links-section/link-section";
@@ -22,13 +21,6 @@ const Falaise = () => {
       }, 0);
     }
   }, [location]);
-  let foundProject = null;
-  for (let i = 0; i < data.projects.length; i++) {
-    if (data.projects[i].text === "La consecration") {
-      foundProject = data.projects[i];
-      break;
-    }
-  }
   const logoPath = `${process.env.PUBLIC_URL}/logo-habitations-dark.svg`;
 
   return (
@@ -45,88 +37,88 @@ const Falaise = () => {
           <div className="falaise__items">
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-27.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
           </div>
 
           <div className="falaise__items">
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-12.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-15.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
           </div>
           <div className="falaise__items">
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-26.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-4.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-14.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
           </div>
           <div className="falaise__items">
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-31.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
           </div>
           <div className="falaise__items">
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-22.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-16.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
           </div>
           <div className="falaise__items">
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-7.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-30.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-19.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
           </div>
           <div className="falaise__items">
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-18.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-25.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
           </div>
           <div className="falaise__items">
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-32.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
           </div>
           <div className="falaise__items">
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-11.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/Falaise/Habitations-du-sommet-la-falaise-2.jpg`}
-              className="falaise__item"
+              className="falaise__item" alt="Vue du projet La Férreolaise"
             ></img>
           </div>
         </div>
