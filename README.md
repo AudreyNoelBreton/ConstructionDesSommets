@@ -75,7 +75,11 @@ GitHub Pages est actuellement configuré pour servir le site public depuis la br
 
 La configuration Pages confirmée publie uniquement des fichiers statiques depuis `gh-pages` (`/`); elle n'exécute pas Express. Le dépôt ne révèle pas si le serveur est hébergé séparément. Le code historique contenait des adresses et identifiants factices, pas de secrets réels. Le serveur a été durci séparément, sans changer le déploiement Pages.
 
-Les mises à jour compatibles appliquées avec `npm audit fix` (sans `--force`) ont supprimé les quatre avis critiques du lockfile initial et actualisé les versions transitives dans les plages déjà déclarées. Au 17 novembre 2026, `npm audit --omit=dev` signale encore 83 avis (3 faibles, 6 modérés et 74 élevés), principalement issus du toolchain Create React App. Les avis directs restants concernent `react-scripts` (aucun correctif non majeur proposé) et `react-router-dom` (correctif proposé en version majeure 7). Nodemailer, Express et Multer ont été mis à jour pour éliminer leurs avis directs. Les migrations majeures restantes demandent une validation distincte de compatibilité et de portée.
+### Audit des dépendances
+
+L'audit complet, son inventaire par gravité et chemin de dépendance, les résultats des vérifications et l'évaluation de l'exposition sont consignés dans [docs/dependency-audit-2026-11-17.md](docs/dependency-audit-2026-11-17.md). Après `npm ci`, `npm audit` signale 83 entrées de paquets vulnérables (0 critique, 74 élevées, 6 modérées et 3 faibles). `npm audit fix --dry-run` et `npm audit fix` n'ont trouvé aucun changement compatible; aucune mise à jour forcée ni mise à jour de version n'a été effectuée.
+
+Les outils de compilation, Sass et les bibliothèques de test sont classés dans `devDependencies`, sans changement de version verrouillée. `npm audit --omit=dev` signale maintenant 2 entrées de paquets affectés, toutes deux modérées et liées à React Router. Express, Multer et Nodemailer ne figurent pas dans les résultats d'audit. GitHub Pages sert des fichiers statiques et n'exécute pas Express; l'existence éventuelle d'un hébergement Express séparé demeure non confirmée. Aucun code Express ni identifiant de messagerie n'a été modifié.
 
 ### Serveur Express (facultatif, hébergement séparé)
 
