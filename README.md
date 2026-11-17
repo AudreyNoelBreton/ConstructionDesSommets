@@ -90,4 +90,4 @@ Lancer localement avec `npm run start:server`. En développement, sans configura
 
 Le serveur exige Node.js 20 ou plus récent. `/send-email` limite les requêtes à 5 par IP toutes les 15 minutes, valide les champs et l'adresse courriel, et n'accepte qu'un plan PDF/JPG/PNG jusqu'à 10 Mo dont l'extension, le type MIME et la signature du fichier correspondent. Les fichiers temporaires sont supprimés après traitement. En multi-instance, remplacer le limiteur en mémoire par un stockage partagé avant exposition publique et définir `TRUST_PROXY_HOPS` selon l'hébergeur.
 
-La CI exécute les tests et la compilation seulement ; elle ne publie pas le site.
+La CI exécute les tests et la compilation seulement ; elle ne publie pas le site. Le build s'exécute avec `CI=true` : les avertissements ESLint empêchent donc une compilation réussie.
