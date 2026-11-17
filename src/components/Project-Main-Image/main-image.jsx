@@ -38,7 +38,7 @@ const MainImage = ({ images = [], mainText, url }) => {
         <img
           className="main-image__img"
           src={images[currentImage]}
-          alt="Background"
+          alt={`Projet ${mainText}`}
           style={{ opacity: imageOpacity }}
         />
       )}

@@ -1,7 +1,6 @@
 import "./olympique.scss";
 import React, { useState, useEffect } from "react";
 import Header from "../../components/Header/header";
-import data from "../../data/data";
 import Cart from "../../Sections/Cart-section/cartSection";
 import Contact from "../../Sections/Contact-section/contact-section";
 import Links from "../../Sections/Links-section/link-section";
@@ -22,13 +21,6 @@ const Olympique = () => {
       }, 0);
     }
   }, [location]);
-  let foundProject = null;
-  for (let i = 0; i < data.projects.length; i++) {
-    if (data.projects[i].text === "La consecration") {
-      foundProject = data.projects[i];
-      break;
-    }
-  }
   const logoPath = `${process.env.PUBLIC_URL}/logo-habitations-dark.svg`;
 
   return (
@@ -45,24 +37,24 @@ const Olympique = () => {
           <div className="maison__items">
             <img
               src={`${process.env.PUBLIC_URL}/olympique/habitations-du-sommet-bloc-3.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue du projet L’Olympique"
             ></img>
           </div>
           <div className="maison__items">
             <img
               src={`${process.env.PUBLIC_URL}/olympique/habitations-du-sommet-bloc-2.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue du projet L’Olympique"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/olympique/habitations-du-sommet-bloc-4.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue du projet L’Olympique"
             ></img>
           </div>
 
           <div className="maison__items">
             <img
               src={`${process.env.PUBLIC_URL}/olympique/habitations-du-sommet-bloc-1.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue du projet L’Olympique"
             ></img>
           </div>
         </div>

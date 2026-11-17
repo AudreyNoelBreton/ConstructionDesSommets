@@ -1,7 +1,6 @@
 import "./maison.scss";
 import React, { useState, useEffect } from "react";
 import Header from "../../components/Header/header";
-import data from "../../data/data";
 import Cart from "../../Sections/Cart-section/cartSection";
 import Contact from "../../Sections/Contact-section/contact-section";
 import Links from "../../Sections/Links-section/link-section";
@@ -22,13 +21,6 @@ const Maison = () => {
       }, 0);
     }
   }, [location]);
-  let foundProject = null;
-  for (let i = 0; i < data.projects.length; i++) {
-    if (data.projects[i].text === "La consecration") {
-      foundProject = data.projects[i];
-      break;
-    }
-  }
   const logoPath = `${process.env.PUBLIC_URL}/logo-habitations-dark.svg`;
 
   return (
@@ -45,65 +37,65 @@ const Maison = () => {
           <div className="maison__items">
             <img
               src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-6.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue de la Petite Maison verte"
             ></img>
           </div>
           <div className="maison__items">
             <img
               src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-2.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue de la Petite Maison verte"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-11.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue de la Petite Maison verte"
             ></img>
           </div>
 
           <div className="maison__items">
             <img
               src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-7.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue de la Petite Maison verte"
             ></img>
           </div>
           <div className="maison__items">
             <img
               src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-4.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue de la Petite Maison verte"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-1.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue de la Petite Maison verte"
             ></img>
           </div>
           <div className="maison__items">
             <img
               src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-9.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue de la Petite Maison verte"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-5.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue de la Petite Maison verte"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-8.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue de la Petite Maison verte"
             ></img>
           </div>
 
           <div className="maison__items">
             <img
               src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-3.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue de la Petite Maison verte"
             ></img>
           </div>
           <div className="maison__items">
             <img
               src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-10.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue de la Petite Maison verte"
             ></img>
             <img
               src={`${process.env.PUBLIC_URL}/maison/Habitations-du-sommet-petite-maison-verte-12.jpg`}
-              className="maison__item"
+              className="maison__item" alt="Vue de la Petite Maison verte"
             ></img>
           </div>
         </div>

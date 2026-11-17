@@ -5,6 +5,10 @@
   border-bottom: 2px solid #242318;
   &__title {
     padding: 1.8rem 0.5rem;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    color: inherit;
     font-family: Eurostile Bold;
     font-size: 30px;
     cursor: pointer;
@@ -12,6 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-align: left;
   }
 
   &__icon {

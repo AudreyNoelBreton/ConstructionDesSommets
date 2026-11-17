@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import "./link-section.scss";
 import Link from "../../components/Link/link";
 import data from "../../data/data";

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.scss";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
@@ -14,16 +14,6 @@ import Olympique from "./pages/Olympique/olympique";
 
 const App = () => {
   const location = useLocation();
-  const [isAlertActive, setIsAlertActive] = useState(false);
-
-  useEffect(() => {
-    if (location.pathname !== "/about") {
-      setIsAlertActive(false);
-      setTimeout(() => {
-        setIsAlertActive(true);
-      }, 0);
-    }
-  }, [location]);
 
   return (
     <PageTransition>

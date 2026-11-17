@@ -22,6 +22,12 @@
     flex: 0 0 auto; // Empêche les items de s'étendre
     scroll-snap-align: start;
     max-width: fit-content;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
     cursor: pointer;
     img {
       height: 100%;

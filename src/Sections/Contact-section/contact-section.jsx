@@ -48,7 +48,11 @@ const Contact = () => {
         </div>
 
         <div className="contact__bottom-right">
-          <img src={logo} className="contact__logo"></img>
+          <img
+            src={logo}
+            className="contact__logo"
+            alt="Habitations du Sommet"
+          />
           <div className="contact__license">R.B.Q : 5820-8927-01</div>
         </div>
       </div>
