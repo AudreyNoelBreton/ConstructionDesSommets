@@ -68,3 +68,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Sécurité et déploiement
+
+GitHub Pages est actuellement configuré pour servir le site public depuis la branche `gh-pages` (source Pages historique). Le client React est un site statique et aucune requête du client vers la route Express `/send-email` n'est référencée dans `src/`. Le script `npm run deploy` publie sur GitHub Pages : ne l'exécutez pas dans le cadre des tests ou de la CI.
+
+`src/server/server.js` est présent dans le dépôt, mais son exécution ou son hébergement en production n'a pas pu être confirmé. L'audit du dépôt et de son historique n'a pas mis en évidence d'identifiants SMTP réels; la configuration du serveur contient des valeurs factices. Il ne dispose pas d'une configuration de production documentée et ses protections ne sont pas adaptées à une exposition publique. Aucun changement de comportement n'est apporté à ce serveur tant que son usage et son hébergement ne sont pas confirmés.
+
+L'audit npm de l'arbre verrouillé (`npm audit --omit=dev`) a signalé 74 avis : 14 de faible, 15 de moyenne, 41 de haute et 4 de criticité élevée, dont des dépendances directes Express et Nodemailer. Aucune mise à niveau de dépendances n'est incluse dans cette phase : l'usage du serveur est inconnu et la correction complète toucherait aussi le toolchain Create React App, dont certaines corrections proposées sont majeures.
+
+Avant toute mise en production du serveur, confirmer avec l'équipe responsable :
+
+- s'il est déployé, où il est hébergé et quels clients l'appellent ;
+- les origines CORS attendues et les limites fonctionnelles des requêtes et pièces jointes ;
+- le fournisseur de courriel, les destinataires autorisés et la façon de fournir les identifiants par variables d'environnement sécurisées.
+
+Ne pas publier d'identifiants dans le dépôt ou les rapports. Après confirmation, configurer et documenter les variables d'environnement, puis ajouter CORS à liste d'autorisation, validation des données, limites et contrôles de téléversement, limitation de débit et réponses d'erreur sûres avant d'exposer le serveur.
+
+La CI exécute les tests et la compilation seulement ; elle ne publie pas le site.
