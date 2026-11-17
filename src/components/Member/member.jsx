@@ -1,6 +1,6 @@
 import React from "react";
 import "./member.scss";
-import "../../components/Btn.scss";
+import "../../components/btn.scss";
 
 const Member = ({ position }) => {
   return (
