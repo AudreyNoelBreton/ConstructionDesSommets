@@ -1,5 +1,5 @@
 import React from "react";
-import "../../components/Btn.scss";
+import "../../components/btn.scss";
 import "./card.scss";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
