@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./carouselSecteurs.scss";
-import "../../components/Btn.scss";
+import "../../components/btn.scss";
 import data from "../../data/data";
 import { useMediaQuery } from "react-responsive";
 

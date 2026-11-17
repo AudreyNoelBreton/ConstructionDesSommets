@@ -1,6 +1,6 @@
 import MainImage from "../../components/Project-Main-Image/main-image";
 import "./realisation.scss";
-import "../../components/Btn.scss";
+import "../../components/btn.scss";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import CarouselRealisations from "../../components/CarouselRealisations/carouselRealisations";

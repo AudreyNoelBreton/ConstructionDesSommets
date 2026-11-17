@@ -4,7 +4,7 @@ import "./footer.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa6";
 import { GrInstagram } from "react-icons/gr";
-import "../../components/Btn.scss";
+import "../../components/btn.scss";
 import { useMediaQuery } from "react-responsive";
 
 const Footer = () => {

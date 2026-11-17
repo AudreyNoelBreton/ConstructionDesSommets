@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./soumission.scss";
-import "../../components/Btn.scss";
+import "../../components/btn.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useMediaQuery } from "react-responsive";
 
