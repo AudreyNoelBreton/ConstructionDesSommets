@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      var location = window.location;
+      var pathSegments = location.pathname.split("/").filter(Boolean);
+      var destination = location.protocol + "//" + location.host +
+        "/?/" + pathSegments.map(encodeURIComponent).join("/") +
+        (location.search ? "&" + location.search.slice(1).replace(/~and~/g, "&") : "") +
+        location.hash;
+      location.replace(destination);
+    </script>
+  </head>
+  <body></body>
+</html>

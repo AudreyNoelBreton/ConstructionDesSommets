@@ -1,10 +1,14 @@
-/** @jest-environment node */
+/** @vitest-environment node */
 
-const fs = require("fs");
-const os = require("os");
-const path = require("path");
-const request = require("supertest");
-const { createApp } = require("./server");
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import request from "supertest";
+import { vi } from "vitest";
+import { createRequire } from "node:module";
+
+const require = createRequire(import.meta.url);
+const { createApp } = require("./server.js");
 
 const allowedOrigin = "https://habitationsdusommet.com";
 
@@ -13,8 +17,8 @@ function createTestApp(options = {}) {
     path.join(os.tmpdir(), "construction-des-sommets-test-")
   );
   const logger = {
-    error: jest.fn(),
-    warn: jest.fn(),
+    error: vi.fn(),
+    warn: vi.fn(),
   };
   const app = createApp({
     env: {
@@ -65,7 +69,7 @@ describe("Express quote request server", () => {
   }
 
   test("sends a validated quote request and removes its temporary attachment", async () => {
-    const transporter = { sendMail: jest.fn().mockResolvedValue({}) };
+    const transporter = { sendMail: vi.fn().mockResolvedValue({}) };
     const { app } = registerApp({ transporter });
     const response = await validQuoteRequest(app).attach(
       "plan",
@@ -90,7 +94,7 @@ describe("Express quote request server", () => {
   });
 
   test("rejects an origin outside the configured allowlist", async () => {
-    const transporter = { sendMail: jest.fn() };
+    const transporter = { sendMail: vi.fn() };
     const { app } = registerApp({ transporter });
     const response = await request(app)
       .post("/send-email")
@@ -101,7 +105,7 @@ describe("Express quote request server", () => {
   });
 
   test("rejects invalid fields and invalid email addresses", async () => {
-    const transporter = { sendMail: jest.fn() };
+    const transporter = { sendMail: vi.fn() };
     const { app } = registerApp({ transporter });
     const response = await validQuoteRequest(app, "not-an-email").attach(
       "plan",
@@ -120,7 +124,7 @@ describe("Express quote request server", () => {
   });
 
   test("rejects a file with a valid extension and MIME type but invalid signature", async () => {
-    const transporter = { sendMail: jest.fn() };
+    const transporter = { sendMail: vi.fn() };
     const { app } = registerApp({ transporter });
     const response = await validQuoteRequest(app).attach(
       "plan",
@@ -152,7 +156,7 @@ describe("Express quote request server", () => {
   });
 
   test("rejects unsupported file types and files larger than 10 MB", async () => {
-    const { app } = registerApp({ transporter: { sendMail: jest.fn() } });
+    const { app } = registerApp({ transporter: { sendMail: vi.fn() } });
     const unsupported = await validQuoteRequest(app).attach(
       "plan",
       Buffer.from("plain text"),
@@ -170,7 +174,7 @@ describe("Express quote request server", () => {
 
   test("does not return SMTP error details to the client", async () => {
     const transporter = {
-      sendMail: jest.fn().mockRejectedValue(
+      sendMail: vi.fn().mockRejectedValue(
         Object.assign(new Error("private SMTP response"), { code: "EAUTH" })
       ),
     };
@@ -206,7 +210,7 @@ describe("Express quote request server", () => {
   });
 
   test("limits quote requests to five per IP in fifteen minutes", async () => {
-    const { app } = registerApp({ transporter: { sendMail: jest.fn() } });
+    const { app } = registerApp({ transporter: { sendMail: vi.fn() } });
     const responses = [];
 
     for (let index = 0; index < 6; index += 1) {

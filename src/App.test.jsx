@@ -1,13 +1,14 @@
 import { fireEvent, render, screen } from "@testing-library/react";
+import { vi } from "vitest";
 import Soumission from "./Sections/Soumission/soumission";
 
-jest.mock("react-responsive", () => ({
+vi.mock("react-responsive", () => ({
   useMediaQuery: () => false,
 }));
 
 describe("Soumission", () => {
   afterEach(() => {
-    jest.restoreAllMocks();
+    vi.restoreAllMocks();
   });
 
   test("renders the required quote request fields", () => {
@@ -31,7 +32,7 @@ describe("Soumission", () => {
   });
 
   test("asks the visitor to attach plans before opening the email", () => {
-    const confirm = jest.spyOn(window, "confirm").mockReturnValue(false);
+    const confirm = vi.spyOn(window, "confirm").mockReturnValue(false);
     const { container } = render(<Soumission />);
 
     fireEvent.submit(container.querySelector("form"));
