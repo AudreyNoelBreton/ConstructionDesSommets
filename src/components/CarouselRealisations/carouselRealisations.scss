@@ -1,27 +1,35 @@
 .carouselRealisations {
+  --carousel-item-width: min(600px, calc(100vw - 5rem));
+  --carousel-gap: clamp(1rem, 3vw, 3.125rem);
+  --carousel-step: calc(var(--carousel-item-width) + var(--carousel-gap));
+
   display: flex;
   position: relative;
+  overflow: hidden;
   max-height: 400px;
 
   &__container {
     position: relative;
+    left: 50%;
     display: flex;
-    transition: transform 0.5s ease-in-out;
     justify-content: flex-start;
-    gap: 50px;
-    max-width: fit-content;
+    gap: var(--carousel-gap);
+    width: max-content;
+    transform: translateX(-50%);
 
     &.animating {
       transition: transform 0.5s ease-in-out;
+      transform: translateX(calc(-50% - var(--carousel-step)));
     }
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 auto; // Empêche les items de s'étendre
-    scroll-snap-align: start;
-    max-width: fit-content;
+    position: relative;
+    display: block;
+    flex: 0 0 var(--carousel-item-width);
+    width: var(--carousel-item-width);
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
     padding: 0;
     border: 0;
     background: none;
@@ -29,21 +37,22 @@
     font: inherit;
     text-align: inherit;
     cursor: pointer;
+
     img {
-      height: 100%;
+      display: block;
       width: 100%;
+      height: 100%;
       object-fit: cover;
     }
   }
 
   &__overlay {
     display: flex;
-    align-items: center; // Aligne le texte et l'icône sur la même ligne
-    position: relative; // Utilisez `absolute` si vous voulez que le texte soit superposé à l'image
-    bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0.5rem 1rem;
+    align-items: center;
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1rem;
+    left: 1.5rem;
     border-radius: 5px;
     justify-content: space-between;
   }
@@ -52,7 +61,7 @@
     color: #f7f4f0;
     font-size: 25px;
     font-family: Eurostile Bold;
-    margin-right: 0.5rem; // Espace entre le texte et l'icône
+    margin-right: 0.5rem;
     position: relative;
     cursor: pointer;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.4),
@@ -95,8 +104,14 @@
     padding: 0 2.5rem; /* 40px => 2.5rem */
 
     &__overlay {
-      transform: translateX(-50%);
-      padding: 0.5rem 2rem;
+      right: 2rem;
+      left: 2rem;
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carouselRealisations__container.animating {
+    transition-duration: 0.01ms;
   }
 }
