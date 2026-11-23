@@ -66,10 +66,13 @@
   }
 
   &__field-control {
+    -webkit-appearance: none;
+    appearance: none;
     box-sizing: border-box;
     display: block;
     width: 100%;
     min-width: 0;
+    height: 2.5rem;
     min-height: 2.5rem;
     padding: 0;
     border: 0;
@@ -78,18 +81,20 @@
     color: #242318;
     font-family: "Eurostile Medium", sans-serif;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: normal;
 
     &::placeholder {
       color: rgba(36, 35, 24, 0.58);
       font: inherit;
-      line-height: 1.5;
+      line-height: normal;
       text-transform: none;
     }
 
     &--multiline {
+      height: auto;
       min-height: 6rem;
       resize: vertical;
+      line-height: 1.45;
     }
   }
 
