@@ -2,10 +2,6 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { vi } from "vitest";
 import Soumission from "./Sections/Soumission/soumission";
 
-vi.mock("react-responsive", () => ({
-  useMediaQuery: () => false,
-}));
-
 describe("Soumission", () => {
   afterEach(() => {
     vi.restoreAllMocks();
@@ -14,21 +10,20 @@ describe("Soumission", () => {
   test("renders the required quote request fields", () => {
     render(<Soumission />);
 
-    expect(screen.getByText("Demander une soumission")).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "Demander une soumission" })
+    ).toBeInTheDocument();
 
     [
       "Nom",
       "Numéro de téléphone",
       "Lieu des travaux",
+      "Début des travaux souhaité",
       "Résumé du projet",
       "Courriel",
-    ].forEach((placeholder) => {
-      expect(screen.getByPlaceholderText(placeholder)).toBeRequired();
+    ].forEach((label) => {
+      expect(screen.getByLabelText(label)).toBeRequired();
     });
-
-    expect(
-      screen.getByPlaceholderText(/^Début des travaux souhaité/)
-    ).toBeRequired();
   });
 
   test("asks the visitor to attach plans before opening the email", () => {
