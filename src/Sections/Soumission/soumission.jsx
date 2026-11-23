@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./soumission.scss";
 import "../../components/btn.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { useMediaQuery } from "react-responsive";
 
 const Soumission = () => {
   const [nom, setNom] = useState("");
@@ -11,12 +10,10 @@ const Soumission = () => {
   const [resume, setResume] = useState("");
   const [delais, setDelais] = useState("");
   const [courriel, setCourriel] = useState("");
-  const isMobile = useMediaQuery({ maxWidth: 575 });
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Message d'alerte natif du navigateur
     const confirmMessage =
       "N'oubliez pas de joindre vos plans en pièces jointes dans le courriel.";
     const userConfirmed = window.confirm(confirmMessage);
@@ -41,154 +38,107 @@ const Soumission = () => {
   return (
     <section className="soumission">
       <form className="soumission__container" onSubmit={handleSubmit}>
-        <div className="soumission__title">Demander une soumission</div>
+        <h2 className="soumission__title">Demander une soumission</h2>
 
         <div className="soumission__inputs">
-          {isMobile && (
-            <>
-              <div className="soumission__row">
-                <div className="soumission__input soumission__input--nom">
-                  <input
-                    type="text"
-                    placeholder="Nom"
-                    value={nom}
-                    onChange={(e) => setNom(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className="soumission__input soumission__input--numero">
-                  <input
-                    type="text"
-                    placeholder="Numéro de téléphone"
-                    value={numero}
-                    onChange={(e) => setNumero(e.target.value)}
-                    required
-                  />
-                </div>
-              </div>
-              <div className="soumission__row">
-                <div className="soumission__input">
-                  <input
-                    type="text"
-                    placeholder="Lieu des travaux"
-                    value={lieu}
-                    onChange={(e) => setLieu(e.target.value)}
-                    required
-                  />
-                </div>
-              </div>
-              <div className="soumission__row">
-                <div className="soumission__input">
-                  <input
-                    type="text"
-                    placeholder="Résumé du projet"
-                    value={resume}
-                    onChange={(e) => setResume(e.target.value)}
-                    required
-                  />
-                </div>
-              </div>
-              <div className="soumission__row">
-                <div className="soumission__input">
-                  <input
-                    type="text"
-                    placeholder="Début des travaux souhaité "
-                    value={delais}
-                    onChange={(e) => setDelais(e.target.value)}
-                    required
-                  />
-                </div>
-              </div>
+          <label className="soumission__field" htmlFor="soumission-nom">
+            <span className="soumission__field-label">Nom</span>
+            <input
+              className="soumission__field-control"
+              id="soumission-nom"
+              type="text"
+              placeholder="Votre nom"
+              autoComplete="name"
+              value={nom}
+              onChange={(e) => setNom(e.target.value)}
+              required
+            />
+          </label>
 
-              <div className="soumission__row">
-                <div className="soumission__input">
-                  <input
-                    type="email"
-                    placeholder="Courriel"
-                    value={courriel}
-                    onChange={(e) => setCourriel(e.target.value)}
-                    required
-                  />
-                </div>
-              </div>
-              <div className="soumission__row soumission__row--end">
-                <button className="btn">
-                  <div className="btn__text">Envoyer</div>
-                  <FaArrowRightLong className="btn__icon" />
-                </button>
-              </div>
-            </>
-          )}
-          {!isMobile && (
-            <>
-              <div className="soumission__row">
-                <div className="soumission__input ">
-                  <input
-                    type="text"
-                    placeholder="Nom"
-                    value={nom}
-                    onChange={(e) => setNom(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className="soumission__input ">
-                  <input
-                    type="text"
-                    placeholder="Numéro de téléphone"
-                    value={numero}
-                    onChange={(e) => setNumero(e.target.value)}
-                    required
-                  />
-                </div>
-              </div>
-              <div className="soumission__row">
-                <div className="soumission__input">
-                  <input
-                    type="text"
-                    placeholder="Lieu des travaux"
-                    value={lieu}
-                    onChange={(e) => setLieu(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className="soumission__input">
-                  <input
-                    type="text"
-                    placeholder="Début des travaux souhaité "
-                    value={delais}
-                    onChange={(e) => setDelais(e.target.value)}
-                    required
-                  />
-                </div>
-              </div>
-              <div className="soumission__row">
-                <div className="soumission__input">
-                  <input
-                    type="text"
-                    placeholder="Résumé du projet"
-                    value={resume}
-                    onChange={(e) => setResume(e.target.value)}
-                    required
-                  />
-                </div>
-                <div className="soumission__input">
-                  <input
-                    type="email"
-                    placeholder="Courriel"
-                    value={courriel}
-                    onChange={(e) => setCourriel(e.target.value)}
-                    required
-                  />
-                </div>
-              </div>
-              <div className="soumission__row soumission__row--end">
-                <button className="btn">
-                  <div className="btn__text">Envoyer</div>
-                  <FaArrowRightLong className="btn__icon" />
-                </button>
-              </div>
-            </>
-          )}
+          <label className="soumission__field" htmlFor="soumission-numero">
+            <span className="soumission__field-label">
+              Numéro de téléphone
+            </span>
+            <input
+              className="soumission__field-control"
+              id="soumission-numero"
+              type="tel"
+              placeholder="Votre numéro"
+              autoComplete="tel"
+              value={numero}
+              onChange={(e) => setNumero(e.target.value)}
+              required
+            />
+          </label>
+
+          <label className="soumission__field" htmlFor="soumission-lieu">
+            <span className="soumission__field-label">Lieu des travaux</span>
+            <input
+              className="soumission__field-control"
+              id="soumission-lieu"
+              type="text"
+              placeholder="Ville ou adresse"
+              autoComplete="street-address"
+              value={lieu}
+              onChange={(e) => setLieu(e.target.value)}
+              required
+            />
+          </label>
+
+          <label className="soumission__field" htmlFor="soumission-delais">
+            <span className="soumission__field-label">
+              Début des travaux souhaité
+            </span>
+            <input
+              className="soumission__field-control"
+              id="soumission-delais"
+              type="text"
+              placeholder="Ex. printemps 2027"
+              value={delais}
+              onChange={(e) => setDelais(e.target.value)}
+              required
+            />
+          </label>
+
+          <label
+            className="soumission__field soumission__field--wide"
+            htmlFor="soumission-resume"
+          >
+            <span className="soumission__field-label">Résumé du projet</span>
+            <textarea
+              className="soumission__field-control soumission__field-control--multiline"
+              id="soumission-resume"
+              placeholder="Décrivez brièvement votre projet"
+              rows={4}
+              value={resume}
+              onChange={(e) => setResume(e.target.value)}
+              required
+            />
+          </label>
+
+          <label
+            className="soumission__field soumission__field--wide"
+            htmlFor="soumission-courriel"
+          >
+            <span className="soumission__field-label">Courriel</span>
+            <input
+              className="soumission__field-control"
+              id="soumission-courriel"
+              type="email"
+              placeholder="Votre adresse courriel"
+              autoComplete="email"
+              value={courriel}
+              onChange={(e) => setCourriel(e.target.value)}
+              required
+            />
+          </label>
+
+          <div className="soumission__actions">
+            <button type="submit" className="btn">
+              <span className="btn__text">Envoyer</span>
+              <FaArrowRightLong className="btn__icon" aria-hidden="true" />
+            </button>
+          </div>
         </div>
       </form>
     </section>
