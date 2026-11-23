@@ -70,7 +70,7 @@
     display: block;
     width: 100%;
     min-width: 0;
-    min-height: 1.5em;
+    min-height: 2.5rem;
     padding: 0;
     border: 0;
     outline: none;
@@ -78,12 +78,12 @@
     color: #242318;
     font-family: "Eurostile Medium", sans-serif;
     font-size: 1rem;
-    line-height: 1.45;
+    line-height: 1.5;
 
     &::placeholder {
       color: rgba(36, 35, 24, 0.58);
       font: inherit;
-      line-height: inherit;
+      line-height: 1.5;
       text-transform: none;
     }
 
