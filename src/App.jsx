@@ -11,6 +11,7 @@ import PageTransition from "./components/PageTransition/PageTransition";
 import ScrollToTop from "./components/scrollToTop";
 import Maison from "./pages/Maison/maison";
 import Olympique from "./pages/Olympique/olympique";
+import ProjectDetail from "./pages/ProjectDetail/projectDetail";
 
 const App = () => {
   const location = useLocation();
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="ferreolaise" element={<Falaise />} />
             <Route path="maison-verte" element={<Maison />} />
             <Route path="olympique" element={<Olympique />} />
+            <Route path=":projectSlug" element={<ProjectDetail />} />
           </Route>
           <Route path="/team" element={<Team />} />
         </Routes>

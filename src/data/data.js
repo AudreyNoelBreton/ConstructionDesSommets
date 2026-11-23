@@ -90,6 +90,56 @@ const consecrationImages = [
   },
 ];
 
+const garageVertImages = [
+  "1MaisonHDSLouis-119.JPG",
+  "MaisonHDSLouis-114.JPG",
+  "MaisonHDSLouis-116.JPG",
+  "MaisonHDSLouis-118.JPG",
+  "MaisonHDSLouis-121.JPG",
+  "MaisonHDSLouis-123.JPG",
+  "MaisonHDSLouis-124.JPG",
+  "MaisonHDSLouis-128.JPG",
+  "MaisonHDSLouis-130.JPG",
+  "MaisonHDSLouis-131.JPG",
+  "MaisonHDSLouis-134.JPG",
+  "MaisonHDSLouis-135.JPG",
+  "MaisonHDSLouis-136.JPG",
+  "MaisonHDSLouis-137.JPG",
+  "MaisonHDSLouis-138.JPG",
+  "MaisonHDSLouis-139.JPG",
+  "MaisonHDSLouis-140.JPG",
+  "MaisonHDSLouis-141.JPG",
+  "MaisonHDSLouis-142.JPG",
+  "MaisonHDSLouis-143.JPG",
+  "MaisonHDSLouis-144.JPG",
+].map((image) => `${process.env.PUBLIC_URL}/garage-vert/${image}`);
+
+const altitudeImageNumbers = [
+  1, 2, 4, 6, 7, 8, 10, 11, 12, 13, 14, 16, 18, 19, 20, 21, 22, 28, 29, 30,
+  32, 33, 34, 35, 36, 39, 41, 43, 51, 52, 53, 54, 55, 56, 57, 58, 59, 62, 64,
+  67, 68, 69, 73, 74, 75, 77, 78, 80, 81, 82, 83, 84, 85, 86, 88, 89, 100,
+  101, 107, 112,
+];
+const altitudeImage = (imageNumber) =>
+  `${process.env.PUBLIC_URL}/l-altitude/MaisonHDSLouis-${imageNumber}.JPG`;
+const altitudeImages = altitudeImageNumbers.map(altitudeImage);
+const altitudeCardImages = [19, 18, 8].map(altitudeImage);
+
+const amontImageNumbers = [
+  147, 148, 149, 150, 151, 152, 154, 157, 159, 160, 161, 162, 167, 168, 169,
+  173, 175, 176, 178, 179, 181,
+];
+const amontImage = (imageNumber) =>
+  `${process.env.PUBLIC_URL}/l-amont/MaisonHDSLouis-${imageNumber}.JPG`;
+const amontImages = amontImageNumbers.map(amontImage);
+const amontCardImages = [147, 148, 157].map(amontImage);
+
+const lesCimesImageNumbers = [188, 189, 190, 182, 186, 187];
+const lesCimesImage = (imageNumber) =>
+  `${process.env.PUBLIC_URL}/les-cimes/MaisonHDSLouis-${imageNumber}.JPG`;
+const lesCimesImages = lesCimesImageNumbers.map(lesCimesImage);
+const lesCimesCardImages = [182, 186, 187].map(lesCimesImage);
+
 const cardHomePage = [
   {
     src: `${process.env.PUBLIC_URL}/Projet/Habitations-du-sommet-rue-du-sommet-15.jpg`,
@@ -175,6 +225,47 @@ const projects = [
     image2: `${process.env.PUBLIC_URL}/l'olympique-2.jpg`,
     image3: `${process.env.PUBLIC_URL}/l'olympique-3.jpg`,
     url: "/realisations/olympique",
+  },
+
+  {
+    slug: "garage-vert",
+    images: garageVertImages.slice(0, 3),
+    gallery: garageVertImages,
+    text: "Garage vert",
+    image1: garageVertImages[0],
+    image2: garageVertImages[1],
+    image3: garageVertImages[2],
+    url: "/realisations/garage-vert",
+  },
+  {
+    slug: "altitude",
+    images: altitudeCardImages,
+    gallery: altitudeImages,
+    text: "L’Altitude",
+    image1: altitudeCardImages[0],
+    image2: altitudeCardImages[1],
+    image3: altitudeCardImages[2],
+    url: "/realisations/altitude",
+  },
+  {
+    slug: "amont",
+    images: amontCardImages,
+    gallery: amontImages,
+    text: "L’Amont",
+    image1: amontCardImages[0],
+    image2: amontCardImages[1],
+    image3: amontCardImages[2],
+    url: "/realisations/amont",
+  },
+  {
+    slug: "les-cimes",
+    images: lesCimesCardImages,
+    gallery: lesCimesImages,
+    text: "Les Cimes",
+    image1: lesCimesCardImages[0],
+    image2: lesCimesCardImages[1],
+    image3: lesCimesCardImages[2],
+    url: "/realisations/les-cimes",
   },
 ];
 

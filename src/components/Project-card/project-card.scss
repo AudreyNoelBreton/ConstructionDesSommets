@@ -1,66 +1,89 @@
 .project-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   width: 100%;
-  flex-direction: column;
   gap: 20px;
-  justify-content: space-between;
 
   &__main {
     width: 100%;
+    aspect-ratio: 4 / 5;
+    min-width: 0;
+    overflow: hidden;
+
+    .main-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .main-image__img {
+      display: block;
+    }
   }
 
   &__secondary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     gap: 20px;
     overflow: hidden;
-  }
-
-  &__img {
-    width: 100%;
-    height: auto;
-    display: block;
-    flex-shrink: 0;
   }
 
   &__link {
     display: block;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 4 / 3;
+    min-width: 0;
+    overflow: hidden;
   }
-}
 
-.column {
-  flex-direction: column;
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 @media (min-width: 576px) {
   .project-card {
-    flex-direction: row;
-    width: 100%;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    aspect-ratio: 4 / 3;
+    min-height: 0;
     gap: 30px;
 
-    &__main {
-      width: 100%;
-    }
+    &__main,
     &__secondary {
-      flex-direction: column;
-      width: 60%;
       height: 100%;
+    }
+
+    &__main {
+      aspect-ratio: auto;
+    }
+
+    &__secondary {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      min-height: 0;
       gap: 30px;
     }
-    &__img {
-      width: 100%;
-    }
-  }
 
-  .column {
-    flex-direction: row;
+    &__link {
+      aspect-ratio: auto;
+      min-height: 0;
+    }
   }
 
   .column-reverse {
-    flex-direction: row-reverse;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+
+    .project-card__main {
+      grid-column: 2;
+    }
+
+    .project-card__secondary {
+      grid-column: 1;
+      grid-row: 1;
+    }
   }
 }
